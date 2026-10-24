@@ -18,6 +18,7 @@ from backend.app.core.config import settings
 from backend.app.db.database import init_db, seed_blocks_if_empty
 from backend.app.api.endpoints import router as api_router
 from backend.app.api.prediction_router import router as prediction_router
+from backend.app.api.agent_router import router as agent_router
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
@@ -101,6 +102,7 @@ def verify_officials_credentials(credentials: HTTPBasicCredentials = Depends(sec
 
 # Include API Routers
 app.include_router(api_router, prefix="/api")
+app.include_router(agent_router, prefix="/api")
 app.include_router(prediction_router)  # Direct /predict/block/{block_id}
 app.include_router(prediction_router, prefix="/api")  # /api/predict/block/{block_id}
 

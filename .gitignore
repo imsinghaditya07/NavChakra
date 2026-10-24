@@ -32,6 +32,12 @@ data/large/
 *.nc
 !data/sample/**
 
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
 # Root reference PDFs and large scans
 /*.pdf
 

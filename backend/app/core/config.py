@@ -31,10 +31,17 @@ class Settings(BaseSettings):
     BHASHINI_ENDPOINT: str = "https://nmt-models.bhashini.gov.in/v1/translate"
     HF_INFERENCE_API: str = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3"
     
+    # Agent37 Agentic Layer Configuration
+    AGENT37_API_KEY: str = os.getenv("AGENT37_API_KEY", "")
+    AGENT37_API_BASE: str = os.getenv("AGENT37_API_BASE", "https://api.agent37.com")
+    AGENT37_INSTANCE_ID: str = os.getenv("AGENT37_INSTANCE_ID", "")
+    AGENT37_INSTANCE_URL: str = os.getenv("AGENT37_INSTANCE_URL", "")
+    AGENT37_TIMEOUT_S: float = float(os.getenv("AGENT37_TIMEOUT_S", "8.0"))
+    AGENT_TOOLS_KEY: str = os.getenv("AGENT_TOOLS_KEY", "")
+
     # Privacy Statement
     PRIVACY_CONSENT_NOTICE: str = "Farmer location and phone data are stored solely for automated agromet advisory delivery under MoES guidelines and are strictly never shared, monetized, or sold."
 
-    class Config:
-        case_sensitive = True
+    model_config = {"case_sensitive": True, "extra": "ignore"}
 
 settings = Settings()

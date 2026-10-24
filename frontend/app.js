@@ -5270,9 +5270,9 @@ async function sendQuickAssistantQuery(query) {
     content.innerHTML = `<b>सवाल:</b> "${query}"<br><span style="color:#16a34a;">⏳ NavChakra मॉडल से उत्तर प्राप्त हो रहा है...</span>`;
   }
 
-  // Call Backend API /api/chat
+  // Call Backend API /api/agent/chat (Agent37 Kisan Saarthi with Grounded RAG Fallback)
   try {
-    const res = await fetch('/api/chat', {
+    const res = await fetch('/api/agent/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -5379,7 +5379,7 @@ async function executeFullChatSubmit() {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 
   try {
-    const res = await fetch('/api/chat', {
+    const res = await fetch('/api/agent/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

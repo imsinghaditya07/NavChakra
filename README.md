@@ -22,7 +22,7 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 
 ---
 
-## 2. ₹0 Recurring Infra Cost Statement (Prototype Scale)
+## 2. Infrastructure Cost Statement & Operational Economics
 
 | Component | Selected Tool / Provider | Commercial Alternative | Prototype Cost | Production Scaling Path |
 |---|---|---|---|---|
@@ -35,9 +35,63 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 | **Multi-Lingual Translation**| Bhashini (Govt of India) + Web Speech API | Google Cloud Translation | **₹0.00** | In-house IndicTrans2 models |
 | **Map Base & Radar** | OpenStreetMap + RainViewer API | Mapbox / Google Maps | **₹0.00** | ISRO Bhuvan GeoPlatform |
 | **IVR Voice Gateway** | Asterisk PBX Open-Source AGI | Twilio / Exotel Voice | **₹0.00** | C-DOT Kisan Call Centre PRI lines |
-| **Total Recurring Cost** | — | — | **₹0.00 / month** | Budget-neutral for Government of India |
+| **Agentic AI Layer (Optional)** | Agent37 Cloud Hermes Sandbox | AutoGPT / Cloud LLM APIs | Metered pay-per-minute / BYOK | Persistent sandbox with managed tools |
+| **Core Platform Total** | — | — | **₹0.00 / month** | Budget-neutral for Government of India |
+
+> **Cost & Metering Clarification**: The core prediction backbone (physics models, ML models A & B, deterministic agronomic rules, and grounded RAG chatbot) operates at **₹0.00 recurring infrastructure cost** on open tiers. The optional Agent37 agent layer is pay-per-minute after the free tier credit ($1.00 / 1,000,000 credit micros); model usage is metered unless you configure your own model API key (BYOK). When Agent37 credentials are not set, the platform functions with zero degradation via deterministic RAG.
 
 ---
+
+## 2B. Agent Layer (Agent37) & Kisan Saarthi Architecture
+
+NavChakra integrates an optional **Agent37-powered Kisan Saarthi agent** (`/api/agent/chat`) that executes within a persistent cloud sandbox (Hermes agent template) while enforcing strict meteorological guardrails.
+
+```
+                  ┌────────────────────────────────────────┐
+                  │ Farmer Query via Web App / Mobile Chat │
+                  └───────────────────┬────────────────────┘
+                                      │
+                                      ▼
+                  ┌────────────────────────────────────────┐
+                  │        Pre-Fetch Verified State        │
+                  │ (SQLite Block Met State + ICAR RAG DB) │
+                  └───────────────────┬────────────────────┘
+                                      │
+                ┌─────────────────────┴─────────────────────┐
+                │                                           │
+  [If Agent37 configured]                     [If unconfigured / timeout / error]
+                │                                           │
+                ▼                                           ▼
+┌───────────────────────────────┐           ┌───────────────────────────────┐
+│  Agent37 Persistent Instance   │           │   Deterministic Grounded RAG   │
+│  - POST /v1/responses         │           │   - rag_chatbot.answer_query  │
+│  - Guarded strictly by context │           │   - Zero hallucination        │
+│  - Farmer text treated as data │           │   - 100% Free / Open tier     │
+│  - Max 3 sentences            │           │                               │
+└───────────────┬───────────────┘           └───────────────┬───────────────┘
+                │                                           │
+                │ (On timeout, failed status, empty output) │
+                ├───────────────────────────────────────────┘
+                │
+                ▼
+┌───────────────────────────────────────────────────────────┐
+│ Return Response: { answer, response, language, source }   │
+│ source = "agent37" OR source = "rag_fallback"             │
+└───────────────────────────────────────────────────────────┘
+```
+
+### Hard Rules & Safety Constraints
+1. **Advisory Only**: The agent layer is strictly advisory. It never modifies physical Model A/B prediction tensors, risk tiers, or the deterministic citizen crowd RED override.
+2. **Deterministic Fallback**: If `AGENT37_API_KEY` or `AGENT37_INSTANCE_URL` are not configured, or if an invocation times out (default 8s), returns HTTP 200 with `status: "failed"`, or produces empty text, the backend seamlessly falls back to `rag_chatbot.answer_query(...)` with `source="rag_fallback"`.
+3. **Prompt Injection Defense**: Farmer text is passed between explicit data tags and treated as untrusted data.
+4. **Guarded Read-Only Tools (`/api/agent-tools/*`)**:
+   - `GET /api/agent-tools/forecast/{block_id}`: Read-only block meteorological state.
+   - `GET /api/agent-tools/alerts`: Read-only active meteorological alerts.
+   - `GET /api/agent-tools/crowd-reports`: Read-only ground observation feed.
+   - `GET /api/agent-tools/advisory/{block_id}`: Read-only agronomic advisory.
+   - *Security*: Guarded by header `X-Tools-Key` validated against `AGENT_TOOLS_KEY` via constant-time `secrets.compare_digest`. Returns HTTP 503 if unconfigured.
+5. **Scheduled Jobs**: Prompt templates are provided in `backend/app/agents/jobs/` for daily bulletins and system health reports. As a matter of policy, schedules are not created automatically to prevent unexpected compute consumption.
+
 
 ## 3. Known Free-Tier Limitations & Mitigation Strategy
 
