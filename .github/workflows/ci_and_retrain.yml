@@ -13,7 +13,7 @@ on:
 jobs:
   test_and_lint:
     name: Pytest Verification & Advisory Audit
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -38,13 +38,13 @@ jobs:
         env:
           PYTHONPATH: .
         run: |
-          pytest backend/tests/test_api.py -v --tb=short
+          pytest backend/tests/ -v --tb=short
 
   weekly_retrain:
     name: Weekly Model Retrain & Drift Audit
     needs: test_and_lint
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
