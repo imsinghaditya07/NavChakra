@@ -1,0 +1,78 @@
+name: SIH 2026 CI & Weekly Auto-Retrain Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Weekly retrain on free tier (Sundays at 02:00 UTC)
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+
+jobs:
+  test_and_lint:
+    name: Pytest Verification & Advisory Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          cache: 'pip'
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgomp1
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run CI Pytest Suite
+        env:
+          PYTHONPATH: .
+        run: |
+          pytest backend/tests/test_api.py -v --tb=short
+
+  weekly_retrain:
+    name: Weekly Model Retrain & Drift Audit
+    needs: test_and_lint
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y libgomp1
+          pip install -r requirements.txt
+
+      - name: Ingest Latest Teleconnections & Agromet
+        run: |
+          python data/build_datasets.py
+
+      - name: Retrain Model A (LightGBM) & Model B (Nowcast ONNX)
+        run: |
+          python models/training/train_model_a_lightgbm.py
+          python models/training/train_model_b_nowcast.py
+          python models/training/export_model_a_onnx.py
+
+      - name: Execute Evidently Drift Analysis
+        run: |
+          python models/eval/model_health_monitor.py
+
+      - name: Check Artifact Status
+        run: |
+          git status --short

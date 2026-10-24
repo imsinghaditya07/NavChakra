@@ -1,0 +1,9 @@
+{
+  "model_name": "AryaSaarthi Cyclogenesis Potential Diagnostic",
+  "model_version": "aryasaarthi-cyclone-rules-v1.0.0",
+  "training_status": "NOT TRAINABLE (ML Supervised)",
+  "reason_for_block": "Historical IMD best-track cyclone waypoints and central pressure logs are absent in the provided raw files.",
+  "scientific_alternative": "Kalsi & Roy Bhowmik Cyclogenesis Potential Index (CPI) over Bay of Bengal based on SST > 28.5\u00b0C (from SST CSV.csv), low-level cyclonic vorticity, and MJO Phases 3-5.",
+  "formulation": "CPI = (vorticity * 1e5) * (SST - 26.0) / 4.0 * MJO_active_factor",
+  "updated_at": "2026-10-02T15:22:25.255712+00:00"
+}

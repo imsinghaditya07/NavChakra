@@ -1,0 +1,9 @@
+{
+  "model_name": "AryaSaarthi In-Situ Vector Wind Forecaster (u, v components)",
+  "model_version": "aryasaarthi-wind-v1.0.0",
+  "trained_at": "2026-10-02T15:22:25.255247+00:00",
+  "geographic_limitation_note": "In-situ ERA5 station verification point (28.576N, 77.187E). wind_data.pdf is reference visualization only.",
+  "metrics": {
+    "test_wind_speed_mae_kmh": 1.339
+  }
+}

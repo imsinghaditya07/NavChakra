@@ -1,0 +1,9 @@
+{
+  "model_name": "AryaSaarthi Topographic Runoff & Flood Risk Diagnostic",
+  "model_version": "aryasaarthi-flood-rules-v1.0.0",
+  "training_status": "NOT TRAINABLE (ML Supervised)",
+  "reason_for_block": "Verified historical flood inundation and embankment breach event labels are absent in the provided raw files.",
+  "scientific_alternative": "Rule-based hydrological risk index: Antecedent 7-day precipitation accumulation \u00d7 topographic drainage index (DEM Elevation, 2D Slope) vs catchment runoff threshold.",
+  "formulation": "flood_risk_score = 0.5 * (rain_7d / 150.0) + 0.3 * (1.0 - elevation / 100.0) + 0.2 * (1.0 - slope / 5.0)",
+  "updated_at": "2026-10-02T15:22:25.255545+00:00"
+}

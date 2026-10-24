@@ -1,0 +1,5 @@
+outs:
+- md5: 6f4d1b833b0693227290bec80b29bcd2
+  size: 266711
+  hash: md5
+  path: convective_nowcast_dataset.parquet

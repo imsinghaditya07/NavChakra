@@ -1,0 +1,9 @@
+{
+  "model_name": "AryaSaarthi Hail Probability Diagnostic",
+  "model_version": "aryasaarthi-hail-rules-v1.0.0",
+  "training_status": "NOT TRAINABLE (ML Supervised)",
+  "reason_for_block": "Verified ground station hail incident logs are absent in the provided raw files.",
+  "scientific_alternative": "Thermodynamic proxy rule: CAPE > 2200 J/kg + Freezing Level Height < 3800m + OLR deep convective cooling rate.",
+  "formulation": "hail_prob = sigmoid(0.0015 * (CAPE - 2000) - 0.001 * (FreezingLevel - 3800))",
+  "updated_at": "2026-10-02T15:22:25.255602+00:00"
+}

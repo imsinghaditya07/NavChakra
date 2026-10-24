@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-02T15:22:25.262244+00:00",
+  "valid_for": "2026-10-03T15:22:25.262248+00:00",
+  "region": {
+    "block_id": "WB_BIR_BOLPUR",
+    "panchayat_id": "PANCH_BOLPUR_01",
+    "lat": 23.6693,
+    "lon": 87.7196,
+    "district": "Birbhum",
+    "state": "West Bengal",
+    "elevation_m": 46.2
+  },
+  "event": {
+    "type": "none",
+    "track": [],
+    "intensity": 0.05,
+    "confidence": 0.7
+  },
+  "fields": {
+    "rainfall_mm": 13.1,
+    "rainfall_prob": 0.63,
+    "rainfall_p10_mm": 0.0,
+    "rainfall_p90_mm": 24.9,
+    "heat_index": 38.5,
+    "drought_index": 0.45,
+    "flood_risk": 0.15
+  },
+  "particles": {
+    "wind": {
+      "speed_kmh": 16.5,
+      "direction_deg": 220.0
+    },
+    "rain": {
+      "intensity": 0.52
+    },
+    "hail_prob": 0.02,
+    "lightning_prob": 0.35
+  },
+  "model_version": "aryasaarthi-weather-v1.0.0",
+  "confidence": 0.7
+}

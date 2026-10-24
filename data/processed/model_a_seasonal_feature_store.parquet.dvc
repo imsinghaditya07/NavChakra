@@ -1,0 +1,5 @@
+outs:
+- md5: 359ad730ac68f2a1f834ce3a5079eb5d
+  size: 1031766
+  hash: md5
+  path: model_a_seasonal_feature_store.parquet

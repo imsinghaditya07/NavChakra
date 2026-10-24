@@ -1,0 +1,6 @@
+{
+  "model": "BiLSTM-Attention",
+  "test_accuracy": 0.975,
+  "f1_score": 0.9746,
+  "architecture": "2-layer BiLSTM (48 units) + Dense(32) + Softmax(4)"
+}

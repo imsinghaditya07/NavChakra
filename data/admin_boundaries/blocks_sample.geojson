@@ -1,0 +1,197 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "block_yavatmal_pusad",
+      "properties": {
+        "block_id": "MH_YVT_01",
+        "block_name": "Pusad (पुसद)",
+        "district": "Yavatmal",
+        "state": "Maharashtra",
+        "subdivision": "Vidarbha",
+        "lat": 19.9072,
+        "lon": 77.5684,
+        "elevation_m": 315,
+        "soil_type": "Deep Black Cotton Soil (Vertisol)",
+        "major_crops": ["cotton", "soybean", "pulses_arhar"],
+        "normal_onset_doy": 162,
+        "normal_monsoon_rain_mm": 890,
+        "vulnerability_break": "High",
+        "vulnerability_storm": "Moderate"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.45, 19.82],
+            [77.68, 19.82],
+            [77.72, 19.98],
+            [77.50, 20.02],
+            [77.45, 19.82]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "block_amravati_morshi",
+      "properties": {
+        "block_id": "MH_AMR_02",
+        "block_name": "Morshi (मोर्शी)",
+        "district": "Amravati",
+        "state": "Maharashtra",
+        "subdivision": "Vidarbha",
+        "lat": 21.3167,
+        "lon": 78.0167,
+        "elevation_m": 352,
+        "soil_type": "Medium Black & Alluvial Loam",
+        "major_crops": ["cotton", "soybean", "citrus_orange"],
+        "normal_onset_doy": 165,
+        "normal_monsoon_rain_mm": 840,
+        "vulnerability_break": "Very High",
+        "vulnerability_storm": "High"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.90, 21.20],
+            [78.15, 21.22],
+            [78.18, 21.42],
+            [77.88, 21.39],
+            [77.90, 21.20]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "block_jalna_partur",
+      "properties": {
+        "block_id": "MH_JLN_03",
+        "block_name": "Partur (परतूर)",
+        "district": "Jalna",
+        "state": "Maharashtra",
+        "subdivision": "Marathwada",
+        "lat": 19.5936,
+        "lon": 76.2167,
+        "elevation_m": 484,
+        "soil_type": "Shallow to Medium Black Soil",
+        "major_crops": ["cotton", "soybean", "maize"],
+        "normal_onset_doy": 160,
+        "normal_monsoon_rain_mm": 680,
+        "vulnerability_break": "Severe",
+        "vulnerability_storm": "Moderate"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.10, 19.50],
+            [76.35, 19.51],
+            [76.38, 19.70],
+            [76.08, 19.68],
+            [76.10, 19.50]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "block_hoshangabad_seoni",
+      "properties": {
+        "block_id": "MP_HSH_04",
+        "block_name": "Seoni Malwa (सिवनी मालवा)",
+        "district": "Narmadapuram",
+        "state": "Madhya Pradesh",
+        "subdivision": "West Madhya Pradesh",
+        "lat": 22.4500,
+        "lon": 77.4700,
+        "elevation_m": 305,
+        "soil_type": "Rich River Valley Vertisol / Clayey",
+        "major_crops": ["soybean", "paddy", "maize"],
+        "normal_onset_doy": 168,
+        "normal_monsoon_rain_mm": 1150,
+        "vulnerability_break": "Moderate",
+        "vulnerability_storm": "High"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.35, 22.35],
+            [77.60, 22.36],
+            [77.62, 22.56],
+            [77.32, 22.54],
+            [77.35, 22.35]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "block_dharwad_hubli",
+      "properties": {
+        "block_id": "KA_DHW_05",
+        "block_name": "Hubballi Rural (हुबली ग्रामीण)",
+        "district": "Dharwad",
+        "state": "Karnataka",
+        "subdivision": "North Interior Karnataka",
+        "lat": 15.3647,
+        "lon": 75.1240,
+        "elevation_m": 670,
+        "soil_type": "Red Sandy Loam & Black Soil transition",
+        "major_crops": ["cotton", "maize", "groundnut"],
+        "normal_onset_doy": 156,
+        "normal_monsoon_rain_mm": 740,
+        "vulnerability_break": "High",
+        "vulnerability_storm": "High"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [75.00, 15.25],
+            [75.25, 15.26],
+            [75.28, 15.48],
+            [74.98, 15.46],
+            [75.00, 15.25]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "block_bihar_muzaffarpur",
+      "properties": {
+        "block_id": "BR_MZP_06",
+        "block_name": "Kanti (कांटी)",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "subdivision": "Bihar Plains",
+        "lat": 26.1833,
+        "lon": 85.3167,
+        "elevation_m": 58,
+        "soil_type": "Calcareous Alluvial Sandy Loam",
+        "major_crops": ["paddy", "maize"],
+        "normal_onset_doy": 164,
+        "normal_monsoon_rain_mm": 1180,
+        "vulnerability_break": "High",
+        "vulnerability_storm": "Very High"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [85.20, 26.08],
+            [85.45, 26.10],
+            [85.48, 26.28],
+            [85.18, 26.26],
+            [85.20, 26.08]
+          ]
+        ]
+      }
+    }
+  ]
+}

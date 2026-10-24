@@ -1,0 +1,9 @@
+{
+  "model_name": "AryaSaarthi Temperature Regressor",
+  "model_version": "aryasaarthi-heatwave-v1.0.0",
+  "trained_at": "2026-10-02T15:22:25.255454+00:00",
+  "training_status_note": "PARTIALLY TRAINABLE (Continuous Temperature Regression). Supervised Heatwave Event Classifier BLOCKED due to lack of multi-decade station extreme temperature threshold logs in raw files.",
+  "metrics": {
+    "test_temp_mae_c": 0.708
+  }
+}

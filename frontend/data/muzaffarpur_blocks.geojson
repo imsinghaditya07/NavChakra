@@ -1,0 +1,865 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "BR_MZP_01",
+      "properties": {
+        "block_id": "BR_MZP_01",
+        "block_name": "Mushahari (Muzaffarpur Sadar)",
+        "short_name": "Mushahari",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.12,
+        "lon": 85.395,
+        "bounds": [
+          [
+            26.06,
+            85.33
+          ],
+          [
+            26.17,
+            85.45
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.33,
+              26.08
+            ],
+            [
+              85.36,
+              26.17
+            ],
+            [
+              85.44,
+              26.16
+            ],
+            [
+              85.45,
+              26.07
+            ],
+            [
+              85.39,
+              26.06
+            ],
+            [
+              85.33,
+              26.08
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_02",
+      "properties": {
+        "block_id": "BR_MZP_02",
+        "block_name": "Kanti",
+        "short_name": "Kanti",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.1833,
+        "lon": 85.3167,
+        "bounds": [
+          [
+            26.08,
+            85.18
+          ],
+          [
+            26.28,
+            85.48
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.2,
+              26.08
+            ],
+            [
+              85.45,
+              26.1
+            ],
+            [
+              85.48,
+              26.28
+            ],
+            [
+              85.18,
+              26.26
+            ],
+            [
+              85.2,
+              26.08
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_03",
+      "properties": {
+        "block_id": "BR_MZP_03",
+        "block_name": "Motipur",
+        "short_name": "Motipur",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.28,
+        "lon": 85.18,
+        "bounds": [
+          [
+            26.2,
+            85.08
+          ],
+          [
+            26.36,
+            85.28
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.08,
+              26.22
+            ],
+            [
+              85.12,
+              26.35
+            ],
+            [
+              85.26,
+              26.36
+            ],
+            [
+              85.28,
+              26.24
+            ],
+            [
+              85.18,
+              26.2
+            ],
+            [
+              85.08,
+              26.22
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_04",
+      "properties": {
+        "block_id": "BR_MZP_04",
+        "block_name": "Marwan",
+        "short_name": "Marwan",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.11,
+        "lon": 85.28,
+        "bounds": [
+          [
+            26.06,
+            85.22
+          ],
+          [
+            26.18,
+            85.34
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.22,
+              26.08
+            ],
+            [
+              85.25,
+              26.17
+            ],
+            [
+              85.34,
+              26.16
+            ],
+            [
+              85.32,
+              26.07
+            ],
+            [
+              85.24,
+              26.06
+            ],
+            [
+              85.22,
+              26.08
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_05",
+      "properties": {
+        "block_id": "BR_MZP_05",
+        "block_name": "Minapur",
+        "short_name": "Minapur",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.25,
+        "lon": 85.38,
+        "bounds": [
+          [
+            26.18,
+            85.3
+          ],
+          [
+            26.32,
+            85.46
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.3,
+              26.2
+            ],
+            [
+              85.34,
+              26.31
+            ],
+            [
+              85.45,
+              26.32
+            ],
+            [
+              85.46,
+              26.22
+            ],
+            [
+              85.38,
+              26.18
+            ],
+            [
+              85.3,
+              26.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_06",
+      "properties": {
+        "block_id": "BR_MZP_06",
+        "block_name": "Sahebganj",
+        "short_name": "Sahebganj",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.28,
+        "lon": 85.02,
+        "bounds": [
+          [
+            26.2,
+            84.95
+          ],
+          [
+            26.36,
+            85.1
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              84.95,
+              26.22
+            ],
+            [
+              84.98,
+              26.35
+            ],
+            [
+              85.09,
+              26.36
+            ],
+            [
+              85.1,
+              26.24
+            ],
+            [
+              85.02,
+              26.2
+            ],
+            [
+              84.95,
+              26.22
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_07",
+      "properties": {
+        "block_id": "BR_MZP_07",
+        "block_name": "Paroo",
+        "short_name": "Paroo",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.1,
+        "lon": 85.08,
+        "bounds": [
+          [
+            26.02,
+            85.0
+          ],
+          [
+            26.18,
+            85.16
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.0,
+              26.04
+            ],
+            [
+              85.03,
+              26.16
+            ],
+            [
+              85.15,
+              26.18
+            ],
+            [
+              85.16,
+              26.06
+            ],
+            [
+              85.08,
+              26.02
+            ],
+            [
+              85.0,
+              26.04
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_08",
+      "properties": {
+        "block_id": "BR_MZP_08",
+        "block_name": "Saraiya",
+        "short_name": "Saraiya",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.04,
+        "lon": 85.15,
+        "bounds": [
+          [
+            25.96,
+            85.08
+          ],
+          [
+            26.12,
+            85.22
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.08,
+              25.98
+            ],
+            [
+              85.11,
+              26.1
+            ],
+            [
+              85.21,
+              26.12
+            ],
+            [
+              85.22,
+              26.0
+            ],
+            [
+              85.15,
+              25.96
+            ],
+            [
+              85.08,
+              25.98
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_09",
+      "properties": {
+        "block_id": "BR_MZP_09",
+        "block_name": "Kurhani",
+        "short_name": "Kurhani",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 25.98,
+        "lon": 85.32,
+        "bounds": [
+          [
+            25.9,
+            85.24
+          ],
+          [
+            26.06,
+            85.4
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.24,
+              25.92
+            ],
+            [
+              85.26,
+              26.04
+            ],
+            [
+              85.38,
+              26.06
+            ],
+            [
+              85.4,
+              25.94
+            ],
+            [
+              85.32,
+              25.9
+            ],
+            [
+              85.24,
+              25.92
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_10",
+      "properties": {
+        "block_id": "BR_MZP_10",
+        "block_name": "Sakra",
+        "short_name": "Sakra",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 25.99,
+        "lon": 85.45,
+        "bounds": [
+          [
+            25.92,
+            85.38
+          ],
+          [
+            26.06,
+            85.52
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.38,
+              25.94
+            ],
+            [
+              85.4,
+              26.05
+            ],
+            [
+              85.51,
+              26.06
+            ],
+            [
+              85.52,
+              25.95
+            ],
+            [
+              85.45,
+              25.92
+            ],
+            [
+              85.38,
+              25.94
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_11",
+      "properties": {
+        "block_id": "BR_MZP_11",
+        "block_name": "Muraul",
+        "short_name": "Muraul",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.04,
+        "lon": 85.48,
+        "bounds": [
+          [
+            25.98,
+            85.42
+          ],
+          [
+            26.1,
+            85.54
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.42,
+              26.0
+            ],
+            [
+              85.44,
+              26.09
+            ],
+            [
+              85.53,
+              26.1
+            ],
+            [
+              85.54,
+              26.02
+            ],
+            [
+              85.48,
+              25.98
+            ],
+            [
+              85.42,
+              26.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_12",
+      "properties": {
+        "block_id": "BR_MZP_12",
+        "block_name": "Bandra",
+        "short_name": "Bandra",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.07,
+        "lon": 85.55,
+        "bounds": [
+          [
+            26.0,
+            85.48
+          ],
+          [
+            26.14,
+            85.62
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.48,
+              26.02
+            ],
+            [
+              85.5,
+              26.13
+            ],
+            [
+              85.61,
+              26.14
+            ],
+            [
+              85.62,
+              26.03
+            ],
+            [
+              85.55,
+              26.0
+            ],
+            [
+              85.48,
+              26.02
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_13",
+      "properties": {
+        "block_id": "BR_MZP_13",
+        "block_name": "Gaighat",
+        "short_name": "Gaighat",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.15,
+        "lon": 85.52,
+        "bounds": [
+          [
+            26.08,
+            85.44
+          ],
+          [
+            26.22,
+            85.6
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.44,
+              26.1
+            ],
+            [
+              85.46,
+              26.21
+            ],
+            [
+              85.59,
+              26.22
+            ],
+            [
+              85.6,
+              26.11
+            ],
+            [
+              85.52,
+              26.08
+            ],
+            [
+              85.44,
+              26.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_14",
+      "properties": {
+        "block_id": "BR_MZP_14",
+        "block_name": "Bochahan",
+        "short_name": "Bochahan",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.18,
+        "lon": 85.45,
+        "bounds": [
+          [
+            26.12,
+            85.38
+          ],
+          [
+            26.24,
+            85.52
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.38,
+              26.14
+            ],
+            [
+              85.4,
+              26.23
+            ],
+            [
+              85.51,
+              26.24
+            ],
+            [
+              85.52,
+              26.15
+            ],
+            [
+              85.45,
+              26.12
+            ],
+            [
+              85.38,
+              26.14
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_15",
+      "properties": {
+        "block_id": "BR_MZP_15",
+        "block_name": "Aurai",
+        "short_name": "Aurai",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.32,
+        "lon": 85.53,
+        "bounds": [
+          [
+            26.24,
+            85.45
+          ],
+          [
+            26.4,
+            85.62
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.45,
+              26.26
+            ],
+            [
+              85.48,
+              26.39
+            ],
+            [
+              85.61,
+              26.4
+            ],
+            [
+              85.62,
+              26.28
+            ],
+            [
+              85.53,
+              26.24
+            ],
+            [
+              85.45,
+              26.26
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "BR_MZP_16",
+      "properties": {
+        "block_id": "BR_MZP_16",
+        "block_name": "Katra",
+        "short_name": "Katra",
+        "district": "Muzaffarpur",
+        "state": "Bihar",
+        "lat": 26.22,
+        "lon": 85.6,
+        "bounds": [
+          [
+            26.15,
+            85.52
+          ],
+          [
+            26.3,
+            85.68
+          ]
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.52,
+              26.17
+            ],
+            [
+              85.55,
+              26.29
+            ],
+            [
+              85.67,
+              26.3
+            ],
+            [
+              85.68,
+              26.19
+            ],
+            [
+              85.6,
+              26.15
+            ],
+            [
+              85.52,
+              26.17
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

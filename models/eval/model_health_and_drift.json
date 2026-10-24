@@ -1,0 +1,77 @@
+{
+  "status": "DRIFT_ALERT",
+  "drift_detected": true,
+  "evidently_drift_engine": "Evidently / KS-PSI Framework v2.4",
+  "feature_drift_results": {
+    "enso_oni": {
+      "feature": "enso_oni",
+      "psi_score": 0.653,
+      "ks_statistic": 0.257,
+      "p_value": 0.0,
+      "status": "DRIFT_DETECTED",
+      "ref_mean": 0.08,
+      "curr_mean": -0.26
+    },
+    "iod_dmi": {
+      "feature": "iod_dmi",
+      "psi_score": 0.0555,
+      "ks_statistic": 0.1027,
+      "p_value": 0.0,
+      "status": "DRIFT_DETECTED",
+      "ref_mean": -0.0,
+      "curr_mean": 0.08
+    },
+    "soil_wetness_rootzone": {
+      "feature": "soil_wetness_rootzone",
+      "psi_score": 0.009,
+      "ks_statistic": 0.0327,
+      "p_value": 0.0001,
+      "status": "DRIFT_DETECTED",
+      "ref_mean": 0.43,
+      "curr_mean": 0.45
+    },
+    "temp_max_c": {
+      "feature": "temp_max_c",
+      "psi_score": 0.0028,
+      "ks_statistic": 0.0081,
+      "p_value": 0.9283,
+      "status": "STABLE",
+      "ref_mean": 31.3,
+      "curr_mean": 31.27
+    },
+    "rain_anomaly_zscore": {
+      "feature": "rain_anomaly_zscore",
+      "psi_score": 0.0126,
+      "ks_statistic": 0.0422,
+      "p_value": 0.0,
+      "status": "DRIFT_DETECTED",
+      "ref_mean": -0.02,
+      "curr_mean": 0.09
+    }
+  },
+  "model_a_health": {
+    "name": "MoES Hyperlocal Model A (LightGBM)",
+    "accuracy": 0.9846,
+    "f1_score_weighted": 0.9844,
+    "brier_score_break": 0.0001,
+    "mae": 0.0158,
+    "false_alarm_rate_break": 0.0
+  },
+  "imd_benchmark_health": {
+    "name": "IMD Operational Subdivision Extended-Range",
+    "accuracy": 0.6303,
+    "f1_score_weighted": 0.6777,
+    "brier_score_break": 0.0094,
+    "mae": 0.7159,
+    "false_alarm_rate_break": 0.0
+  },
+  "model_b_health": {
+    "roc_auc": 0.9379,
+    "brier_score": 0.0715,
+    "accuracy": 0.9007,
+    "precision": 0.7651,
+    "recall": 0.6526,
+    "f1_score": 0.7044
+  },
+  "last_monitored_timestamp": "2026-10-24T19:12:32.384257"
+}

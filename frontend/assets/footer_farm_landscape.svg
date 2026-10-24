@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220" width="100%" height="220" preserveAspectRatio="none">
+  <defs>
+    <!-- Sky & Atmosphere Gradients -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#042316" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#063622" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#083d28" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Sun Glow on Horizon -->
+    <radialGradient id="sunGlow" cx="90%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#f59e0b" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#15803d" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#052e16" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Rolling Hills Gradients -->
+    <linearGradient id="hillFar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#052e16"/>
+    </linearGradient>
+
+    <linearGradient id="hillMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#166534"/>
+      <stop offset="100%" stop-color="#052e16"/>
+    </linearGradient>
+
+    <linearGradient id="hillFore" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+
+    <!-- Crop Rows Pattern -->
+    <pattern id="cropRows" width="30" height="15" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M 0,7 Q 15,2 30,7" stroke="#22c55e" stroke-width="1.8" fill="none" opacity="0.35"/>
+      <path d="M 0,14 Q 15,9 30,14" stroke="#4ade80" stroke-width="1.2" fill="none" opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- Sky glow -->
+  <rect width="1440" height="220" fill="url(#skyGrad)"/>
+  
+  <!-- Rising Sun on the Right -->
+  <circle cx="1320" cy="175" r="90" fill="url(#sunGlow)"/>
+  <circle cx="1320" cy="170" r="38" fill="#fef08a" opacity="0.85"/>
+  <circle cx="1320" cy="170" r="28" fill="#fffbeb" opacity="0.95"/>
+
+  <!-- Far Distant Soft Mist Layer -->
+  <path d="M 0,165 Q 360,140 720,158 T 1440,150 L 1440,220 L 0,220 Z" fill="#0f3d24" opacity="0.6"/>
+
+  <!-- Distant Mountain/Hill Ridges -->
+  <path d="M 0,155 Q 240,130 520,148 Q 800,165 1100,135 Q 1280,120 1440,142 L 1440,220 L 0,220 Z" fill="url(#hillFar)"/>
+
+  <!-- Midground Hills with Tree Clusters -->
+  <path d="M 0,170 Q 300,145 640,165 Q 960,185 1250,152 Q 1360,142 1440,155 L 1440,220 L 0,220 Z" fill="url(#hillMid)"/>
+
+  <!-- Farmhouse / Village Cottage on Right Ridge (approx x=1050..1160) -->
+  <g transform="translate(1060, 135)">
+    <!-- Cottage Shadow -->
+    <ellipse cx="45" cy="52" rx="55" ry="10" fill="#022c22" opacity="0.6"/>
+    <!-- Main Cottage Wall -->
+    <polygon points="10,26 80,26 80,50 10,50" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+    <!-- Side Wall (Perspective) -->
+    <polygon points="80,26 100,18 100,42 80,50" fill="#fbbf24" stroke="#b45309" stroke-width="1"/>
+    <!-- Pitch Roof (Terracotta / Tile) -->
+    <polygon points="5,26 45,6 85,26" fill="#dc2626" stroke="#b91c1c" stroke-width="1"/>
+    <polygon points="45,6 105,0 102,18 85,26" fill="#b91c1c" stroke="#991b1b" stroke-width="1"/>
+    <!-- Windows & Door -->
+    <rect x="22" y="32" width="12" height="12" fill="#78350f" rx="1"/>
+    <rect x="24" y="34" width="8" height="8" fill="#fef3c7"/>
+    <rect x="52" y="30" width="14" height="20" fill="#78350f" rx="1"/>
+    <!-- Fence -->
+    <line x1="-5" y1="46" x2="115" y2="46" stroke="#92400e" stroke-width="1.5"/>
+    <line x1="5" y1="42" x2="5" y2="52" stroke="#92400e" stroke-width="1.5"/>
+    <line x1="20" y1="42" x2="20" y2="52" stroke="#92400e" stroke-width="1.5"/>
+    <line x1="90" y1="42" x2="90" y2="52" stroke="#92400e" stroke-width="1.5"/>
+    <line x1="105" y1="42" x2="105" y2="52" stroke="#92400e" stroke-width="1.5"/>
+    <!-- Small shed / silo next to house -->
+    <rect x="108" y="24" width="16" height="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1" rx="2"/>
+    <path d="M 108,24 Q 116,16 124,24 Z" fill="#64748b"/>
+  </g>
+
+  <!-- Trees Near Cottage & Hills -->
+  <g fill="#14532d" stroke="#052e16" stroke-width="0.8">
+    <!-- Tree cluster left of cottage -->
+    <circle cx="1025" cy="148" r="14" fill="#15803d"/>
+    <circle cx="1042" cy="144" r="18" fill="#166534"/>
+    <circle cx="1055" cy="150" r="13" fill="#14532d"/>
+    <!-- Tree cluster right of cottage -->
+    <circle cx="1190" cy="146" r="17" fill="#16a34a"/>
+    <circle cx="1208" cy="142" r="22" fill="#15803d"/>
+    <circle cx="1228" cy="148" r="16" fill="#14532d"/>
+    <circle cx="1245" cy="154" r="14" fill="#166534"/>
+    <!-- Distant trees across midground -->
+    <circle cx="480" cy="162" r="12" fill="#166534"/>
+    <circle cx="496" cy="158" r="15" fill="#15803d"/>
+    <circle cx="512" cy="164" r="11" fill="#14532d"/>
+    <circle cx="820" cy="172" r="10" fill="#14532d"/>
+    <circle cx="834" cy="168" r="14" fill="#166534"/>
+  </g>
+
+  <!-- Foreground Terraced Agricultural Ridge -->
+  <path d="M 0,185 Q 260,165 580,180 Q 920,195 1200,168 Q 1340,158 1440,170 L 1440,220 L 0,220 Z" fill="url(#hillFore)"/>
+  
+  <!-- Overlay Pattern for Crop Rows on Foreground Hills -->
+  <path d="M 0,185 Q 260,165 580,180 Q 920,195 1200,168 Q 1340,158 1440,170 L 1440,220 L 0,220 Z" fill="url(#cropRows)"/>
+
+  <!-- Foreground Field Contour Lines -->
+  <path d="M 0,195 Q 320,180 720,192 T 1440,182" stroke="#22c55e" stroke-width="2.5" fill="none" opacity="0.45"/>
+  <path d="M 0,205 Q 400,192 880,204 T 1440,196" stroke="#4ade80" stroke-width="2.8" fill="none" opacity="0.35"/>
+  <path d="M 0,214 Q 380,205 920,214 T 1440,208" stroke="#86efac" stroke-width="2.0" fill="none" opacity="0.25"/>
+
+  <!-- Lush Silhouette Grass / Foliage on Left & Right Borders -->
+  <g fill="#022c22">
+    <!-- Left foreground foliage -->
+    <path d="M 0,220 L 0,180 Q 15,160 22,175 Q 35,150 48,172 Q 62,145 75,170 Q 90,155 105,178 Q 120,162 135,182 Q 155,170 175,190 L 175,220 Z"/>
+    <!-- Left tall blades of grass & paddy stems -->
+    <path d="M 12,220 Q 20,175 14,152 Q 22,170 26,220" stroke="#15803d" stroke-width="2.5" fill="none"/>
+    <path d="M 38,220 Q 42,168 34,142 Q 45,165 48,220" stroke="#22c55e" stroke-width="2.5" fill="none"/>
+    <path d="M 68,220 Q 75,172 65,148 Q 78,168 82,220" stroke="#16a34a" stroke-width="2.5" fill="none"/>
+    <path d="M 98,220 Q 106,180 94,158 Q 108,176 112,220" stroke="#22c55e" stroke-width="2" fill="none"/>
+    
+    <!-- Right foreground foliage -->
+    <path d="M 1280,220 Q 1300,185 1320,195 Q 1345,172 1365,188 Q 1390,165 1410,182 Q 1425,170 1440,178 L 1440,220 Z"/>
+    <path d="M 1340,220 Q 1348,175 1338,154 Q 1352,172 1358,220" stroke="#16a34a" stroke-width="2.5" fill="none"/>
+    <path d="M 1378,220 Q 1386,168 1372,145 Q 1390,166 1395,220" stroke="#22c55e" stroke-width="2.5" fill="none"/>
+    <path d="M 1415,220 Q 1422,172 1410,150 Q 1428,170 1432,220" stroke="#15803d" stroke-width="2" fill="none"/>
+  </g>
+</svg>

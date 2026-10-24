@@ -1,0 +1,35 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Large state document PDFs and media
+*.pdf
+*.png
+*.jpg
+*.jpeg
+!frontend/**/*.png
+!frontend/**/*.jpg
+!frontend/**/*.jpeg
+!frontend/assets/**
+
+# Git and CI/CD
+.git/
+.github/
+.gitignore
+
+# Testing and cache
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+
+# Scratch and development experiments
+scratch/
+build_complete_india_hierarchy.py
+update_names.py
+
+# DVC internals
+.dvc/
+.dvcignore
