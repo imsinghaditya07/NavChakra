@@ -86,7 +86,7 @@
           <div class="top-header-right">
             <button class="top-login-pill-btn" id="topNavLogin" onclick="switchView('login')" title="Login">
               <span class="login-user-glyph">👤</span>
-              <span class="login-text">Login</span>
+              <span class="login-text" data-i18n="top_login">Login</span>
             </button>
             <button class="top-mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleMobileNavMenu()" aria-label="Toggle Mobile Menu" title="मेन्यू खोलें">
               <span>☰</span>
@@ -98,22 +98,22 @@
       <!-- Mobile Slide-Down Navigation Menu -->
       <div class="mobile-nav-drawer" id="mobileNavDrawer">
         <button class="mobile-nav-item active" onclick="switchView('home'); closeMobileNavMenu();">
-          <span>🏠</span> <span>Home</span>
+          <span>🏠</span> <span data-i18n="top_home">Home</span>
         </button>
         <button class="mobile-nav-item" onclick="switchView('forecast'); closeMobileNavMenu();">
-          <span>🌧️</span> <span>Monsoon Predictor</span>
+          <span>🌧️</span> <span data-i18n="top_forecast">Monsoon Predictor</span>
         </button>
         <button class="mobile-nav-item" onclick="switchView('todayWeather'); closeMobileNavMenu();">
-          <span>☀️</span> <span>Today's Weather</span>
+          <span>☀️</span> <span data-i18n="top_today">Today's Weather</span>
         </button>
         <button class="mobile-nav-item" onclick="switchView('dashboard'); closeMobileNavMenu();">
-          <span>📊</span> <span>Climate Signals</span>
+          <span>📊</span> <span data-i18n="top_dashboard">Climate Signals</span>
         </button>
         <button class="mobile-nav-item" onclick="switchView('map'); closeMobileNavMenu();">
-          <span>🗺️</span> <span>Agro Risk Map</span>
+          <span>🗺️</span> <span data-i18n="top_map">Agro Risk Map</span>
         </button>
         <button class="mobile-nav-item" onclick="switchView('kisan'); closeMobileNavMenu();">
-          <span>🌾</span> <span>Crop Advisory</span>
+          <span>🌾</span> <span data-i18n="top_kisan">Crop Advisory</span>
         </button>
         <div class="mobile-drawer-divider"></div>
         <button class="mobile-nav-item" onclick="switchView('chatbot'); closeMobileNavMenu();">
@@ -126,7 +126,7 @@
           <span>🌐</span> <span>Language / भाषा</span>
         </button>
         <button class="mobile-nav-item mobile-login-item" onclick="switchView('login'); closeMobileNavMenu();">
-          <span>👤</span> <span>Login</span>
+          <span>👤</span> <span data-i18n="top_login">Login</span>
         </button>
       </div>
 
@@ -145,8 +145,8 @@
             <!-- 1. HERO SECTION -->
             <div class="gov-home-hero">
               <div class="gov-home-hero-content">
-                <h1 class="gov-hero-heading">From Climate Signals to Confident Farming Decisions</h1>
-                <p class="gov-hero-subtitle">
+                <h1 class="gov-hero-heading" data-i18n="gov_hero_heading">From Climate Signals to Confident Farming Decisions</h1>
+                <p class="gov-hero-subtitle" data-i18n="gov_hero_subtitle">
                   NavChakra combines global climate signals with local weather intelligence to deliver 7–30 day monsoon outlooks, Panchayat-level risk insights and actionable crop advisories for farmers across India.
                 </p>
               </div>
@@ -155,17 +155,17 @@
             <!-- 3. KEY SERVICES SECTION -->
             <div class="gov-section-container">
               <div class="gov-section-header">
-                <h2 class="gov-section-title">Key Services</h2>
+                <h2 class="gov-section-title" data-i18n="gov_services_title">Key Services</h2>
               </div>
 
               <div class="gov-services-grid">
                 <!-- Service 1: Monsoon Predictor -->
                 <div class="gov-service-card" role="button" tabindex="0" onclick="switchView('forecast')" onkeydown="if(event.key==='Enter'||event.key===' ')switchView('forecast')">
                   <div class="service-icon-box blue">🌧️</div>
-                  <h3 class="service-card-title">Monsoon Predictor</h3>
-                  <p class="service-card-desc">7–30 day probabilistic monsoon outlook for Block & Panchayat level — onset, break phases, revival and rainfall risk.</p>
+                  <h3 class="service-card-title" data-i18n="gov_service_forecast_title">Monsoon Predictor</h3>
+                  <p class="service-card-desc" data-i18n="gov_service_forecast_desc">7–30 day probabilistic monsoon outlook for Block & Panchayat level — onset, break phases, revival and rainfall risk.</p>
                   <button class="service-card-action" onclick="event.stopPropagation(); switchView('forecast')">
-                    <span class="service-action-text">Explore Forecast</span>
+                    <span class="service-action-text" data-i18n="gov_service_forecast_action">Explore Forecast</span>
                     <span class="service-action-arrow">→</span>
                   </button>
                 </div>
@@ -173,10 +173,10 @@
                 <!-- Service 2: Local Weather -->
                 <div class="gov-service-card" role="button" tabindex="0" onclick="switchView('todayWeather')" onkeydown="if(event.key==='Enter'||event.key===' ')switchView('todayWeather')">
                   <div class="service-icon-box yellow">☀️</div>
-                  <h3 class="service-card-title">Local Weather</h3>
-                  <p class="service-card-desc">Real-time and hourly weather for your village — temperature, rainfall probability, wind and humidity.</p>
+                  <h3 class="service-card-title" data-i18n="gov_service_weather_title">Local Weather</h3>
+                  <p class="service-card-desc" data-i18n="gov_service_weather_desc">Real-time and hourly weather for your village — temperature, rainfall probability, wind and humidity.</p>
                   <button class="service-card-action" onclick="event.stopPropagation(); switchView('todayWeather')">
-                    <span class="service-action-text">Check Weather</span>
+                    <span class="service-action-text" data-i18n="gov_service_weather_action">Check Weather</span>
                     <span class="service-action-arrow">→</span>
                   </button>
                 </div>
@@ -184,10 +184,10 @@
                 <!-- Service 3: Agro Risk Map -->
                 <div class="gov-service-card" role="button" tabindex="0" onclick="switchView('map')" onkeydown="if(event.key==='Enter'||event.key===' ')switchView('map')">
                   <div class="service-icon-box green">🗺️</div>
-                  <h3 class="service-card-title">Agro Risk Map</h3>
-                  <p class="service-card-desc">Explore Block & Panchayat-level risks for delayed onset, dry spells, heavy rainfall, drought, heatwave and floods.</p>
+                  <h3 class="service-card-title" data-i18n="gov_service_map_title">Agro Risk Map</h3>
+                  <p class="service-card-desc" data-i18n="gov_service_map_desc">Explore Block & Panchayat-level risks for delayed onset, dry spells, heavy rainfall, drought, heatwave and floods.</p>
                   <button class="service-card-action" onclick="event.stopPropagation(); switchView('map')">
-                    <span class="service-action-text">View Risk Map</span>
+                    <span class="service-action-text" data-i18n="gov_service_map_action">View Risk Map</span>
                     <span class="service-action-arrow">→</span>
                   </button>
                 </div>
@@ -195,10 +195,10 @@
                 <!-- Service 4: Crop Advisory -->
                 <div class="gov-service-card" role="button" tabindex="0" onclick="switchView('kisan')" onkeydown="if(event.key==='Enter'||event.key===' ')switchView('kisan')">
                   <div class="service-icon-box mint">🌱</div>
-                  <h3 class="service-card-title">Crop Advisory</h3>
-                  <p class="service-card-desc">AI-powered crop recommendations based on upcoming monsoon conditions, sowing windows, irrigation needs and weather risks.</p>
+                  <h3 class="service-card-title" data-i18n="gov_service_crop_title">Crop Advisory</h3>
+                  <p class="service-card-desc" data-i18n="gov_service_crop_desc">AI-powered crop recommendations based on upcoming monsoon conditions, sowing windows, irrigation needs and weather risks.</p>
                   <button class="service-card-action" onclick="event.stopPropagation(); switchView('kisan')">
-                    <span class="service-action-text">Crop Advisory</span>
+                    <span class="service-action-text" data-i18n="gov_service_crop_title">Crop Advisory</span>
                     <span class="service-action-arrow">→</span>
                   </button>
                 </div>
@@ -223,7 +223,7 @@
                     <span class="panel-title-text" data-i18n="kisan_assistant_title">Kisan Saarthi</span>
                   </div>
                   <button type="button" class="kisan-assistant-chat-now" onclick="switchView('chatbot')" title="Open Kisan Saarthi AI Assistant">
-                    <span>Chat Now</span>
+                    <span data-i18n="chat_now_btn">Chat Now</span>
                     <span class="chat-now-arrow">→</span>
                   </button>
                 </div>
@@ -238,7 +238,7 @@
                         <div class="kisan-assistant-title">Kisan Saarthi</div>
                         <div class="kisan-assistant-status">
                           <span class="status-green-dot"></span>
-                          <span>24/7 AI</span>
+                          <span data-i18n="kisan_ai_badge">24/7 AI</span>
                         </div>
                       </div>
                     </div>
@@ -281,7 +281,7 @@
                         <rect x="15.5" y="4" width="3" height="15" rx="1" fill="#3b82f6"/>
                       </svg>
                     </span>
-                    <span class="panel-title-text">All-India Meteorological Pulse</span>
+                    <span class="panel-title-text" data-i18n="pulse_title">All-India Meteorological Pulse</span>
                   </div>
                   <a href="javascript:void(0)" onclick="switchView('todayWeather')" class="gov-panel-header-link green-live">
                     <span class="live-soft-leaf">
@@ -290,15 +290,15 @@
                         <circle cx="7" cy="8" r="3.5" fill="#86efac" fill-opacity="0.9" />
                       </svg>
                     </span>
-                    Live IMD Data →
+                    <span data-i18n="pulse_live_data">Live IMD Data →</span>
                   </a>
                 </div>
 
                 <div class="gov-pulse-body">
                   <div class="pulse-left-col">
                     <div class="pulse-big-temp">28.4°C</div>
-                    <div class="pulse-temp-label">All-India Average Temperature</div>
-                    <button class="pulse-view-btn" onclick="switchView('todayWeather')">
+                    <div class="pulse-temp-label" data-i18n="pulse_avg_temp">All-India Average Temperature</div>
+                    <button class="pulse-view-btn" onclick="switchView('todayWeather')" data-i18n="pulse_view_all_btn">
                       View All-India Weather & Temperature →
                     </button>
                   </div>
@@ -309,22 +309,22 @@
 
                   <div class="pulse-right-regions">
                     <div class="region-temp-row">
-                      <span class="region-name">North</span>
+                      <span class="region-name" data-i18n="region_north">North</span>
                       <span class="region-weather-icon" id="pulseRegionNorthIcon">🌙</span>
                       <span class="region-val" id="pulseRegionNorthTemp">26°C</span>
                     </div>
                     <div class="region-temp-row">
-                      <span class="region-name">East</span>
+                      <span class="region-name" data-i18n="region_east">East</span>
                       <span class="region-weather-icon" id="pulseRegionEastIcon">☁️🌙</span>
                       <span class="region-val" id="pulseRegionEastTemp">27°C</span>
                     </div>
                     <div class="region-temp-row">
-                      <span class="region-name">West</span>
+                      <span class="region-name" data-i18n="region_west">West</span>
                       <span class="region-weather-icon" id="pulseRegionWestIcon">🌙</span>
                       <span class="region-val" id="pulseRegionWestTemp">28°C</span>
                     </div>
                     <div class="region-temp-row">
-                      <span class="region-name">South</span>
+                      <span class="region-name" data-i18n="region_south">South</span>
                       <span class="region-weather-icon" id="pulseRegionSouthIcon">🌧️</span>
                       <span class="region-val" id="pulseRegionSouthTemp">25°C</span>
                     </div>
@@ -397,16 +397,16 @@
                 <div class="gov-card-panel-header wrap-header">
                   <div class="gov-panel-title-wrap">
                     <span class="panel-icon">📰</span>
-                    <span class="panel-title-text">Latest Weather Updates</span>
+                    <span class="panel-title-text" data-i18n="news_title">Latest Weather Updates</span>
                   </div>
                   
                   <div class="news-filter-pills" id="newsFilterPills">
-                    <button class="news-filter-pill active" onclick="filterHomeNews('all', this)">All</button>
-                    <button class="news-filter-pill" onclick="filterHomeNews('monsoon', this)">Monsoon</button>
-                    <button class="news-filter-pill" onclick="filterHomeNews('heatwave', this)">Heatwave</button>
-                    <button class="news-filter-pill" onclick="filterHomeNews('drought', this)">Drought</button>
-                    <button class="news-filter-pill" onclick="filterHomeNews('flood', this)">Flood</button>
-                    <button class="news-filter-pill" onclick="filterHomeNews('cyclone', this)">Cyclone</button>
+                    <button class="news-filter-pill active" onclick="filterHomeNews('all', this)" data-i18n="news_all">All</button>
+                    <button class="news-filter-pill" onclick="filterHomeNews('monsoon', this)" data-i18n="news_monsoon">Monsoon</button>
+                    <button class="news-filter-pill" onclick="filterHomeNews('heatwave', this)" data-i18n="news_heatwave">Heatwave</button>
+                    <button class="news-filter-pill" onclick="filterHomeNews('drought', this)" data-i18n="news_drought">Drought</button>
+                    <button class="news-filter-pill" onclick="filterHomeNews('flood', this)" data-i18n="news_flood">Flood</button>
+                    <button class="news-filter-pill" onclick="filterHomeNews('cyclone', this)" data-i18n="news_cyclone">Cyclone</button>
                   </div>
                 </div>
 
@@ -438,7 +438,7 @@
                 <div class="gov-card-panel-header">
                   <div class="gov-panel-title-wrap">
                     <span class="panel-icon">🔗</span>
-                    <span class="panel-title-text">Farmers Resources</span>
+                    <span class="panel-title-text" data-i18n="resources_title">Farmers Resources</span>
                   </div>
                 </div>
 
@@ -1431,7 +1431,7 @@
                      oninput="handleAsLiveSearch(this.value)"
                      onkeydown="if(event.key==='Enter') executeAsUnifiedSearch()">
               <button class="as-search-clear-btn" id="btnAsClearSearch" onclick="clearAsSearch()" title="Clear Search">✕</button>
-              <button class="as-search-execute-btn" onclick="executeAsUnifiedSearch()">Search</button>
+              <button class="as-search-execute-btn" onclick="executeAsUnifiedSearch()" data-i18n="as_search_btn">Search</button>
             </div>
             <!-- Autocomplete Results Dropdown -->
             <div id="asSearchAutocompleteList" class="as-search-autocomplete" style="display:none;"></div>
@@ -1441,33 +1441,33 @@
           <div class="as-hierarchy-panel">
             <div class="as-hierarchy-label-row">
               <span class="as-hierarchy-icon">🏛️</span>
-              <span class="as-hierarchy-title">Administrative Selection Filter:</span>
+              <span class="as-hierarchy-title" data-i18n="as_hierarchy_title">Administrative Selection Filter:</span>
             </div>
             <div class="as-hierarchy-grid">
               <!-- Dropdown 1: State -->
               <div class="as-select-wrap">
-                <label for="asStateSelect">1. STATE</label>
+                <label for="asStateSelect" data-i18n="as_label_state">1. STATE</label>
                 <select id="asStateSelect" class="as-select" onchange="onAryaStateChanged(this.value)">
                   <option value="">Select State (All 36 States & UTs)</option>
                 </select>
               </div>
               <!-- Dropdown 2: District -->
               <div class="as-select-wrap">
-                <label for="asDistrictSelect">2. DISTRICT</label>
+                <label for="asDistrictSelect" data-i18n="as_label_district">2. DISTRICT</label>
                 <select id="asDistrictSelect" class="as-select" onchange="onAryaDistrictChanged(this.value)" disabled>
                   <option value="">Select District</option>
                 </select>
               </div>
               <!-- Dropdown 3: Block -->
               <div class="as-select-wrap">
-                <label for="asBlockSelect">3. BLOCK</label>
+                <label for="asBlockSelect" data-i18n="as_label_block">3. BLOCK</label>
                 <select id="asBlockSelect" class="as-select" onchange="onAryaBlockChanged(this.value)" disabled>
                   <option value="">Select Block</option>
                 </select>
               </div>
               <!-- Dropdown 4: Gram Panchayat -->
               <div class="as-select-wrap">
-                <label for="asPanchayatSelect">4. GRAM PANCHAYAT</label>
+                <label for="asPanchayatSelect" data-i18n="as_label_panchayat">4. GRAM PANCHAYAT</label>
                 <select id="asPanchayatSelect" class="as-select" onchange="onAryaGpChanged(this.value)" disabled>
                   <option value="">Select Gram Panchayat</option>
                 </select>

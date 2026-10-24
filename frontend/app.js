@@ -2109,6 +2109,13 @@ function switchView(viewName) {
     }, 120);
   }
 
+  // Ensure active language is applied to the newly displayed view
+  setTimeout(() => {
+    if (typeof updateTranslations === 'function') {
+      updateTranslations();
+    }
+  }, 60);
+
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -2437,6 +2444,9 @@ function selectLanguage(langCode) {
   if (typeof renderAlertIntelligenceCenter === 'function') {
     renderAlertIntelligenceCenter();
   }
+
+  // Ensure dynamically rendered view elements are also translated
+  setTimeout(updateTranslations, 60);
 }
 
 function selectChatLanguage(langCode) {
@@ -2478,6 +2488,34 @@ function updateTranslations() {
     const key = el.getAttribute('data-i18n');
     if (dict[key]) {
       el.innerHTML = dict[key];
+    }
+  });
+
+  // 1B. Universal DOM Translator: translates all visible phrases across all 23 languages
+  const enDict = Object.assign({}, i18n['en'] || {}, (window.RITUIQ_I18N && window.RITUIQ_I18N['en']) || {});
+  const translatableSelector = 'h1, h2, h3, h4, h5, h6, p, span, button, a, label, option, .metric-label-title, .metric-subtext, .wh-label, .today-stat-sub, .region-name';
+  document.querySelectorAll(translatableSelector).forEach(el => {
+    // Avoid translating the language modal itself or code tags
+    if (el.closest('#languageModal') || el.closest('.compact-lang-popup') || el.closest('#langTilesGrid')) return;
+    if (el.children.length > 0 && !el.classList.contains('nav-text') && !el.classList.contains('service-action-text') && !el.classList.contains('region-name')) return;
+
+    if (!el.dataset.i18nOriginal) {
+      el.dataset.i18nOriginal = el.textContent.trim();
+    }
+    const orig = el.dataset.i18nOriginal;
+    if (!orig || /^\d+(\.\d+)?%?°?C?$/.test(orig) || orig.length < 2) return;
+
+    if (current === 'en') {
+      el.textContent = el.dataset.i18nOriginal;
+      return;
+    }
+
+    // Direct phrase matching against English dictionary
+    for (const [key, enVal] of Object.entries(enDict)) {
+      if (typeof enVal === 'string' && enVal.trim() === orig && dict[key]) {
+        el.textContent = dict[key];
+        break;
+      }
     }
   });
 
