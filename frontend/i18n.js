@@ -328,7 +328,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. STATE",
     "as_label_district": "2. DISTRICT",
     "as_label_block": "3. BLOCK",
-    "as_label_panchayat": "4. GRAM PANCHAYAT"
+    "as_label_panchayat": "4. GRAM PANCHAYAT",
+    "bot_full_greeting": "Hello! I am your <strong>Kisan Saarthi</strong> AI Assistant. Ask me anything about your local weather, rainfall forecast, sowing advisory, or crop protection in <b>English</b>. <span class=\"bhashini-chat-meta-tag\">⚡ Powered by Digital India Bhashini AI</span>",
+    "chat_send_btn": "Send",
+    "chat_mic_title": "Voice Input / Speak",
+    "lbl_question": "Question",
+    "lbl_answer": "Answer",
+    "lbl_loading_response": "NavChakra AI is formulating guidance..."
   },
   "hi": {
     "top_home": "होम",
@@ -658,7 +664,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. राज्य",
     "as_label_district": "2. ज़िला",
     "as_label_block": "3. ब्लॉक / तहसील",
-    "as_label_panchayat": "4. ग्राम पंचायत"
+    "as_label_panchayat": "4. ग्राम पंचायत",
+    "bot_full_greeting": "नमस्कार! मैं आपका <strong>किसान सारथी (Kisan Saarthi)</strong> AI सहायक हूँ। आप मुझसे अपने ब्लॉक के मौसम, बारिश की संभावना, या खेती के बारे में <b>हिन्दी</b> में पूछ सकते हैं। <span class=\"bhashini-chat-meta-tag\">⚡ भाषिणी AI समर्थित</span>",
+    "chat_send_btn": "भेजें",
+    "chat_mic_title": "बोलकर पूछें (माइक)",
+    "lbl_question": "सवाल",
+    "lbl_answer": "उत्तर",
+    "lbl_loading_response": "NavChakra AI से उत्तर प्राप्त हो रहा है..."
   },
   "bn": {
     "name": "বাংলা",
@@ -989,7 +1001,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "১. রাজ্য",
     "as_label_district": "২. জেলা",
     "as_label_block": "৩. ব্লক",
-    "as_label_panchayat": "৪. গ্রাম পঞ্চায়েত"
+    "as_label_panchayat": "৪. গ্রাম পঞ্চায়েত",
+    "bot_full_greeting": "নমস্কার! আমি আপনার <strong>কিসান সারথি (Kisan Saarthi)</strong> AI সহকারী। আপনি আপনার ব্লকের আবহাওয়া, বৃষ্টিপাতের পূর্বাভাস বা চাষাবাদ সম্পর্কে <b>বাংলায়</b> প্রশ্ন করতে পারেন। <span class=\"bhashini-chat-meta-tag\">⚡ ভাষিণী AI সমর্থিত</span>",
+    "chat_send_btn": "পাঠান",
+    "chat_mic_title": "মুখে বলে প্রশ্ন করুন",
+    "lbl_question": "প্রশ্ন",
+    "lbl_answer": "উত্তর",
+    "lbl_loading_response": "NavChakra AI থেকে উত্তর প্রস্তুত হচ্ছে..."
   },
   "mr": {
     "name": "मराठी",
@@ -1320,7 +1338,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "१. राज्य",
     "as_label_district": "२. जिल्हा",
     "as_label_block": "३. तालुका / ब्लॉक",
-    "as_label_panchayat": "४. ग्रामपंचायत"
+    "as_label_panchayat": "४. ग्रामपंचायत",
+    "bot_full_greeting": "नमस्कार! मी तुमचा <strong>किसान सारथी (Kisan Saarthi)</strong> AI सहाय्यक आहे. आपण आपल्या परिसरातील हवामान, पाऊस आणि शेतीविषयक सल्ला <b>मराठीत</b> विचारू शकता. <span class=\"bhashini-chat-meta-tag\">⚡ भाषिणी AI समर्थित</span>",
+    "chat_send_btn": "पाठवा",
+    "chat_mic_title": "बोलून विचारा",
+    "lbl_question": "प्रश्न",
+    "lbl_answer": "उत्तर",
+    "lbl_loading_response": "NavChakra AI कडून उत्तर तयार होत आहे..."
   },
   "te": {
     "name": "తెలుగు",
@@ -1651,7 +1675,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. రాష్ట్రం",
     "as_label_district": "2. జిల్లా",
     "as_label_block": "3. మండలం / బ్లాక్",
-    "as_label_panchayat": "4. గ్రామ పంచాయతీ"
+    "as_label_panchayat": "4. గ్రామ పంచాయతీ",
+    "bot_full_greeting": "నమస్కారం! నేను మీ <strong>కిసాన్ సారథి (Kisan Saarthi)</strong> AI సహాయకుడిని. మీ ప్రాంత వాతావరణం, వర్షపాతం మరియు వ్యవసాయ సలహాల గురించి <b>తెలుగులో</b> అడగవచ్చు. <span class=\"bhashini-chat-meta-tag\">⚡ భాషిణి AI</span>",
+    "chat_send_btn": "పంపండి",
+    "chat_mic_title": "వాయిస్ ద్వారా అడగండి",
+    "lbl_question": "ప్రశ్న",
+    "lbl_answer": "సమాధానం",
+    "lbl_loading_response": "NavChakra AI సమాధానం సిద్ధం చేస్తోంది..."
   },
   "ta": {
     "name": "தமிழ்",
@@ -1982,7 +2012,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. மாநிலம்",
     "as_label_district": "2. மாவட்டம்",
     "as_label_block": "3. வட்டாரம்",
-    "as_label_panchayat": "4. கிராம ஊராட்சி"
+    "as_label_panchayat": "4. கிராம ஊராட்சி",
+    "bot_full_greeting": "வணக்கம்! நான் உங்கள் <strong>கிசான் சாரதி (Kisan Saarthi)</strong> AI உதவியாளர். உங்கள் வட்டார வானிலை, மழை மற்றும் விவசாய ஆலோசனைகளை <b>தமிழில்</b> கேட்கலாம். <span class=\"bhashini-chat-meta-tag\">⚡ பாஷினி AI</span>",
+    "chat_send_btn": "அனுப்பு",
+    "chat_mic_title": "குரல் மூலம் கேட்கவும்",
+    "lbl_question": "கேள்வி",
+    "lbl_answer": "பதில்",
+    "lbl_loading_response": "NavChakra AI பதில் பெறப்படுகிறது..."
   },
   "gu": {
     "top_home": "હોમ",
@@ -2312,7 +2348,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. રાજ્ય",
     "as_label_district": "2. જિલ્લો",
     "as_label_block": "3. બ્લોક / તાલુકો",
-    "as_label_panchayat": "4. ગ્રામ પંચાયત"
+    "as_label_panchayat": "4. ગ્રામ પંચાયત",
+    "bot_full_greeting": "નમસ્તે! હું તમારો <strong>કિસાન સારથી (Kisan Saarthi)</strong> AI સહાયક છું. તમારા વિસ્તારના હવામાન, વરસાદ અને ખેતી વિશે <b>ગુજરાતીમાં</b> પૂછી શકો છો. <span class=\"bhashini-chat-meta-tag\">⚡ ભાષિણી AI</span>",
+    "chat_send_btn": "મોકલો",
+    "chat_mic_title": "બોલીને પૂછો",
+    "lbl_question": "પ્રશ્ન",
+    "lbl_answer": "જવાબ",
+    "lbl_loading_response": "NavChakra AI જવાબ તૈયાર કરી રહ્યું છે..."
   },
   "kn": {
     "top_home": "ಮುಖಪುಟ",
@@ -2642,7 +2684,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. ರಾಜ್ಯ",
     "as_label_district": "2. ಜಿಲ್ಲೆ",
     "as_label_block": "3. ಬ್ಲಾಕ್ / ತಾಲೂಕು",
-    "as_label_panchayat": "4. ಗ್ರಾಮ ಪಂಚಾಯತ್"
+    "as_label_panchayat": "4. ಗ್ರಾಮ ಪಂಚಾಯತ್",
+    "bot_full_greeting": "ನಮಸ್ಕಾರ! ನಾನು ನಿಮ್ಮ <strong>ಕಿಸಾನ್ ಸಾರಥಿ (Kisan Saarthi)</strong> AI ಸಹಾಯಕ. ನಿಮ್ಮ ಪ್ರದೇಶದ ಹವಾಮಾನ, ಮಳೆ ಮತ್ತು ಕೃಷಿ ಬಗ್ಗೆ <b>ಕನ್ನಡದಲ್ಲಿ</b> ಕೇಳಬಹುದು. <span class=\"bhashini-chat-meta-tag\">⚡ ಭಾಷಿಣಿ AI</span>",
+    "chat_send_btn": "ಕಳುಹಿಸಿ",
+    "chat_mic_title": "ಧ್ವನಿ ಮೂಲಕ ಕೇಳಿ",
+    "lbl_question": "ಪ್ರಶ್ನೆ",
+    "lbl_answer": "ಉತ್ತರ",
+    "lbl_loading_response": "NavChakra AI ಉತ್ತರ ಸಿದ್ಧಪಡಿಸುತ್ತಿದೆ..."
   },
   "ml": {
     "top_home": "ഹോം",
@@ -2972,7 +3020,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. സംസ്ഥാനം",
     "as_label_district": "2. ജില്ല",
     "as_label_block": "3. ബ്ലോക്ക്",
-    "as_label_panchayat": "4. ഗ്രാമപഞ്ചായത്ത്"
+    "as_label_panchayat": "4. ഗ്രാമപഞ്ചായത്ത്",
+    "bot_full_greeting": "നമസ്കാരം! ഞാൻ നിങ്ങളുടെ <strong>കിസാൻ സാരഥി (Kisan Saarthi)</strong> AI സഹായിയാണ്. കാലാവസ്ഥ, മഴ, കൃഷി എന്നിവയെക്കുറിച്ച് <b>മലയാളത്തിൽ</b> ചോദിക്കാം. <span class=\"bhashini-chat-meta-tag\">⚡ ഭാഷിണി AI</span>",
+    "chat_send_btn": "അയക്കുക",
+    "chat_mic_title": "ശബ്ദത്തിലൂടെ ചോദിക്കുക",
+    "lbl_question": "ചോദ്യം",
+    "lbl_answer": "ഉത്തരം",
+    "lbl_loading_response": "NavChakra AI മറുപടി തയ്യാറാക്കുന്നു..."
   },
   "or": {
     "top_home": "ମୁଖ୍ୟ ପୃଷ୍ଠା",
@@ -3302,7 +3356,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "୧. ରାଜ୍ୟ",
     "as_label_district": "୨. ଜିଲ୍ଲା",
     "as_label_block": "୩. ବ୍ଲକ",
-    "as_label_panchayat": "୪. ଗ୍ରାମ ପଞ୍ଚାୟତ"
+    "as_label_panchayat": "୪. ଗ୍ରାମ ପଞ୍ଚାୟତ",
+    "bot_full_greeting": "ନମସ୍କାର! ମୁଁ ଆପଣଙ୍କ <strong>କିଷାନ ସାରଥୀ (Kisan Saarthi)</strong> AI ସହାୟକ। ଆପଣଙ୍କ ବ୍ଲକର ପାଣିପାଗ, ବର୍ଷା ଓ କୃଷି ସମ୍ପର୍କରେ <b>ଓଡ଼ିଆରେ</b> ପଚାରନ୍ତୁ। <span class=\"bhashini-chat-meta-tag\">⚡ ଭାଷିଣୀ AI</span>",
+    "chat_send_btn": "ପଠାନ୍ତୁ",
+    "chat_mic_title": "ସ୍ୱର ମାଧ୍ୟମରେ ପଚାରନ୍ତୁ",
+    "lbl_question": "ପ୍ରଶ୍ନ",
+    "lbl_answer": "ଉତ୍ତର",
+    "lbl_loading_response": "NavChakra AI ଉତ୍ତର ପ୍ରସ୍ତୁତ କରୁଛି..."
   },
   "pa": {
     "top_home": "ਮੁੱਖ ਸਫ਼ਾ",
@@ -3632,7 +3692,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. ਰਾਜ",
     "as_label_district": "2. ਜ਼ਿਲ੍ਹਾ",
     "as_label_block": "3. ਬਲਾਕ",
-    "as_label_panchayat": "4. ਗ੍ਰਾਮ ਪੰਚਾਇਤ"
+    "as_label_panchayat": "4. ਗ੍ਰਾਮ ਪੰਚਾਇਤ",
+    "bot_full_greeting": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ ਤੁਹਾਡਾ <strong>ਕਿਸਾਨ ਸਾਰਥੀ (Kisan Saarthi)</strong> AI ਸਹਾਇਕ ਹਾਂ। ਆਪਣੇ ਬਲਾਕ ਦੇ ਮੌਸਮ, ਮੀਂਹ ਅਤੇ ਖੇਤੀ ਬਾਰੇ <b>ਪੰਜਾਬੀ ਵਿੱਚ</b> ਪੁੱਛੋ। <span class=\"bhashini-chat-meta-tag\">⚡ ਭਾਸ਼ਿਣੀ AI</span>",
+    "chat_send_btn": "ਭੇਜੋ",
+    "chat_mic_title": "ਬੋਲ ਕੇ ਪੁੱਛੋ",
+    "lbl_question": "ਸਵਾਲ",
+    "lbl_answer": "ਜਵਾਬ",
+    "lbl_loading_response": "NavChakra AI ਵੱਲੋਂ ਜਵਾਬ ਤਿਆਰ ਹੋ ਰਿਹਾ ਹੈ..."
   },
   "ur": {
     "top_home": "ہوم",
@@ -3962,7 +4028,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. ریاست",
     "as_label_district": "2. ضلع",
     "as_label_block": "3. بلاک",
-    "as_label_panchayat": "4. گرام پنچایت"
+    "as_label_panchayat": "4. گرام پنچایت",
+    "bot_full_greeting": "السلام علیکم! میں آپ کا <strong>کسان سارتھی (Kisan Saarthi)</strong> AI معاون ہوں۔ آپ اپنے علاقے کے موسم، بارش اور زراعت کے بارے میں <b>اردو میں</b> پوچھ سکتے ہیں۔ <span class=\"bhashini-chat-meta-tag\">⚡ بھاشنی AI</span>",
+    "chat_send_btn": "بھیجیں",
+    "chat_mic_title": "بول کر پوچھیں",
+    "lbl_question": "سوال",
+    "lbl_answer": "جواب",
+    "lbl_loading_response": "NavChakra AI سے جواب تیار ہو رہا ہے..."
   },
   "as": {
     "top_home": "ঘৰ",
@@ -4292,7 +4364,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "১. ৰাজ্য",
     "as_label_district": "২. জিলা",
     "as_label_block": "৩. ব্লক",
-    "as_label_panchayat": "৪. গাঁও পঞ্চায়ত"
+    "as_label_panchayat": "৪. গাঁও পঞ্চায়ত",
+    "bot_full_greeting": "নমস্কাৰ! মই আপোনাৰ <strong>কিষাণ সাৰথী (Kisan Saarthi)</strong> AI সহায়ক। আপোনাৰ অঞ্চলৰ বতৰ, বৰষুণ আৰু খেতিৰ বিষয়ে <b>অসমীয়াত</b> সোধক। <span class=\"bhashini-chat-meta-tag\">⚡ ভাষিণী AI</span>",
+    "chat_send_btn": "পঠাওক",
+    "chat_mic_title": "কৈ সোধক",
+    "lbl_question": "প্ৰশ্ন",
+    "lbl_answer": "উত্তৰ",
+    "lbl_loading_response": "NavChakra AI ৰ পৰা উত্তৰ প্ৰস্তুত হৈছে..."
   },
   "mai": {
     "top_home": "घर",
@@ -4622,7 +4700,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. राज्य",
     "as_label_district": "2. ज़िला",
     "as_label_block": "3. प्रखंड",
-    "as_label_panchayat": "4. ग्राम पंचायत"
+    "as_label_panchayat": "4. ग्राम पंचायत",
+    "bot_full_greeting": "प्रणाम! हम अहाँक <strong>किसान सारथी (Kisan Saarthi)</strong> AI सहायक छी। अपन ब्लॉकक मौसम, बरखा आर खेतीक बारे मे <b>मैथिली में</b> पुछू। <span class=\"bhashini-chat-meta-tag\">⚡ भाषिणी AI</span>",
+    "chat_send_btn": "पठाउ",
+    "chat_mic_title": "बाज क' पुछू",
+    "lbl_question": "प्रश्न",
+    "lbl_answer": "उत्तर",
+    "lbl_loading_response": "NavChakra AI सं उत्तर आबि रहल अछि..."
   },
   "sat": {
     "top_home": "ᱚᱲᱟᱜ",
@@ -4952,7 +5036,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. ᱯᱚᱱᱚᱛ",
     "as_label_district": "2. ᱦᱚᱱᱚᱛ",
     "as_label_block": "3. ᱵᱞᱚᱠ",
-    "as_label_panchayat": "4. ᱟᱹᱛᱩ ᱯᱚᱧᱪᱟᱭᱮᱛ"
+    "as_label_panchayat": "4. ᱟᱹᱛᱩ ᱯᱚᱧᱪᱟᱭᱮᱛ",
+    "bot_full_greeting": "ᱡᱚᱦᱟᱨ! ᱤᱧ ᱟᱢᱤᱡ <strong>ᱠᱤᱥᱟᱱ ᱥᱟᱨᱛᱷᱤ (Kisan Saarthi)</strong> AI ᱜᱚᱲᱚᱭᱤᱡ ᱠᱟᱹᱱᱟᱹᱧ᱾ ᱦᱚᱭ-ᱫᱟᱜ ᱟᱨ ᱪᱟᱥ-ᱵᱟᱥ ᱵᱟᱵᱚᱛ <b>ᱥᱟᱱᱛᱟᱲᱤ ᱛᱮ</b> ᱠᱩᱞᱤ ᱢᱮ᱾ <span class=\"bhashini-chat-meta-tag\">⚡ ᱵᱷᱟᱥᱤᱬᱤ AI</span>",
+    "chat_send_btn": "ᱠᱩᱞ ᱢᱮ",
+    "chat_mic_title": "ᱨᱚᱲ ᱠᱟᱛᱮ ᱠᱩᱞᱤ ᱢᱮ",
+    "lbl_question": "ᱠᱩᱠᱞᱤ",
+    "lbl_answer": "ᱛᱮᱞᱟ",
+    "lbl_loading_response": "NavChakra AI ᱠᱷᱚᱱ ᱛᱮᱞᱟ ᱥᱟᱯᱲᱟᱣᱜ ᱠᱟᱱᱟ..."
   },
   "ks": {
     "top_home": "گھر",
@@ -5282,7 +5372,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. رِیاسَت",
     "as_label_district": "2. ضِلہٕ",
     "as_label_block": "3. بلاک",
-    "as_label_panchayat": "4. گرام پنچایت"
+    "as_label_panchayat": "4. گرام پنچایت",
+    "bot_full_greeting": "سلام! بَہ چُھس تُہنٛد <strong>کِسان سارتھی (Kisan Saarthi)</strong> AI مددگار۔ پننہِ جائے ہِنٛدِ موسم، رُد تہٕ کٔشیرِ مُتلق <b>کٲشُر زَبانہِ مَنٛز</b> پرژھِو۔ <span class=\"bhashini-chat-meta-tag\">⚡ بھاشِنی AI</span>",
+    "chat_send_btn": "سوزِو",
+    "chat_mic_title": "بوٗلِتھ پرژھِو",
+    "lbl_question": "سَوال",
+    "lbl_answer": "جَواب",
+    "lbl_loading_response": "NavChakra AI سۭتۍ جَواب تیار گَژھان..."
   },
   "ne": {
     "top_home": "गृहपृष्ठ",
@@ -5612,7 +5708,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "१. राज्य",
     "as_label_district": "२. जिल्ला",
     "as_label_block": "३. ब्लक",
-    "as_label_panchayat": "४. ग्राम पञ्चायत"
+    "as_label_panchayat": "४. ग्राम पञ्चायत",
+    "bot_full_greeting": "नमस्ते! म तपाईंको <strong>किसान सारथी (Kisan Saarthi)</strong> AI सहायक हुँ। मौसम, वर्षा र खेतीपाती बारे <b>नेपालीमा</b> सोध्नुहोस्। <span class=\"bhashini-chat-meta-tag\">⚡ भाषिणी AI</span>",
+    "chat_send_btn": "पठाउनुहोस्",
+    "chat_mic_title": "बोलेर सोध्नुहोस्",
+    "lbl_question": "प्रश्न",
+    "lbl_answer": "उत्तर",
+    "lbl_loading_response": "NavChakra AI बाट उत्तर तयार हुँदैछ..."
   },
   "kok": {
     "top_home": "घर",
@@ -5942,7 +6044,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "१. राज्य",
     "as_label_district": "२. जिल्लो",
     "as_label_block": "३. ब्लॉक",
-    "as_label_panchayat": "४. ग्रामपंचायत"
+    "as_label_panchayat": "४. ग्रामपंचायत",
+    "bot_full_greeting": "नमस्कार! हांव तुमचो <strong>किसान सारथी (Kisan Saarthi)</strong> AI सहाय्यक. हवामान, पावस आनी शेतकामा विशीं <b>कोंकणींत</b> विचारूंक शकतात. <span class=\"bhashini-chat-meta-tag\">⚡ भाषिणी AI</span>",
+    "chat_send_btn": "धाडात",
+    "chat_mic_title": "उलोवन विचारात",
+    "lbl_question": "प्रश्न",
+    "lbl_answer": "जाप",
+    "lbl_loading_response": "NavChakra AI कडल्यान जाप तयार जाता..."
   },
   "sd": {
     "top_home": "گھر",
@@ -6272,7 +6380,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. رياست",
     "as_label_district": "2. ضلعو",
     "as_label_block": "3. بلاڪ",
-    "as_label_panchayat": "4. ڳوٺ پنچائت"
+    "as_label_panchayat": "4. ڳوٺ پنچائت",
+    "bot_full_greeting": "سلام! مان توهان جو <strong>ڪسان سارٿي (Kisan Saarthi)</strong> AI مددگار آهيان. پنهنجي علائقي جي موسم ۽ زراعت بابت <b>سنڌيءَ ۾</b> پڇو. <span class=\"bhashini-chat-meta-tag\">⚡ ڀاشڻي AI</span>",
+    "chat_send_btn": "موڪليو",
+    "chat_mic_title": "ڳالهائي پڇو",
+    "lbl_question": "سوال",
+    "lbl_answer": "جواب",
+    "lbl_loading_response": "NavChakra AI کان جواب تيار ٿي رهيو آهي..."
   },
   "doi": {
     "top_home": "घर",
@@ -6602,7 +6716,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. राज्य",
     "as_label_district": "2. जिला",
     "as_label_block": "3. ब्लाक",
-    "as_label_panchayat": "4. ग्राम पंचायत"
+    "as_label_panchayat": "4. ग्राम पंचायत",
+    "bot_full_greeting": "नमस्ते! म्हूं तुंदा <strong>किसान सारथी (Kisan Saarthi)</strong> AI सहायक आं। मौसम, वर्खा ते खेती बारे <b>डोगरी च</b> पुच्छो। <span class=\"bhashini-chat-meta-tag\">⚡ भाषिणी AI</span>",
+    "chat_send_btn": "भेजो",
+    "chat_mic_title": "बोली के पुच्छो",
+    "lbl_question": "सवाल",
+    "lbl_answer": "उत्तर",
+    "lbl_loading_response": "NavChakra AI कन्नै उत्तर त्यार होई रेहा ऐ..."
   },
   "brx": {
     "top_home": "न'",
@@ -6932,7 +7052,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "1. हादोरसा",
     "as_label_district": "2. जिल्ला",
     "as_label_block": "3. ब्लक",
-    "as_label_panchayat": "4. गामियारि पन्चायत"
+    "as_label_panchayat": "4. गामियारि पन्चायत",
+    "bot_full_greeting": "खुलुमबाय! आं नोंथांनि <strong>किसान सारथि (Kisan Saarthi)</strong> AI हेफाजाबगिरि। बोथोर, अखा आरो आबादनि बागै <b>बर’ रावजों</b> सोंनो हागौ। <span class=\"bhashini-chat-meta-tag\">⚡ बासिनी AI</span>",
+    "chat_send_btn": "हरहर",
+    "chat_mic_title": "बुंन्नानै सों",
+    "lbl_question": "सोंनाय",
+    "lbl_answer": "फिननाय",
+    "lbl_loading_response": "NavChakra AI निफ्राय फिननाय सोलोंबाय..."
   },
   "sa": {
     "top_home": "गृहम्",
@@ -7262,7 +7388,13 @@ window.RITUIQ_I18N = {
     "as_label_state": "१. राज्यम्",
     "as_label_district": "२. जनपदम्",
     "as_label_block": "३. खण्डम्",
-    "as_label_panchayat": "४. ग्रामपञ्चायतम्"
+    "as_label_panchayat": "४. ग्रामपञ्चायतम्",
+    "bot_full_greeting": "नमो नमः! अहं भवतः <strong>किसानसारथिः (Kisan Saarthi)</strong> AI सहायकः अस्मि। वातावरणं, वृष्टिं, कृषिकार्यं च अधिकृत्य <b>संस्कृतेन</b> पृच्छन्तु। <span class=\"bhashini-chat-meta-tag\">⚡ भाषिणी AI</span>",
+    "chat_send_btn": "प्रेषयन्तु",
+    "chat_mic_title": "उक्त्वा पृच्छतु",
+    "lbl_question": "प्रश्नः",
+    "lbl_answer": "उत्तरम्",
+    "lbl_loading_response": "NavChakra AI तः उत्तरं सज्जीक्रियते..."
   },
   "mni": {
     "top_home": "য়ুম",
@@ -7592,6 +7724,12 @@ window.RITUIQ_I18N = {
     "as_label_state": "১. রাজ্য",
     "as_label_district": "২. জিলা",
     "as_label_block": "৩. ব্লক",
-    "as_label_panchayat": "৪. গ্রাম পঞ্চায়ত"
+    "as_label_panchayat": "৪. গ্রাম পঞ্চায়ত",
+    "bot_full_greeting": "খুরুমজরি! ঐহাক নহাক্কী <strong>কিসান সারথি (Kisan Saarthi)</strong> AI তেংবাংলোইনি। নোং-নুংশিৎ অমসুং লৌ-উ শিং-উগী মতাংদা <b>মৈতৈলোন্দা</b> হংবীয়ু। <span class=\"bhashini-chat-meta-tag\">⚡ ভাষিণী AI</span>",
+    "chat_send_btn": "থাগৎলুরসি",
+    "chat_mic_title": "ৱা ঙাংদুনা হংবীয়ু",
+    "lbl_question": "ৱাহং",
+    "lbl_answer": "পাউখুম",
+    "lbl_loading_response": "NavChakra AI দগী পাউখুম শেম-শারি..."
   }
 };

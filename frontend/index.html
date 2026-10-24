@@ -257,14 +257,14 @@
                 </div>
 
                 <div class="kisan-assistant-quick-prompts">
-                  <button type="button" class="kisan-prompt-pill" onclick="askKisanAssistantQuestion('बारिश कब होगी?')">
-                    बारिश कब होगी?
+                  <button type="button" class="kisan-prompt-pill" onclick="askKisanAssistantQuestion(this.innerText)" data-i18n="prompt_rain">
+                    When will it rain?
                   </button>
-                  <button type="button" class="kisan-prompt-pill" onclick="askKisanAssistantQuestion('धान की बुवाई कब करें?')">
-                    धान की बुवाई कब करें?
+                  <button type="button" class="kisan-prompt-pill" onclick="askKisanAssistantQuestion(this.innerText)" data-i18n="prompt_sow">
+                    When to sow paddy?
                   </button>
-                  <button type="button" class="kisan-prompt-pill" onclick="askKisanAssistantQuestion('मेरे इलाके का मौसम')">
-                    मेरे इलाके का मौसम
+                  <button type="button" class="kisan-prompt-pill" onclick="askKisanAssistantQuestion(this.innerText)" data-i18n="prompt_weather">
+                    Weather in my area
                   </button>
                 </div>
               </div>
@@ -1149,17 +1149,17 @@
                       </button>
                     </div>
                     <div class="assistant-speech-bubble">
-                      <div class="assistant-bubble-text" id="dashBotGreeting">
-                        नमस्कार! मैं आपका NavChakra सहायक हूँ। मौसम, फसल और खेती से जुड़े किसी भी सवाल पूछें।
+                      <div class="assistant-bubble-text" id="dashBotGreeting" data-i18n="bot_greeting">
+                        Namaskar! I am your Kisan Saarthi assistant. Ask me anything about local rainfall, crop sowing, or weather risks.
                       </div>
                     </div>
                   </div>
 
                   <!-- Quick Prompt Chips -->
                   <div class="assistant-quick-chips">
-                    <button class="quick-chip-btn" onclick="sendQuickAssistantQuery('बारिश कब होगी?')">बारिश कब होगी?</button>
-                    <button class="quick-chip-btn" onclick="sendQuickAssistantQuery('धान की बुवाई कब करें?')">धान की बुवाई कब करें?</button>
-                    <button class="quick-chip-btn" onclick="sendQuickAssistantQuery('मेरे इलाके का मौसम')">मेरे इलाके का मौसम</button>
+                    <button class="quick-chip-btn" onclick="sendQuickAssistantQuery(this.innerText)" data-i18n="prompt_rain">When will it rain?</button>
+                    <button class="quick-chip-btn" onclick="sendQuickAssistantQuery(this.innerText)" data-i18n="prompt_sow">When to sow paddy?</button>
+                    <button class="quick-chip-btn" onclick="sendQuickAssistantQuery(this.innerText)" data-i18n="prompt_weather">Weather in my area</button>
                   </div>
 
                   <!-- Inline Instant Chat Response -->
@@ -2527,16 +2527,23 @@
             <div class="chat-messages-scroll" id="fullChatMessages">
               <div style="display:flex; gap:12px; align-items:flex-start;">
                 <img src="/assets/rituiq_kisan_ai_logo.png" alt="Kisan Saarthi" style="width:36px; height:36px; border-radius:50%; object-fit:cover; border:1.5px solid #22c55e; flex-shrink:0; box-shadow:0 2px 6px rgba(0,0,0,0.08);">
-                <div class="chat-bubble bot">
-                  नमस्कार! मैं आपका <strong>Kisan Saarthi (किसान सारथी)</strong> AI सहायक हूँ। आप मुझसे अपने ब्लॉक के मौसम, बारिश की संभावना, या धान-मक्के की खेती के बारे में अपनी किसी भी भाषा में पूछ सकते हैं। (Bhashini AI 23 भाषाएं समर्थित)
+                <div class="chat-bubble bot" id="fullChatBotGreeting" data-i18n="bot_full_greeting">
+                  Hello! I am your <strong>Kisan Saarthi</strong> AI Assistant. Ask me anything about your local weather, rainfall forecast, sowing advisory, or crop protection in <b>English</b>. <span class="bhashini-chat-meta-tag">⚡ Powered by Digital India Bhashini AI</span>
                 </div>
               </div>
             </div>
 
+            <!-- Quick Suggestions in Selected Language -->
+            <div class="chat-quick-suggestions" id="fullChatQuickPrompts" style="display:flex; gap:8px; padding:8px 18px; flex-wrap:wrap; background:#f8fafc; border-top:1px solid #f1f5f9;">
+              <button type="button" class="chat-suggest-pill" onclick="askKisanAssistantQuestion(this.innerText)" data-i18n="prompt_rain" style="border:1px solid #cbd5e1; background:#ffffff; border-radius:16px; padding:4px 12px; font-size:0.78rem; cursor:pointer; color:#0f172a; transition:all 0.15s;">When will it rain?</button>
+              <button type="button" class="chat-suggest-pill" onclick="askKisanAssistantQuestion(this.innerText)" data-i18n="prompt_sow" style="border:1px solid #cbd5e1; background:#ffffff; border-radius:16px; padding:4px 12px; font-size:0.78rem; cursor:pointer; color:#0f172a; transition:all 0.15s;">When to sow paddy?</button>
+              <button type="button" class="chat-suggest-pill" onclick="askKisanAssistantQuestion(this.innerText)" data-i18n="prompt_weather" style="border:1px solid #cbd5e1; background:#ffffff; border-radius:16px; padding:4px 12px; font-size:0.78rem; cursor:pointer; color:#0f172a; transition:all 0.15s;">Weather in my area</button>
+            </div>
+
             <div class="chat-input-toolbar">
-              <input type="text" id="fullChatInput" class="chat-text-input" placeholder="Type your farming or weather question..." onkeydown="if(event.key==='Enter') executeFullChatSubmit()">
-              <button class="btn-voice-mic" onclick="toggleFullChatVoice()" title="Voice Input">🎙️</button>
-              <button class="btn-send-chat" onclick="executeFullChatSubmit()">Send</button>
+              <input type="text" id="fullChatInput" class="chat-text-input" placeholder="Ask about crops, weather, or rainfall..." data-i18n-placeholder="bot_placeholder" onkeydown="if(event.key==='Enter') executeFullChatSubmit()">
+              <button class="btn-voice-mic" onclick="toggleFullChatVoice()" title="Voice Input" data-i18n-title="chat_mic_title">🎙️</button>
+              <button class="btn-send-chat" onclick="executeFullChatSubmit()" data-i18n="chat_send_btn">Send</button>
             </div>
           </div>
 
@@ -3411,15 +3418,15 @@
   <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
 
   <!-- Bhashini 23-Language Native Translation Engine -->
-  <script src="/i18n.js?v=20260928-v127"></script>
+  <script src="/i18n.js?v=20261024-v201"></script>
 
   <!-- Kisan Sewa & Crop Advisory Module -->
-  <script src="/crop_advisory.js?v=20260928-v1"></script>
+  <script src="/crop_advisory.js?v=20261024-v201"></script>
 
   <!-- Alert Intelligence Module (Early Warning & Disaster Safety Center) -->
-  <script src="/alert_intelligence.js?v=20260928-v4"></script>
+  <script src="/alert_intelligence.js?v=20261024-v201"></script>
 
   <!-- Application Logic -->
-  <script src="/app.js?v=20260928-v132"></script>
+  <script src="/app.js?v=20261024-v201"></script>
 </body>
 </html>

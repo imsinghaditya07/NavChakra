@@ -2455,19 +2455,57 @@ function selectChatLanguage(langCode) {
 
 function updateChatbotGreeting() {
   const fullChatMessages = document.getElementById('fullChatMessages');
-  if (fullChatMessages && fullChatMessages.children.length >= 1) {
-    const curLang = appState.currentLang || 'en';
-    const lObj = ALL_23_LANGUAGES.find(l => l.code === curLang);
-    const nativeName = lObj ? lObj.native : 'English';
-    const firstBubble = fullChatMessages.children[0];
-    if (firstBubble && firstBubble.classList.contains('bot')) {
-      const greeting = (curLang === 'en')
-        ? `Hello! I am your <strong>Kisan Saarthi</strong> AI Assistant. Ask me anything about your local weather, rainfall forecast, sowing advisory, or crop protection in <b>English</b>. <span class="bhashini-chat-meta-tag">⚡ Powered by Digital India Bhashini AI</span>`
-        : (curLang === 'hi')
-        ? `नमस्कार! मैं आपका <strong>किसान सारथी</strong> AI सहायक हूँ। आप मुझसे अपने ब्लॉक के मौसम, बारिश की संभावना, या खेती के बारे में <b>${nativeName}</b> में पूछ सकते हैं। <span class="bhashini-chat-meta-tag">⚡ भाषिणी AI समर्थित</span>`
-        : `Greetings! I am your <strong>Kisan Saarthi</strong> AI Assistant. Ask me about weather, rainfall, or farming in <b>${nativeName}</b>. <span class="bhashini-chat-meta-tag">⚡ Bhashini AI</span>`;
-      firstBubble.innerHTML = greeting;
+  const curLang = appState.currentLang || 'en';
+  const lObj = ALL_23_LANGUAGES.find(l => l.code === curLang);
+  const nativeName = lObj ? lObj.native : 'English';
+  
+  const dict = Object.assign(
+    {}, 
+    i18n['en'] || {}, 
+    (window.RITUIQ_I18N && window.RITUIQ_I18N['en']) || {},
+    i18n[curLang] || {}, 
+    (window.RITUIQ_I18N && window.RITUIQ_I18N[curLang]) || {}
+  );
+
+  // 1. Update the bot greeting bubble inside the full Chatbot view
+  if (fullChatMessages) {
+    const botBubble = document.getElementById('fullChatBotGreeting') || fullChatMessages.querySelector('.chat-bubble.bot');
+    if (botBubble) {
+      if (dict.bot_full_greeting) {
+        botBubble.innerHTML = dict.bot_full_greeting;
+      } else if (dict.bot_greeting) {
+        botBubble.innerHTML = dict.bot_greeting;
+      } else {
+        const greeting = (curLang === 'en')
+          ? `Hello! I am your <strong>Kisan Saarthi</strong> AI Assistant. Ask me anything about your local weather, rainfall forecast, sowing advisory, or crop protection in <b>English</b>. <span class="bhashini-chat-meta-tag">⚡ Powered by Digital India Bhashini AI</span>`
+          : `नमस्कार! मैं आपका <strong>किसान सारथी</strong> AI सहायक हूँ। आप मुझसे अपने ब्लॉक के मौसम, बारिश की संभावना, या खेती के बारे में <b>${nativeName}</b> में पूछ सकते हैं। <span class="bhashini-chat-meta-tag">⚡ भाषिणी AI समर्थित</span>`;
+        botBubble.innerHTML = greeting;
+      }
     }
+  }
+
+  // 2. Update the homepage Kisan Assistant card message
+  const homeCardMsg = document.querySelector('.kisan-assistant-msg-text');
+  if (homeCardMsg && dict.bot_greeting) {
+    homeCardMsg.innerHTML = dict.bot_greeting;
+  }
+
+  // 3. Update dashboard assistant bubble
+  const dashBotMsg = document.getElementById('dashBotGreeting');
+  if (dashBotMsg && dict.bot_greeting) {
+    dashBotMsg.innerHTML = dict.bot_greeting;
+  }
+
+  // 4. Update the chat text input placeholder
+  const fullChatInput = document.getElementById('fullChatInput');
+  if (fullChatInput && dict.bot_placeholder) {
+    fullChatInput.placeholder = dict.bot_placeholder;
+  }
+
+  // 5. Update the chat language select dropdown value
+  const chatSelect = document.getElementById('chatLanguageSelect');
+  if (chatSelect && chatSelect.value !== curLang) {
+    chatSelect.value = curLang;
   }
 }
 
@@ -2489,6 +2527,16 @@ function updateTranslations() {
     if (dict[key]) {
       el.innerHTML = dict[key];
     }
+  });
+
+  // 1A. Attributes: placeholders and titles
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (dict[key]) el.placeholder = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.getAttribute('data-i18n-title');
+    if (dict[key]) el.title = dict[key];
   });
 
   // 1B. Universal DOM Translator: translates all visible phrases across all 23 languages
@@ -5265,9 +5313,21 @@ function toggleVoiceAssistant() {
 async function sendQuickAssistantQuery(query) {
   const drawer = document.getElementById('dashInlineChatDrawer');
   const content = document.getElementById('dashInlineChatContent');
+  const curLang = appState.currentLang || 'en';
+  const dict = Object.assign(
+    {}, 
+    i18n['en'] || {}, 
+    (window.RITUIQ_I18N && window.RITUIQ_I18N['en']) || {},
+    i18n[curLang] || {}, 
+    (window.RITUIQ_I18N && window.RITUIQ_I18N[curLang]) || {}
+  );
+  const qLabel = dict.lbl_question || (curLang === 'hi' ? 'सवाल' : 'Question');
+  const aLabel = dict.lbl_answer || (curLang === 'hi' ? 'उत्तर' : 'Answer');
+  const waitMsg = dict.lbl_loading_response || 'NavChakra AI is formulating guidance...';
+
   if (drawer && content) {
     drawer.classList.add('active');
-    content.innerHTML = `<b>सवाल:</b> "${query}"<br><span style="color:#16a34a;">⏳ NavChakra मॉडल से उत्तर प्राप्त हो रहा है...</span>`;
+    content.innerHTML = `<b>${qLabel}:</b> "${query}"<br><span style="color:#16a34a;">⏳ ${waitMsg}</span>`;
   }
 
   // Call Backend API /api/agent/chat (Agent37 Kisan Saarthi with Grounded RAG Fallback)
@@ -5277,8 +5337,8 @@ async function sendQuickAssistantQuery(query) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         query: query,
-        block_id: 'WB_BIR_01',
-        language: appState.currentLang
+        block_id: appState.locationHierarchy?.blockId || 'MH_YVT_01',
+        language: curLang
       })
     });
 
@@ -5287,8 +5347,9 @@ async function sendQuickAssistantQuery(query) {
     if (res.ok) {
       const data = await res.json();
       answer = data.answer || data.response || "";
-      if (data.bhashini) {
-        bhashiniTag = `<div class="bhashini-chat-meta-tag">⚡ भाषिणी AI (${data.language_native || data.language})</div>`;
+      if (data.bhashini || data.language_native) {
+        const langName = data.language_native || data.language || curLang;
+        bhashiniTag = `<div class="bhashini-chat-meta-tag">⚡ भाषिणी AI (${langName})</div>`;
       }
     } else {
       // Grounded fallback
@@ -5296,18 +5357,18 @@ async function sendQuickAssistantQuery(query) {
     }
 
     if (content) {
-      content.innerHTML = `<b>सवाल:</b> "${query}"<br><br><b>उत्तर:</b> ${answer}${bhashiniTag}`;
+      content.innerHTML = `<b>${qLabel}:</b> "${query}"<br><br><b>${aLabel}:</b> ${answer}${bhashiniTag}`;
     }
 
     // Voice Readout (TTS) in chosen Indian language
-    speakText(answer, appState.currentLang);
+    speakText(answer, curLang);
 
   } catch (err) {
     const fallbackAnswer = getGroundedFallbackResponse(query);
     if (content) {
-      content.innerHTML = `<b>सवाल:</b> "${query}"<br><br><b>उत्तर:</b> ${fallbackAnswer}`;
+      content.innerHTML = `<b>${qLabel}:</b> "${query}"<br><br><b>${aLabel}:</b> ${fallbackAnswer}`;
     }
-    speakText(fallbackAnswer, appState.currentLang);
+    speakText(fallbackAnswer, curLang);
   }
 }
 
@@ -5368,11 +5429,13 @@ async function executeFullChatSubmit() {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 
   // Bot Loading Bubble with NavChakra Avatar
+  const curLang = appState.currentLang || 'en';
+  const waitMsg = (window.RITUIQ_I18N && window.RITUIQ_I18N[curLang]?.lbl_loading_response) || '...';
   const botRow = document.createElement('div');
   botRow.style.cssText = 'display:flex; gap:12px; align-items:flex-start;';
   botRow.innerHTML = `
     <img src="/assets/rituiq_kisan_ai_logo.png" alt="NavChakra" style="width:36px; height:36px; border-radius:50%; object-fit:cover; border:1.5px solid #22c55e; flex-shrink:0; box-shadow:0 2px 6px rgba(0,0,0,0.08);">
-    <div class="chat-bubble bot">...</div>
+    <div class="chat-bubble bot" style="font-style:italic; color:#64748b;">${waitMsg}</div>
   `;
   const botBubble = botRow.querySelector('.chat-bubble.bot');
   chatMessages.appendChild(botRow);
@@ -5384,8 +5447,8 @@ async function executeFullChatSubmit() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         query: query,
-        block_id: 'WB_BIR_01',
-        language: appState.currentLang
+        block_id: appState.locationHierarchy?.blockId || 'MH_YVT_01',
+        language: curLang
       })
     });
 
@@ -5394,8 +5457,9 @@ async function executeFullChatSubmit() {
     if (res.ok) {
       const data = await res.json();
       answer = data.answer || data.response || "";
-      if (data.bhashini) {
-        bhashiniTag = `<div class="bhashini-chat-meta-tag">⚡ भाषिणी AI (${data.language_native || data.language})</div>`;
+      if (data.bhashini || data.language_native) {
+        const langDisplay = data.language_native || data.language || curLang;
+        bhashiniTag = `<div class="bhashini-chat-meta-tag">⚡ भाषिणी AI (${langDisplay})</div>`;
       }
     } else {
       answer = getGroundedFallbackResponse(query);
