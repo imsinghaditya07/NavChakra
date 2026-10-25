@@ -10,6 +10,7 @@
  
 > **📚 Demo Video Link **: **https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz**
 
+PPT PDF Link - https://drive.google.com/file/d/19UHcfaDqVXFjIMmhgoAdQ_kBhy-icfyn/view?usp=drivesdk
 ---
 Team Name- Byte Breaker
 
