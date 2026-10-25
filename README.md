@@ -6,11 +6,15 @@
 [![API Documentation](https://img.shields.io/badge/Swagger%20Docs-API%20Reference-blue?style=for-the-badge&logo=fastapi)](https://navchakra.onrender.com/docs)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-imsinghaditya07%2FNavChakra-black?style=for-the-badge&logo=github)](https://github.com/imsinghaditya07/NavChakra)
 
-> **🚀 Live Deployed App**: **[https://navchakra.onrender.com/](https://navchakra.onrender.com/)**  
-> **📚 Live API Documentation (Swagger)**: **[https://navchakra.onrender.com/docs](https://navchakra.onrender.com/docs)**
+> **🚀 Live Deployed Link**: **[https://navchakra.onrender.com/](https://navchakra.onrender.com/)**  
+> **📚 Demo Video Link **: **
 
 ---
+Team Name- Byte Breaker
+Team Member - Anand Kumar Jha 
+Aditya Singh ,Rishab Kumar
 
+---
 ## 1. System Overview & Architecture
 
 This repository delivers an end-to-end, operational prototype for downscaling global climate teleconnections (NOAA ENSO, BOM IOD, NOAA MJO) to block and panchayat scales across India. It couples 7–30 day seasonal onset/break forecasting with 0–30 minute convective nowcasting, ICAR-aligned deterministic agronomic rules, an auditable Explainable AI (XAI) engine, and multi-channel last-mile delivery (PWA offline app, regional voice TTS, IVR gateway, and officials' disaster management dashboard).
