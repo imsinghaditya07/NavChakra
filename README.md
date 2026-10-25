@@ -4,12 +4,14 @@
 [![Live Deployment](https://img.shields.io/badge/Live%20Demo-navchakra.onrender.com-brightgreen?style=for-the-badge&logo=render)](https://navchakra.onrender.com/)
 [![API Documentation](https://img.shields.io/badge/Swagger%20Docs-API%20Reference-blue?style=for-the-badge&logo=fastapi)](https://navchakra.onrender.com/docs)
 [![Compute](https://img.shields.io/badge/Compute-Nodus%20Compute-7928CA?style=for-the-badge&logo=nvidia)](https://noduscompute.com)
+[![Adaptive AI](https://img.shields.io/badge/Adaptive%20AI-Adaption%20Labs-10B981?style=for-the-badge&logo=openai)](https://adaptionlabs.ai)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-imsinghaditya07%2FNavChakra-black?style=for-the-badge&logo=github)](https://github.com/imsinghaditya07/NavChakra)
 
 > **🚀 Live Deployed App**: [https://navchakra.onrender.com/](https://navchakra.onrender.com/)  
 > **📚 Demo Video Link**: [https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz](https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz)  
 > **📑 PPT / PDF Link**: [Google Drive Presentation](https://drive.google.com/file/d/19UHcfaDqVXFjIMmhgoAdQ_kBhy-icfyn/view?usp=drivesdk)  
-> **⚡ High-Performance ML Compute**: **Nodus Compute**
+> **⚡ High-Performance ML Compute**: **Nodus Compute**  
+> **🌱 Continuous Agro-LLM Learning**: **Adaption Labs** (Adaptive Data & AutoScientist)
 
 ---
 
@@ -46,6 +48,7 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 | **Lightning Stroke Feed** | Blitzortung.org Community TOA | Earth Networks / Vaisala | **₹0.00** | IMD Damini / IITM Lightning Net |
 | **ML Training & Acceleration**| Nodus Compute (Decentralized GPU) + Colab | AWS EC2 p3.2xlarge | **Low-cost / Elastic** | C-DAC PARAM Ananta supercomputer |
 | **Container & API Hosting**| Render Free Tier / HF Spaces | AWS ECS Fargate | **₹0.00** | [Live on Render](https://navchakra.onrender.com/) |
+| **Agro-LLM Specialization**| Adaption Labs (Adaptive Data & AutoScientist) | Manual Data Labeling / Annotation | **Self-serve API** | In-house continuous fine-tuning pipeline |
 | **Multi-Lingual Translation**| Bhashini (Govt of India) + Web Speech API | Google Cloud Translation | **₹0.00** | In-house IndicTrans2 models |
 | **Map Base & Radar** | OpenStreetMap + RainViewer API | Mapbox / Google Maps | **₹0.00** | ISRO Bhuvan GeoPlatform |
 | **IVR Voice Gateway** | Asterisk PBX Open-Source AGI | Twilio / Exotel Voice | **₹0.00** | C-DOT Kisan Call Centre PRI lines |
@@ -193,6 +196,79 @@ flowchart TD
 * **Elastic Checkpointing & Resumability**: Seamlessly couples with NavChakra's resumable training pipeline (`training/train.py`). Epoch checkpoints (`checkpoint_latest.pt` and versioned models in `models/registry/`) are rapidly synced and validated without costly idle instance overhead.
 * **Cost-Efficient Scalability**: Compared to legacy cloud virtual machines (e.g., AWS EC2 p3/p4 instances), Nodus Compute delivers on-demand, high-performance compute with zero idle lock-in—enabling rapid retraining across thousands of administrative blocks at a fraction of the cost.
 * **Parallel Hyperparameter Optimization**: Powers multi-trial grid searches for LightGBM gradient boosting parameters, optimal LSTM sequence lengths, and ONNX runtime export benchmarks.
+
+---
+
+## 2D. Continuous Agro-LLM Learning with Adaption Labs
+
+NavChakra leverages **Adaption Labs** (`adaptionlabs.ai`) to power **Adaptive AI That Continuously Learns** specifically for **Kisan Saarthi (किसान सारथी)**, the autonomous agro-meteorological advisory assistant. Rather than modifying or replacing the core physical meteorology and numerical weather models, Adaption Labs is utilized to curate, expand, fine-tune, and specialize the agricultural natural language intelligence.
+
+### Core Platform Capabilities
+* **Adaptive Data**: Improves and expands datasets used to train AI models. For NavChakra, it synthesizes and enriches realistic examples of farmer questions, localized crop advice, meteorological explanations, and regional-language agricultural terminology.
+* **AutoScientist**: Automates experiments around language model training, training configurations, loss evaluations, and hyperparameter tuning—empowering the development of a domain-specialized AI assistant for Indian agriculture.
+
+### 4-Stage Adaptation & Integration Lifecycle
+
+```mermaid
+flowchart TD
+    subgraph S1 ["1. Prepare Farmer Q&A Data"]
+        A["🌾 <b>Domain Knowledge Ingestion</b><br/>• Real farmer questions across districts<br/>• ICAR verified crop advisory rules<br/>• Sowing, irrigation, & extreme weather alerts"]
+    end
+
+    subgraph S2 ["2. Adaptive Data Engine"]
+        B["📈 <b>Dataset Expansion & Translation</b><br/>• Augments question diversity & edge cases<br/>• Synthesizes realistic farmer phrasing<br/>• Multi-dialect translation across 23 Indian languages"]
+    end
+
+    subgraph S3 ["3. AutoScientist Training Suite"]
+        C["🧪 <b>Automated Experimentation</b><br/>• Fine-tunes supported language model backbones<br/>• Optimizes training hyperparameters & loss<br/>• Validates agromet response accuracy<br/>• Exports optimized model checkpoints"]
+    end
+
+    subgraph S4 ["4. NavChakra Operational Integration"]
+        D["⚙️ <b>FastAPI Backend (/api/agent)</b><br/>Server-side streaming proxy & guardrails"]
+        E["📱 <b>Kisan Saarthi Interface</b><br/>Real-time SSE chat + 23-language voice STT/TTS"]
+    end
+
+    A --> B
+    B --> C
+    C -->|Trained Model Checkpoint| D
+    D --> E
+
+    style S1 fill:#0f172a,stroke:#3b82f6,color:#ffffff,rx:10,ry:10
+    style S2 fill:#064e3b,stroke:#10b981,color:#ffffff,rx:10,ry:10
+    style S3 fill:#3b0764,stroke:#a855f7,color:#ffffff,rx:10,ry:10
+    style S4 fill:#14532d,stroke:#22c55e,color:#ffffff,rx:10,ry:10
+```
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                      1. Prepare Farmer Q&A Data                        │
+│   Curate questions on crops, irrigation, rainfall, & extreme weather   │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                        2. Adaptive Data Engine                         │
+│   Improve, expand, and translate examples across supported languages   │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                        3. AutoScientist Suite                          │
+│   Automate experiments around model training & fine-tuning configs     │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                      4. Integrate with NavChakra                       │
+│    Connect trained checkpoint to FastAPI backend & farmer chat panel   │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Detailed Workflow Steps:
+1. **Prepare Farmer Q&A Data**: Gather realistic questions about crop stages (sowing, vegetative, harvesting), irrigation thresholds, monsoon break risks, and localized weather hazards paired with verified ICAR/MoES advisory answers.
+2. **Use Adaptive Data**: Run the dataset through Adaption's Adaptive Data API to enrich vocabulary, handle regional conversational nuances, and scale training pairs into all 23 supported Indian languages.
+3. **Use AutoScientist**: Execute autonomous fine-tuning experiments across model architectures to optimize domain comprehension, eliminate hallucinations, and download production-ready model checkpoints.
+4. **Integrate with NavChakra**: Deploy the trained checkpoint to the Python/FastAPI backend (`/api/agent`), enabling real-time streaming, speech recognition (STT), and voice narration (TTS) inside the Kisan Saarthi drawer.
 
 ---
 
