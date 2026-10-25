@@ -1,16 +1,23 @@
-# NavChakra (ऋतुIQ) — Hyperlocal Monsoon Onset & Break Prediction System
+# NavChakra — Hyperlocal Monsoon Onset & Break Prediction System
 ### From Climate Signals to Confident Farming Decisions
-**Ministry of Earth Sciences (MoES) / NCMRWF (National Centre for Medium Range Weather Forecasting)**
 
 [![Live Deployment](https://img.shields.io/badge/Live%20Demo-navchakra.onrender.com-brightgreen?style=for-the-badge&logo=render)](https://navchakra.onrender.com/)
 [![API Documentation](https://img.shields.io/badge/Swagger%20Docs-API%20Reference-blue?style=for-the-badge&logo=fastapi)](https://navchakra.onrender.com/docs)
+[![Compute](https://img.shields.io/badge/Compute-Nodus%20Compute-7928CA?style=for-the-badge&logo=nvidia)](https://noduscompute.com)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-imsinghaditya07%2FNavChakra-black?style=for-the-badge&logo=github)](https://github.com/imsinghaditya07/NavChakra)
 
-> **🚀 Live Deployed App**: **[https://navchakra.onrender.com/](https://navchakra.onrender.com/)**  
-> **📚 Live API Documentation (Swagger)**: **[https://navchakra.onrender.com/docs](https://navchakra.onrender.com/docs)**
+> **🚀 Live Deployed App**: [https://navchakra.onrender.com/](https://navchakra.onrender.com/)  
+> **📚 Demo Video Link**: [https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz](https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz)  
+> **📑 PPT / PDF Link**: [Google Drive Presentation](https://drive.google.com/file/d/19UHcfaDqVXFjIMmhgoAdQ_kBhy-icfyn/view?usp=drivesdk)  
+> **⚡ High-Performance ML Compute**: **Nodus Compute**
 
 ---
 
+**Team Name**: Byte Breaker  
+**Team Code**: B26-0673  
+**Team Members**: Anand Kumar Jha, Aditya Singh, Rishab Kumar  
+
+---
 ## 1. System Overview & Architecture
 
 This repository delivers an end-to-end, operational prototype for downscaling global climate teleconnections (NOAA ENSO, BOM IOD, NOAA MJO) to block and panchayat scales across India. It couples 7–30 day seasonal onset/break forecasting with 0–30 minute convective nowcasting, ICAR-aligned deterministic agronomic rules, an auditable Explainable AI (XAI) engine, and multi-channel last-mile delivery (PWA offline app, regional voice TTS, IVR gateway, and officials' disaster management dashboard).
@@ -24,7 +31,7 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 - NOAA ENSO/IOD/MJO       (7-30d Break/Onset)          Score Formula                - SHAP Plain-Language        - Officials Dashboard
 - ISRO INSAT-3D TIR      - Model B (Convective ONNX)  - Emergency Citizen           One-Liner Generator         - Regional Voice (TTS)
 - Open-Meteo & CAPE       (0-30m Severe Storm)         Crowd-Report Fallback       - Grounded RAG Chatbot       - Asterisk IVR Gateway
-- Blitzortung Strikes                                  Override                     (No Hallucination)          - WhatsApp Cloud Free
+- Blitzortung Strikes    - Nodus GPU Compute Engine    Override                     (No Hallucination)          - WhatsApp Cloud Free
 ```
 
 ---
@@ -37,7 +44,7 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 | **Global Teleconnections** | NOAA PSL (ENSO/MJO) & BOM (IOD) | Paid Weather Analytics | **₹0.00** | Automated Open FTP/HTTP cron |
 | **Surface Agromet & CAPE**| Open-Meteo & NASA POWER API | AccuWeather / IBM Weather | **₹0.00** | IMD NCMRWF AWS/C-DAC servers |
 | **Lightning Stroke Feed** | Blitzortung.org Community TOA | Earth Networks / Vaisala | **₹0.00** | IMD Damini / IITM Lightning Net |
-| **ML Training & Checkpointing**| Google Colab / Kaggle Free GPU | AWS EC2 p3.2xlarge | **₹0.00** | C-DAC PARAM Ananta supercomputer |
+| **ML Training & Acceleration**| Nodus Compute (Decentralized GPU) + Colab | AWS EC2 p3.2xlarge | **Low-cost / Elastic** | C-DAC PARAM Ananta supercomputer |
 | **Container & API Hosting**| Render Free Tier / HF Spaces | AWS ECS Fargate | **₹0.00** | [Live on Render](https://navchakra.onrender.com/) |
 | **Multi-Lingual Translation**| Bhashini (Govt of India) + Web Speech API | Google Cloud Translation | **₹0.00** | In-house IndicTrans2 models |
 | **Map Base & Radar** | OpenStreetMap + RainViewer API | Mapbox / Google Maps | **₹0.00** | ISRO Bhuvan GeoPlatform |
@@ -133,6 +140,40 @@ AGENT37_INSTANCE_URL=https://your_instance_id.agent37.app
 AGENT_TOOLS_KEY=your_secure_agent_tools_secret_key
 ```
 
+---
+
+## 2C. High-Performance ML Acceleration with Nodus Compute
+
+NavChakra leverages **Nodus Compute** as its elastic, high-throughput GPU/CPU infrastructure to accelerate data pre-processing, temporal sequence model training, and continuous meteorological fine-tuning.
+
+```
+┌─────────────────────────────────┐       ┌───────────────────────────────────┐
+│     Multi-Decadal Climate       │       │    Sliding-Window Feature Store   │
+│   (NOAA ENSO / IOD / MJO)       │──────►│  (IMD Gridded Rainfall + NASA)    │
+└─────────────────────────────────┘       └─────────────────┬─────────────────┘
+                                                            │
+                                                            ▼
+                                          ┌───────────────────────────────────┐
+                                          │      NODUS COMPUTE GPU CLUSTER    │
+                                          │  - PyTorch MonsoonLSTM Training   │
+                                          │  - Multi-Epoch Checkpointing      │
+                                          │  - Parallel Hyperparameter Search │
+                                          └─────────────────┬─────────────────┘
+                                                            │
+                                                            ▼
+                                          ┌───────────────────────────────────┐
+                                          │       NavChakra Model Registry    │
+                                          │  (models/registry/v_sample/ *.pt) │
+                                          └───────────────────────────────────┘
+```
+
+### Why Nodus Compute for NavChakra?
+* **High-Throughput Sequence Learning**: NavChakra downscales complex multi-decadal global climate drivers (NOAA ENSO ONI, BOM IOD DMI, NOAA MJO Phase 1–8) alongside high-density IMD gridded precipitation and NASA POWER surface data across 7–30 day sliding temporal windows. Nodus Compute provides fast, distributed GPU clusters that drastically accelerate PyTorch LSTM sequence training times.
+* **Elastic Checkpointing & Resumability**: Seamlessly couples with NavChakra's resumable training pipeline (`training/train.py`). Epoch checkpoints (`checkpoint_latest.pt` and versioned models in `models/registry/`) are rapidly synced and validated without costly idle instance overhead.
+* **Cost-Efficient Scalability**: Compared to legacy cloud virtual machines (e.g., AWS EC2 p3/p4 instances), Nodus Compute delivers on-demand, high-performance compute with zero idle lock-in—enabling rapid retraining across thousands of administrative blocks at a fraction of the cost.
+* **Parallel Hyperparameter Optimization**: Powers multi-trial grid searches for LightGBM gradient boosting parameters, optimal LSTM sequence lengths, and ONNX runtime export benchmarks.
+
+---
 
 ## 3. Known Free-Tier Limitations & Mitigation Strategy
 
@@ -189,7 +230,7 @@ pip install -r requirements.txt
 # Build feature store from teleconnections, IMD grids & NASA POWER
 python data/build_datasets.py
 
-# Train PyTorch LSTM and Tabular models with checkpointing
+# Train PyTorch LSTM and Tabular models with Nodus Compute GPU acceleration & checkpointing
 python training/train.py --data data/sample/rainfall_sample.csv --out models/registry/v_sample --epochs 10
 
 # Train Model A (LightGBM + LSTM) and Model B (Nowcast ONNX)
