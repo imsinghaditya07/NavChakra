@@ -176,15 +176,17 @@ class GroundedRAGChatbot:
 
         # General / fallback
         else:
+            b_ctx = block_context or {}
+            soil_moist = b_ctx.get('soil_moisture', 0.35)
             if is_hindi:
-                ans = f"ब्लॉक {block_name} के लिए: मानसून ब्रेक जोखिम {p_break*100:.0f}%, अल्पकालिक तूफान जोखिम {p_storm*100:.0f}%। मिट्टी की नमी लगभग {block_context.get('soil_moisture', 0.35)*100:.0f}% है। आप बुवाई, सिंचाई या आंधी सुरक्षा पर विशेष प्रश्न पूछ सकते हैं।"
+                ans = f"ब्लॉक {block_name} के लिए: मानसून ब्रेक जोखिम {p_break*100:.0f}%, अल्पकालिक तूफान जोखिम {p_storm*100:.0f}%। मिट्टी की नमी लगभग {soil_moist*100:.0f}% है। आप बुवाई, सिंचाई या आंधी सुरक्षा पर विशेष प्रश्न पूछ सकते हैं।"
             elif is_marathi:
                 ans = f"ब्लॉक {block_name} करीता: मान्सून खंड धोका {p_break*100:.0f}%, वादळ धोका {p_storm*100:.0f}%. मातीतील ओलावा समाधानकारक आहे. पेरणी किंवा हवामानाविषयी विचारा."
             else:
                 ans = (
                     f"Verified status for {block_name}: 7-30 day monsoon break risk is {p_break*100:.0f}%, "
                     f"and 30-minute storm nowcast risk is {p_storm*100:.0f}%. "
-                    f"Soil moisture is at {block_context.get('soil_moisture', 0.35)*100:.0f}%. "
+                    f"Soil moisture is at {soil_moist*100:.0f}%. "
                     "Ask specifically about sowing advice, protective irrigation, or lightning alerts."
                 )
 

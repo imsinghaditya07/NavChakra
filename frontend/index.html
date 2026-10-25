@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" />
 
   <!-- Master NavChakra Stylesheet -->
-  <link rel="stylesheet" href="/style.css?v=148">
+  <link rel="stylesheet" href="/style.css?v=20261025-perf4">
 </head>
 <body>
 
@@ -68,7 +68,7 @@
             <button class="top-nav-item" id="topNavKisan" onclick="switchView('kisan')" title="Crop Advisory">
               <span class="nav-text" data-i18n="top_kisan">Crop Advisory</span>
             </button>
-            <button class="top-nav-item" id="topNavChatbot" onclick="switchView('chatbot')" title="Kisan Saarthi">
+            <button class="top-nav-item" id="topNavChatbot" onclick="openKisanSaarthiChat()" title="Kisan Saarthi">
               <span class="nav-text" data-i18n="top_kisan_saarthi">Kisan Saarthi</span>
             </button>
             <button class="top-nav-item nav-item-alerts" id="topNavAlertsBtn" onclick="switchView('alerts')" title="Weather Alerts">
@@ -116,7 +116,7 @@
           <span>🌾</span> <span data-i18n="top_kisan">Crop Advisory</span>
         </button>
         <div class="mobile-drawer-divider"></div>
-        <button class="mobile-nav-item" onclick="switchView('chatbot'); closeMobileNavMenu();">
+        <button class="mobile-nav-item" onclick="openKisanSaarthiChat(); closeMobileNavMenu();">
           <span>🤖</span> <span data-i18n="top_kisan_saarthi">Kisan Saarthi</span>
         </button>
         <button class="mobile-nav-item" onclick="switchView('alerts'); closeMobileNavMenu();">
@@ -222,13 +222,13 @@
                     </span>
                     <span class="panel-title-text" data-i18n="kisan_assistant_title">Kisan Saarthi</span>
                   </div>
-                  <button type="button" class="kisan-assistant-chat-now" onclick="switchView('chatbot')" title="Open Kisan Saarthi AI Assistant">
+                  <button type="button" class="kisan-assistant-chat-now" onclick="openKisanSaarthiChat()" title="Open Kisan Saarthi AI Assistant">
                     <span data-i18n="chat_now_btn">Chat Now</span>
                     <span class="chat-now-arrow">→</span>
                   </button>
                 </div>
 
-                <div class="kisan-assistant-card-box">
+                <div class="kisan-assistant-card-box" onclick="openKisanSaarthiChat()" style="cursor:pointer;" title="Click to chat with Kisan Saarthi">
                   <div class="kisan-assistant-profile-row">
                     <div class="kisan-assistant-profile-left">
                       <div class="kisan-assistant-avatar-badge">
@@ -935,8 +935,8 @@
                 <span class="step-badge">3</span>
                 <div class="step-field-wrap">
                   <label class="step-field-label" id="lblStepBlock" data-i18n="lbl_step_block">Block / Taluka</label>
-                  <select id="dashBlockSelect" class="hierarchy-field-select" onchange="onDashBlockChanged(this.value)" title="Select Block / Taluka" disabled>
-                    <option value="" selected>-- Select District First --</option>
+                  <select id="dashBlockSelect" class="hierarchy-field-select" onchange="onDashBlockChanged(this.value)" title="Select Block / Taluka">
+                    <option value="" selected>-- Select Block / Taluka --</option>
                   </select>
                 </div>
               </div>
@@ -948,8 +948,8 @@
                 <span class="step-badge">4</span>
                 <div class="step-field-wrap">
                   <label class="step-field-label" id="lblStepGp" data-i18n="lbl_step_gp">Gram Panchayat</label>
-                  <select id="dashGpSelect" class="hierarchy-field-select" onchange="onDashGpChanged(this.value)" title="Select Gram Panchayat" disabled>
-                    <option value="" selected>-- Select Block First --</option>
+                  <select id="dashGpSelect" class="hierarchy-field-select" onchange="onDashGpChanged(this.value)" title="Select Gram Panchayat">
+                    <option value="" selected>-- Select Gram Panchayat --</option>
                   </select>
                 </div>
               </div>
@@ -1097,27 +1097,28 @@
                     </a>
                   </div>
 
-                  <div class="alerts-items-list">
-                    <div class="alert-row-item" onclick="switchView('alerts')">
+                  <div class="alerts-items-list" id="upcomingAlertsList">
+                    <div class="alert-row-item" onclick="switchView('alerts')" id="firstAlertRowItem" title="Click to view full Early Warning Center">
                       <div class="alert-row-left">
-                        <div class="alert-icon-square red">🚨</div>
+                        <div class="alert-icon-square red" id="firstAlertIcon">🚨</div>
                         <div class="alert-text-group">
-                          <h4 data-i18n="alert_heavy_rain">Heavy Rainfall Alert</h4>
-                          <p id="alertRainfallSub">Birbhum (3 Panchayats)</p>
+                          <h4 data-i18n="alert_heavy_rain" id="firstAlertTitle">Heavy Rainfall Alert</h4>
+                          <p id="alertRainfallSub">Muzaffarpur (Mushahari Block)</p>
+                          <div id="firstAlertDetails" style="font-size:0.75rem; color:#dc2626; font-weight:700; margin-top:2px;">⚠️ 40–75 mm rain predicted • Clear lowland drainage</div>
                         </div>
                       </div>
-                      <span class="alert-date-tag">24–26 Sep</span>
+                      <span class="alert-date-tag" id="firstAlertDate">25–27 Oct</span>
                     </div>
 
-                    <div class="alert-row-item" onclick="switchView('alerts')">
+                    <div class="alert-row-item" onclick="switchView('alerts')" id="secondAlertRowItem" title="Click to view full Early Warning Center">
                       <div class="alert-row-left">
-                        <div class="alert-icon-square amber">⚠️</div>
+                        <div class="alert-icon-square amber" id="secondAlertIcon">⚠️</div>
                         <div class="alert-text-group">
-                          <h4 data-i18n="alert_thunder">Thunderstorm Possibility</h4>
-                          <p data-i18n="alert_nearby">Nearby Districts</p>
+                          <h4 data-i18n="alert_thunder" id="secondAlertTitle">Thunderstorm Possibility</h4>
+                          <p id="secondAlertSub" data-i18n="alert_nearby">Adjoining blocks</p>
                         </div>
                       </div>
-                      <span class="alert-date-tag">25 Sep</span>
+                      <span class="alert-date-tag" id="secondAlertDate">26 Oct</span>
                     </div>
                   </div>
                 </div>
@@ -1703,14 +1704,14 @@
                 </div>
                 <div class="picker-group">
                   <span class="p-tag tag-block" data-i18n="fi_tag_block">Block</span>
-                  <select class="picker-select" id="fcBlockSelect" onchange="onForecastBlockSelect(this.value)" disabled>
-                    <option value="" selected>-- Select District First --</option>
+                  <select class="picker-select" id="fcBlockSelect" onchange="onForecastBlockSelect(this.value)">
+                    <option value="" selected>-- Select Block / Taluka --</option>
                   </select>
                 </div>
                 <div class="picker-group">
                   <span class="p-tag tag-gp" data-i18n="fi_tag_gp">Panchayat</span>
-                  <select class="picker-select" id="fcPanchayatSelect" onchange="onForecastPanchayatSelect(this.value)" disabled>
-                    <option value="" selected>-- Select Block First --</option>
+                  <select class="picker-select" id="fcPanchayatSelect" onchange="onForecastPanchayatSelect(this.value)">
+                    <option value="" selected>-- Select Gram Panchayat --</option>
                   </select>
                 </div>
               </div>
@@ -3426,7 +3427,13 @@
   <!-- Alert Intelligence Module (Early Warning & Disaster Safety Center) -->
   <script src="/alert_intelligence.js?v=20261024-v201"></script>
 
+  <!-- NavChakra 60 FPS Performance & Animation Engine -->
+  <script src="/navchakra_perf.js?v=20261025-v1"></script>
+
   <!-- Application Logic -->
-  <script src="/app.js?v=20261024-v201"></script>
+  <script src="/app.js?v=20261025-v4"></script>
+
+  <!-- Kisan Saarthi Real-Time Streaming Agent (Powered by Agent37 & RAG) -->
+  <script src="/agent_insight_panel.js?v=20261025-v4"></script>
 </body>
 </html>

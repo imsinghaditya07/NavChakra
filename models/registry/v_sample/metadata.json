@@ -1,0 +1,37 @@
+{
+  "version": "20261024_173640",
+  "created_at": "2026-10-24T17:36:41.380624Z",
+  "features": [
+    "elevation_m",
+    "day_of_year",
+    "temp_max_c",
+    "temp_min_c",
+    "solar_radiation_mj",
+    "rain_mm",
+    "rain_7d_sum",
+    "rain_14d_sum",
+    "soil_wetness_rootzone",
+    "enso_oni",
+    "iod_dmi"
+  ],
+  "classes": [
+    "Normal/Transition",
+    "Onset Phase",
+    "Active Monsoon",
+    "Break Monsoon"
+  ],
+  "metrics": {
+    "tabular_accuracy": 0.1389,
+    "tabular_f1_macro": 0.061,
+    "lstm_accuracy": 0.1092,
+    "lstm_f1_macro": 0.0492,
+    "train_samples": 720,
+    "val_samples": 180,
+    "evaluated_at": "2026-10-24T17:36:41.380389Z"
+  },
+  "artifacts": {
+    "tabular": "model_tabular.pkl",
+    "lstm": "model_lstm.pt",
+    "metrics": "metrics.json"
+  }
+}

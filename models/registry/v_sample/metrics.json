@@ -1,0 +1,9 @@
+{
+  "tabular_accuracy": 0.1389,
+  "tabular_f1_macro": 0.061,
+  "lstm_accuracy": 0.1092,
+  "lstm_f1_macro": 0.0492,
+  "train_samples": 720,
+  "val_samples": 180,
+  "evaluated_at": "2026-10-24T17:36:41.380389Z"
+}

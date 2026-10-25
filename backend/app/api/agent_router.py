@@ -6,10 +6,15 @@ Endpoints:
 - GET /agent-tools/*: Guarded read-only tools for forecast, alerts, crowd reports, advisory
 """
 
+import os
+import json
+import asyncio
 import secrets
 import logging
 from typing import Optional, Dict, Any, List
+import httpx
 from fastapi import APIRouter, HTTPException, Header, Request, status, Depends
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
 from backend.app.core.config import settings
@@ -40,6 +45,16 @@ class AgentChatRequest(BaseModel):
     block_id: Optional[str] = Field("MH_YVT_01", description="Monitored Block ID")
     language: Optional[str] = Field("en", description="Target 23-language code")
     session_id: Optional[str] = Field(None, description="Agent37 conversation session ID")
+
+
+class AgentProxyStreamRequest(BaseModel):
+    input: Optional[str] = Field(None, max_length=1000, description="Farmer input or query prompt")
+    query: Optional[str] = Field(None, max_length=1000, description="Alternative query alias")
+    prompt: Optional[str] = Field(None, max_length=1000, description="Alternative prompt alias")
+    session_id: Optional[str] = Field(None, description="Optional conversation session ID")
+    stream: Optional[bool] = Field(True, description="Enable streaming mode")
+    block_id: Optional[str] = Field(None, description="Monitored Block ID")
+    language: Optional[str] = Field("en", description="Target language code")
 
 
 # ==============================================================================
@@ -168,6 +183,129 @@ async def agent_chat(request: Request, req: AgentChatRequest):
         if req.session_id:
             rag_res["session_id"] = req.session_id
         return rag_res
+
+
+# ==============================================================================
+# 2. Agent37 Direct Streaming Proxy Endpoint (/api/agent)
+# ==============================================================================
+
+@router.post("/agent", summary="Agent37 Streaming Proxy Route (/api/agent)")
+async def proxy_agent_stream(req: AgentProxyStreamRequest):
+    """
+    Proxies requests to an Agent37 instance:
+    POST https://<ID>.agent37.app/v1/responses
+    Header: X-Agent37-Key (from process.env.AGENT37_KEY)
+    
+    Security:
+    - NEVER exposes AGENT37_KEY to the client
+    - Streams responses back to the client in real-time
+    """
+    user_text = (req.input or req.query or req.prompt or "").strip()
+    if not user_text:
+        raise HTTPException(status_code=400, detail="Missing 'input' or 'query' in request body")
+
+    # Read credentials privately from environment
+    api_key = (os.getenv("AGENT37_KEY") or os.getenv("AGENT37_API_KEY") or settings.AGENT37_API_KEY or "").strip()
+    instance_id = (os.getenv("AGENT37_INSTANCE_ID") or settings.AGENT37_INSTANCE_ID or "").strip()
+
+    if not instance_id and (os.getenv("AGENT37_INSTANCE_URL") or settings.AGENT37_INSTANCE_URL):
+        inst_url = os.getenv("AGENT37_INSTANCE_URL") or settings.AGENT37_INSTANCE_URL or ""
+        try:
+            from urllib.parse import urlparse
+            parsed = urlparse(inst_url)
+            if parsed.hostname:
+                instance_id = parsed.hostname.split(".")[0]
+        except Exception:
+            pass
+
+    # Unconfigured fallback generator
+    if not api_key or not instance_id:
+        async def unconfigured_generator():
+            block_ctx = None
+            if req.block_id:
+                try:
+                    conn = get_db_connection()
+                    cursor = conn.cursor()
+                    cursor.execute(
+                        "SELECT block_name, district, state, break_probability, soil_moisture_pct, monsoon_status FROM block_state WHERE block_id = ?",
+                        (req.block_id,)
+                    )
+                    row = cursor.fetchone()
+                    if row:
+                        block_ctx = dict(row)
+                    conn.close()
+                except Exception:
+                    pass
+
+            target_lang = req.language or "en"
+            rag_res = rag_chatbot.answer_query(user_text, block_context=block_ctx, lang=target_lang)
+            ans = rag_res.get("answer", "") or rag_res.get("response", "") or "Atmospheric parameters in the monitored basin indicate active monsoon conditions."
+            
+            words = ans.split(" ")
+            for i, word in enumerate(words):
+                prefix = "" if i == 0 else " "
+                yield f"data: {json.dumps({'text': prefix + word})}\n\n".encode("utf-8")
+                await asyncio.sleep(0.015)
+            yield b"data: [DONE]\n\n"
+
+        return StreamingResponse(
+            unconfigured_generator(),
+            media_type="text/event-stream",
+            headers={
+                "Cache-Control": "no-cache, no-transform",
+                "Connection": "keep-alive",
+                "X-Accel-Buffering": "no"
+            }
+        )
+
+    target_url = f"https://{instance_id}.agent37.app/v1/responses"
+    upstream_payload = {
+        "input": user_text[:1000],
+        "stream": req.stream is not False
+    }
+    if req.session_id:
+        upstream_payload["session_id"] = req.session_id
+
+    async def proxy_stream_generator():
+        try:
+            async with httpx.AsyncClient(timeout=30.0) as client:
+                async with client.stream(
+                    "POST",
+                    target_url,
+                    headers={
+                        "Content-Type": "application/json",
+                        "Accept": "text/event-stream, application/json, text/plain",
+                        "X-Agent37-Key": api_key  # Server-side only, NEVER leaked to client
+                    },
+                    json=upstream_payload
+                ) as upstream_resp:
+                    if upstream_resp.status_code != 200:
+                        err_bytes = await upstream_resp.aread()
+                        err_text = err_bytes.decode("utf-8", errors="replace")[:200]
+                        yield f"data: {json.dumps({'error': f'Agent37 upstream error ({upstream_resp.status_code})', 'details': err_text})}\n\n".encode("utf-8")
+                        yield b"data: [DONE]\n\n"
+                        return
+
+                    async for chunk in upstream_resp.aiter_bytes():
+                        yield chunk
+        except httpx.TimeoutException:
+            yield f"data: {json.dumps({'error': 'Agent37 request timed out'})}\n\n".encode("utf-8")
+            yield b"data: [DONE]\n\n"
+        except Exception as exc:
+            logger.error("Agent37 proxy stream exception: %s", type(exc).__name__)
+            yield f"data: {json.dumps({'error': f'Agent37 proxy error: {type(exc).__name__}'})}\n\n".encode("utf-8")
+            yield b"data: [DONE]\n\n"
+
+    return StreamingResponse(
+        proxy_stream_generator(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache, no-transform",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no"
+        }
+    )
+
 
 
 # ==============================================================================
