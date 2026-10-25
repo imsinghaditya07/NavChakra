@@ -3,10 +3,11 @@
 
 
 [![Live Deployment](https://img.shields.io/badge/Live%20Demo-navchakra.onrender.com-brightgreen?style=for-the-badge&logo=render)](https://navchakra.onrender.com/)
-[![API Documentation](https://img.shields.io/badge/Swagger%20Docs-API%20Reference-blue?style=for-the-badge&logo=fastapi)](https://navchakra.onrender.com/docs)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-imsinghaditya07%2FNavChakra-black?style=for-the-badge&logo=github)](https://github.com/imsinghaditya07/NavChakra)
 
-> **🚀 Live Deployed Link**: **[https://navchakra.onrender.com/](https://navchakra.onrender.com/)**  
+
+
+> **🚀 Live Deployed Link**: **[https://navchakra.onrender.com/](https://navchakra.onrender.com/)**
+ 
 > **📚 Demo Video Link **: **https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz**
 
 ---
