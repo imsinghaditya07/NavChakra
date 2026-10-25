@@ -7,7 +7,7 @@
 [![GitHub Repository](https://img.shields.io/badge/GitHub-imsinghaditya07%2FNavChakra-black?style=for-the-badge&logo=github)](https://github.com/imsinghaditya07/NavChakra)
 
 > **🚀 Live Deployed Link**: **[https://navchakra.onrender.com/](https://navchakra.onrender.com/)**  
-> **📚 Demo Video Link **: **
+> **📚 Demo Video Link **: **https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz**
 
 ---
 Team Name- Byte Breaker
