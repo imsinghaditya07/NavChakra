@@ -1,5 +1,5 @@
-# Hyperlocal Monsoon Onset & Break Prediction System
-### SIH 2026 Problem Statement 26086
+# NavChakra — Hyperlocal Monsoon Onset & Break Prediction System
+From Climate Signals to Confident Farming Decisions
 **Ministry of Earth Sciences (MoES) / NCMRWF (National Centre for Medium Range Weather Forecasting)**
 
 ---
@@ -9,7 +9,7 @@
 This repository delivers an end-to-end, operational prototype for downscaling global climate teleconnections (NOAA ENSO, BOM IOD, NOAA MJO) to block and panchayat scales across India. It couples 7–30 day seasonal onset/break forecasting with 0–30 minute convective nowcasting, ICAR-aligned deterministic agronomic rules, an auditable Explainable AI (XAI) engine, and multi-channel last-mile delivery (PWA offline app, regional voice TTS, IVR gateway, and officials' disaster management dashboard).
 
 ### System Architecture Diagram
-![System Architecture](architecture.png)
+![System Architecture](docs/architecture.png)
 
 ```
 [DATA SOURCES] ────────► [HYBRID ML ENGINE] ────────► [FUSION & OVERRIDE] ────────► [ADVISORY & XAI] ────────► [DELIVERY CHANNELS]
@@ -42,62 +42,96 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 
 ---
 
-## 2B. Agent Layer (Agent37) & Kisan Saarthi Architecture
+## 2B. Agent Layer (Agent37) & Kisan Saarthi (किसान सारथी) Architecture
 
-NavChakra integrates an optional **Agent37-powered Kisan Saarthi agent** (`/api/agent/chat`) that executes within a persistent cloud sandbox (Hermes agent template) while enforcing strict meteorological guardrails.
+NavChakra features an autonomous, multilingual AI agro-meteorological advisory agent named **Kisan Saarthi (किसान सारथी)**, integrated via **Agent37** (`agent37.app`). Agent37 provides a secure, persistent cloud sandbox (Hermes agent environment) with managed tools, session continuity, and real-time streaming capabilities while enforcing strict meteorological guardrails.
 
 ```
-                  ┌────────────────────────────────────────┐
-                  │ Farmer Query via Web App / Mobile Chat │
-                  └───────────────────┬────────────────────┘
-                                      │
-                                      ▼
-                  ┌────────────────────────────────────────┐
-                  │        Pre-Fetch Verified State        │
-                  │ (SQLite Block Met State + ICAR RAG DB) │
-                  └───────────────────┬────────────────────┘
-                                      │
-                ┌─────────────────────┴─────────────────────┐
-                │                                           │
-  [If Agent37 configured]                     [If unconfigured / timeout / error]
-                │                                           │
-                ▼                                           ▼
-┌───────────────────────────────┐           ┌───────────────────────────────┐
-│  Agent37 Persistent Instance   │           │   Deterministic Grounded RAG   │
-│  - POST /v1/responses         │           │   - rag_chatbot.answer_query  │
-│  - Guarded strictly by context │           │   - Zero hallucination        │
-│  - Farmer text treated as data │           │   - 100% Free / Open tier     │
-│  - Max 3 sentences            │           │                               │
-└───────────────┬───────────────┘           └───────────────┬───────────────┘
-                │                                           │
-                │ (On timeout, failed status, empty output) │
-                ├───────────────────────────────────────────┘
-                │
-                ▼
-┌───────────────────────────────────────────────────────────┐
-│ Return Response: { answer, response, language, source }   │
-│ source = "agent37" OR source = "rag_fallback"             │
-└───────────────────────────────────────────────────────────┘
+                  ┌────────────────────────────────────────────────────────┐
+                  │   Farmer Query via Web App / Mobile Voice / Drawer     │
+                  │   (Speech-to-Text in Hindi, Marathi, Bengali, etc.)    │
+                  └───────────────────────────┬────────────────────────────┘
+                                              │
+                                              ▼
+                  ┌────────────────────────────────────────────────────────┐
+                  │            NavChakra Server-Side Proxy API             │
+                  │      (/api/agent — FastAPI Backend & Serverless)       │
+                  │  - Server-side injection of private X-Agent37-Key      │
+                  │  - ZERO key exposure to client browser                 │
+                  └───────────────────────────┬────────────────────────────┘
+                                              │
+                        ┌─────────────────────┴─────────────────────┐
+                        │                                           │
+          [If Agent37 configured & healthy]           [If unconfigured / timeout / error]
+                        │                                           │
+                        ▼                                           ▼
+        ┌───────────────────────────────┐           ┌───────────────────────────────┐
+        │  Agent37 Sandboxed Instance   │           │   Deterministic Grounded RAG   │
+        │  (https://<ID>.agent37.app)   │           │   - rag_chatbot.answer_query  │
+        │  - POST /v1/responses (SSE)   │           │   - Zero meteorological drift │
+        │  - Guarded read-only tools    │           │   - 100% Free / Open tier     │
+        │  - Untrusted input sanitizing │           │   - Instant word-by-word SSE  │
+        │  - Max 3 crisp sentences      │           │                               │
+        └───────────────┬───────────────┘           └───────────────┬───────────────┘
+                        │                                           │
+                        │ (On timeout, failed status, empty output) │
+                        ├───────────────────────────────────────────┘
+                        │
+                        ▼
+        ┌───────────────────────────────────────────────────────────┐
+        │        Server-Sent Events (SSE) Streaming Response        │
+        │ - Real-time word-by-word streaming to Kisan Saarthi panel │
+        │ - Multilingual Text-to-Speech (TTS) audio narration       │
+        │ - Source attribution: "agent37" OR "rag_fallback"         │
+        └───────────────────────────────────────────────────────────┘
 ```
 
-### Hard Rules & Safety Constraints
-1. **Advisory Only**: The agent layer is strictly advisory. It never modifies physical Model A/B prediction tensors, risk tiers, or the deterministic citizen crowd RED override.
-2. **Deterministic Fallback**: If `AGENT37_API_KEY` or `AGENT37_INSTANCE_URL` are not configured, or if an invocation times out (default 8s), returns HTTP 200 with `status: "failed"`, or produces empty text, the backend seamlessly falls back to `rag_chatbot.answer_query(...)` with `source="rag_fallback"`.
-3. **Prompt Injection Defense**: Farmer text is passed between explicit data tags and treated as untrusted data.
-4. **Guarded Read-Only Tools (`/api/agent-tools/*`)**:
-   - `GET /api/agent-tools/forecast/{block_id}`: Read-only block meteorological state.
-   - `GET /api/agent-tools/alerts`: Read-only active meteorological alerts.
-   - `GET /api/agent-tools/crowd-reports`: Read-only ground observation feed.
-   - `GET /api/agent-tools/advisory/{block_id}`: Read-only agronomic advisory.
-   - *Security*: Guarded by header `X-Tools-Key` validated against `AGENT_TOOLS_KEY` via constant-time `secrets.compare_digest`. Returns HTTP 503 if unconfigured.
-5. **Scheduled Jobs**: Prompt templates are provided in `backend/app/agents/jobs/` for daily bulletins and system health reports. As a matter of policy, schedules are not created automatically to prevent unexpected compute consumption.
+### Key Capabilities & Architectural Highlights
+
+#### 1. Dual Execution Pipeline & Zero-Crash Resilience
+* **Real-Time Streaming**: Queries dispatched through `/api/agent` (FastAPI backend `backend/app/api/agent_router.py` or serverless `api/agent.js`) proxy directly to the upstream Agent37 instance at `https://<AGENT37_INSTANCE_ID>.agent37.app/v1/responses` via Server-Sent Events (SSE).
+* **Deterministic Grounded RAG Fallback**: If `AGENT37_KEY` or `AGENT37_INSTANCE_ID` are not configured in the environment, or if an upstream timeout (>8s), network partition, or error occurs, the system automatically falls back to the local deterministic ICAR Grounded RAG engine (`rag_chatbot.py`), streaming simulated word-by-word responses without breaking the user experience or throwing 500 errors.
+
+#### 2. Complete Credential Privacy & Zero Client Leakage
+* The secret `AGENT37_KEY` / `X-Agent37-Key` is strictly stored and evaluated **server-side**.
+* Neither the API key nor the upstream sandbox credentials are ever exposed to the client browser, localStorage, cookies, or frontend bundle.
+
+#### 3. Guarded Read-Only Agent Tools (`/api/agent-tools/*`)
+To answer farmer queries with verified real-time conditions, Agent37 is equipped with read-only tools exposed by NavChakra:
+* `GET /api/agent-tools/forecast/{block_id}`: Real-time block-level monsoon onset/break probabilities, rootzone soil moisture, and teleconnection states.
+* `GET /api/agent-tools/alerts`: Active hazard alerts (severe convective storms, lightning strikes, flash floods, heatwaves).
+* `GET /api/agent-tools/crowd-reports`: Real-time ground-truth citizen observation feed.
+* `GET /api/agent-tools/advisory/{block_id}`: Verified ICAR agronomic advisory matrices for Kharif & Rabi crops.
+* **Tool Authentication**: Tool endpoints require the `X-Tools-Key` header, validated against `AGENT_TOOLS_KEY` via constant-time cryptographic hash verification (`secrets.compare_digest`).
+
+#### 4. Safety Guardrails & Physical Model Immutability
+* **Advisory Only**: The agent operates strictly in an advisory capacity. It can **never** modify physical Model A/B prediction tensors, risk thresholds, or the emergency citizen crowd RED override.
+* **Prompt Injection Defense**: Farmer text is passed between explicit data tags and treated as untrusted input.
+* **Concise Advice**: System prompts bound responses to a maximum of 3 clear, actionable sentences tailored for immediate field application.
+
+#### 5. Multilingual Voice & Chat Interface (`frontend/agent_insight_panel.js`)
+* **23 Indian Languages**: Supports all 23 official Indian languages (Hindi, Marathi, Bengali, Telugu, Tamil, Gujarati, Punjabi, Odia, Kannada, Malayalam, Assamese, etc.) dynamically synchronizing with the user's selected language.
+* **Voice-First Accessibility**: Integrated Speech-to-Text (STT) for hands-free voice questioning and regional Text-to-Speech (TTS) audio narration via the browser Web Speech API with zero per-minute audio charges.
+* **Location Context**: Automatically injects the farmer's currently selected District, Block, and Gram Panchayat into the agent context.
+
+#### 6. Agent37 Environment Setup
+```env
+# Agent37 Cloud Sandbox Configuration
+AGENT37_KEY=your_agent37_api_key_here
+AGENT37_INSTANCE_ID=your_instance_subdomain
+# Or full instance URL:
+AGENT37_INSTANCE_URL=https://your_instance_id.agent37.app
+
+# Guarded Read-Only Tools Shared Secret
+AGENT_TOOLS_KEY=your_secure_agent_tools_secret_key
+```
 
 
 ## 3. Known Free-Tier Limitations & Mitigation Strategy
 
 1. **Hugging Face Spaces & Render Cold-Start Delay**:
    - *Limitation*: Free containers enter a sleep state after 15 minutes of inactivity, causing a 30–50 second cold-start delay on first request.
-   - *Mitigation*: The app features an automated cron keep-alive ping script (`GET /health` every 12 minutes). For hackathon evaluators, a pre-warm ping is dispatched before demonstrations.
+   - *Mitigation*: The app features an automated cron keep-alive ping script (`GET /health` every 12 minutes). A pre-warm ping can be dispatched before demonstrations.
 2. **Google Colab & Kaggle Session Timeouts**:
    - *Limitation*: Free GPU runtimes disconnect after 60–90 minutes of idle time or 12 hours of total duration.
    - *Mitigation*: All model training scripts (`train_model_a_lightgbm.py`, `train_model_a_lstm.py`) implement automated per-epoch checkpointing and save weights directly into version-controlled paths tracked by DVC.
@@ -132,8 +166,8 @@ Direct comparison evaluated on the 2021–2025 Holdout Monsoon Seasons across co
 
 ### 1. Clone & Set Up Environment
 ```bash
-git clone https://github.com/your-org/hyperlocal-monsoon-prediction.git
-cd "hyperlocal-monsoon-prediction"
+git clone https://github.com/imsinghaditya07/NavChakra.git
+cd NavChakra
 
 # Create and activate virtual environment
 python3 -m venv venv
@@ -147,6 +181,9 @@ pip install -r requirements.txt
 ```bash
 # Build feature store from teleconnections, IMD grids & NASA POWER
 python data/build_datasets.py
+
+# Train PyTorch LSTM and Tabular models with checkpointing
+python training/train.py --data data/sample/rainfall_sample.csv --out models/registry/v_sample --epochs 10
 
 # Train Model A (LightGBM + LSTM) and Model B (Nowcast ONNX)
 python models/training/train_model_a_lightgbm.py
@@ -171,7 +208,7 @@ Open your browser at **`http://localhost:8000`**.
 
 ---
 
-## 6. Evaluator Live Demo Script (6 Key Journeys)
+## 6. Application Walkthrough (7 Key Journeys)
 
 ### Journey 1: Hyperlocal Monsoon Break Prediction (7–30 Day Horizon)
 1. Open `http://localhost:8000` in your browser.
@@ -214,3 +251,9 @@ Open your browser at **`http://localhost:8000`**.
 2. Notice the offline warning banner: *"Displaying cached block prediction from 2 hours ago."*
 3. Click **`☀️ High Contrast`**: the UI shifts into an ultra-high-contrast daylight mode designed for direct sunlight in open fields.
 4. Click **`🔊 Voice`** or **`Listen to Voice Advisory`**: the browser's Web Speech API speaks the advisory aloud in clean native Hindi/Marathi without any paid API keys!
+
+### Journey 7: Kisan Saarthi Streaming Agent (Agent37 Powered)
+1. Click the floating green **`🌾 Kisan Saarthi (किसान सारथी)`** button or open the assistant drawer.
+2. Type or speak using the microphone button: *"What is the monsoon break risk for my block?"*
+3. Watch the answer stream in real time via Server-Sent Events (SSE) from the **Agent37** sandbox (or automatic guarded RAG fallback if running offline/unconfigured).
+4. Select any of the **23 regional languages** (e.g., Telugu, Punjabi, Bengali, Gujarati); notice both the response text and the native TTS audio narration instantly adapt.
