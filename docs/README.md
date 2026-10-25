@@ -144,30 +144,51 @@ AGENT_TOOLS_KEY=your_secure_agent_tools_secret_key
 
 ## 2C. High-Performance ML Acceleration with Nodus Compute
 
-NavChakra leverages **Nodus Compute** as its elastic, high-throughput GPU/CPU infrastructure to accelerate data pre-processing, temporal sequence model training, and continuous meteorological fine-tuning.
+NavChakra leverages **Nodus Compute** as its elastic, high-throughput GPU/CPU infrastructure to accelerate data pre-processing, temporal sequence model training, continuous meteorological fine-tuning, and on-demand model inference.
+
+### End-to-End Execution Flow
+
+![Nodus Compute Execution Flow](docs/nodus_workflow.png)
+
+```mermaid
+flowchart TD
+    A["👤 <b>User opens NavChakra</b><br/>Website frontend"] --> B["☁️ <b>Render</b><br/>Hosts the website and/or backend"]
+    B --> C["⚡ <b>Nodus Compute</b><br/>Runs a connected forecasting job or model"]
+    C --> D["📊 <b>Forecast returned to NavChakra</b><br/>Results are displayed to the user"]
+
+    style A fill:#0d1117,stroke:#30363d,color:#ffffff,rx:10,ry:10
+    style B fill:#161b22,stroke:#1f6feb,color:#ffffff,rx:10,ry:10
+    style C fill:#21183c,stroke:#8957e5,color:#ffffff,rx:10,ry:10
+    style D fill:#0e2a1b,stroke:#238636,color:#ffffff,rx:10,ry:10
+```
 
 ```
-┌─────────────────────────────────┐       ┌───────────────────────────────────┐
-│     Multi-Decadal Climate       │       │    Sliding-Window Feature Store   │
-│   (NOAA ENSO / IOD / MJO)       │──────►│  (IMD Gridded Rainfall + NASA)    │
-└─────────────────────────────────┘       └─────────────────┬─────────────────┘
-                                                            │
-                                                            ▼
-                                          ┌───────────────────────────────────┐
-                                          │      NODUS COMPUTE GPU CLUSTER    │
-                                          │  - PyTorch MonsoonLSTM Training   │
-                                          │  - Multi-Epoch Checkpointing      │
-                                          │  - Parallel Hyperparameter Search │
-                                          └─────────────────┬─────────────────┘
-                                                            │
-                                                            ▼
-                                          ┌───────────────────────────────────┐
-                                          │       NavChakra Model Registry    │
-                                          │  (models/registry/v_sample/ *.pt) │
-                                          └───────────────────────────────────┘
+┌────────────────────────────────────────────────────────┐
+│                 User opens NavChakra                   │
+│                   Website frontend                     │
+└───────────────────────────┬────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│                        Render                          │
+│            Hosts the website and/or backend            │
+└───────────────────────────┬────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│                     Nodus Compute                      │
+│       Runs a connected forecasting job or model        │
+└───────────────────────────┬────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│             Forecast returned to NavChakra             │
+│              Results are displayed to user             │
+└────────────────────────────────────────────────────────┘
 ```
 
 ### Why Nodus Compute for NavChakra?
+* **Connected Forecasting Jobs & Model Execution**: When a user selects a block or requests a heavy forecast analysis, Render dispatches the intensive temporal sequence learning and inference workloads to Nodus Compute.
 * **High-Throughput Sequence Learning**: NavChakra downscales complex multi-decadal global climate drivers (NOAA ENSO ONI, BOM IOD DMI, NOAA MJO Phase 1–8) alongside high-density IMD gridded precipitation and NASA POWER surface data across 7–30 day sliding temporal windows. Nodus Compute provides fast, distributed GPU clusters that drastically accelerate PyTorch LSTM sequence training times.
 * **Elastic Checkpointing & Resumability**: Seamlessly couples with NavChakra's resumable training pipeline (`training/train.py`). Epoch checkpoints (`checkpoint_latest.pt` and versioned models in `models/registry/`) are rapidly synced and validated without costly idle instance overhead.
 * **Cost-Efficient Scalability**: Compared to legacy cloud virtual machines (e.g., AWS EC2 p3/p4 instances), Nodus Compute delivers on-demand, high-performance compute with zero idle lock-in—enabling rapid retraining across thousands of administrative blocks at a fraction of the cost.
