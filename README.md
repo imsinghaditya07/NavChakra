@@ -1,6 +1,6 @@
-# NavChakra (ऋतुIQ) — Hyperlocal Monsoon Onset & Break Prediction System
+# NavChakra — Hyperlocal Monsoon Onset & Break Prediction System
 ### From Climate Signals to Confident Farming Decisions
-**Ministry of Earth Sciences (MoES) / NCMRWF (National Centre for Medium Range Weather Forecasting)**
+
 
 [![Live Deployment](https://img.shields.io/badge/Live%20Demo-navchakra.onrender.com-brightgreen?style=for-the-badge&logo=render)](https://navchakra.onrender.com/)
 [![API Documentation](https://img.shields.io/badge/Swagger%20Docs-API%20Reference-blue?style=for-the-badge&logo=fastapi)](https://navchakra.onrender.com/docs)
