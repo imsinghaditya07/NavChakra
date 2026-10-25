@@ -6,9 +6,9 @@
 
 
 
-> **🚀 Live Deployed Link**: **[https://navchakra.onrender.com/](https://navchakra.onrender.com/)**
+> 🚀 Live Deployed Link**: **[https://navchakra.onrender.com/](https://navchakra.onrender.com/)
  
-> **📚 Demo Video Link **: **https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz**
+> 📚 Demo Video Link **: **https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz
 
 PPT PDF Link - https://drive.google.com/file/d/19UHcfaDqVXFjIMmhgoAdQ_kBhy-icfyn/view?usp=drivesdk
 ---
