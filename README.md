@@ -1,23 +1,24 @@
 # NavChakra — Hyperlocal Monsoon Onset & Break Prediction System
 ### From Climate Signals to Confident Farming Decisions
 
-[![Live Deployment](https://img.shields.io/badge/Live%20Demo-navchakra.onrender.com-brightgreen?style=for-the-badge&logo=render)](https://navchakra.onrender.com/)
-[![API Documentation](https://img.shields.io/badge/Swagger%20Docs-API%20Reference-blue?style=for-the-badge&logo=fastapi)](https://navchakra.onrender.com/docs)
+[![Live Deployment](https://img.shields.io/badge/Live%20Demo-navchakra--s9dx.onrender.com-brightgreen?style=for-the-badge&logo=render)](https://navchakra-s9dx.onrender.com/)
+[![API Documentation](https://img.shields.io/badge/Swagger%20Docs-API%20Reference-blue?style=for-the-badge&logo=fastapi)](https://navchakra-s9dx.onrender.com/docs)
 [![Compute](https://img.shields.io/badge/Compute-Nodus%20Compute-7928CA?style=for-the-badge&logo=nvidia)](https://noduscompute.com)
 [![Adaptive AI](https://img.shields.io/badge/Adaptive%20AI-Adaption%20Labs-10B981?style=for-the-badge&logo=openai)](https://adaptionlabs.ai)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-imsinghaditya07%2FNavChakra-black?style=for-the-badge&logo=github)](https://github.com/imsinghaditya07/NavChakra)
 
-> **🚀 Live Deployed App**: [https://navchakra.onrender.com/](https://navchakra.onrender.com/)  
+> **🚀 Live Deployed App**: [https://navchakra-s9dx.onrender.com/](https://navchakra-s9dx.onrender.com/)  
 > **📚 Demo Video Link**: [https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz](https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz)  
-> **📑 PPT / PDF Link**: [Google Drive Presentation](https://drive.google.com/file/d/19UHcfaDqVXFjIMmhgoAdQ_kBhy-icfyn/view?usp=drivesdk)  
+> **📑 Project Presentation**: [Google Drive Presentation](https://drive.google.com/file/d/19UHcfaDqVXFjIMmhgoAdQ_kBhy-icfyn/view?usp=drivesdk)  
 > **⚡ High-Performance ML Compute**: **Nodus Compute**  
 > **🌱 Continuous Agro-LLM Learning**: **Adaption Labs** (Adaptive Data & AutoScientist)
 
 ---
 
-**Team Name**: Byte Breaker  
-**Team Code**: B26-0673  
-**Team Members**: Anand Kumar Jha, Aditya Singh, Rishab Kumar  
+**Core Engineering Team**:  
+- **Aditya Singh** ([@imsinghaditya07](https://github.com/imsinghaditya07))  
+- **Anand Kumar Jha**  
+- **Rishab Kumar**  
 
 ---
 ## 1. System Overview & Architecture
@@ -47,7 +48,7 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 | **Surface Agromet & CAPE**| Open-Meteo & NASA POWER API | AccuWeather / IBM Weather | **₹0.00** | IMD NCMRWF AWS/C-DAC servers |
 | **Lightning Stroke Feed** | Blitzortung.org Community TOA | Earth Networks / Vaisala | **₹0.00** | IMD Damini / IITM Lightning Net |
 | **ML Training & Acceleration**| Nodus Compute (Decentralized GPU) + Colab | AWS EC2 p3.2xlarge | **Low-cost / Elastic** | C-DAC PARAM Ananta supercomputer |
-| **Container & API Hosting**| Render Free Tier / HF Spaces | AWS ECS Fargate | **₹0.00** | [Live on Render](https://navchakra.onrender.com/) |
+| **Container & API Hosting**| Render Free Tier / HF Spaces | AWS ECS Fargate | **₹0.00** | [Live on Render](https://navchakra-s9dx.onrender.com/) |
 | **Agro-LLM Specialization**| Adaption Labs (Adaptive Data & AutoScientist) | Manual Data Labeling / Annotation | **Self-serve API** | In-house continuous fine-tuning pipeline |
 | **Multi-Lingual Translation**| Bhashini (Govt of India) + Web Speech API | Google Cloud Translation | **₹0.00** | In-house IndicTrans2 models |
 | **Map Base & Radar** | OpenStreetMap + RainViewer API | Mapbox / Google Maps | **₹0.00** | ISRO Bhuvan GeoPlatform |
@@ -349,14 +350,14 @@ PYTHONPATH=. pytest backend/tests/test_api.py -v
 ```bash
 python -m uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
 ```
-Open your browser locally at **`http://localhost:8000`** or access the live deployment at **`https://navchakra.onrender.com/`**.
+Open your browser locally at **`http://localhost:8000`** or access the live deployment at **`https://navchakra-s9dx.onrender.com/`**.
 
 ---
 
 ## 6. Application Walkthrough (7 Key Journeys)
 
 ### Journey 1: Hyperlocal Monsoon Break Prediction (7–30 Day Horizon)
-1. Open **`https://navchakra.onrender.com/`** (or `http://localhost:8000` locally) in your browser.
+1. Open **`https://navchakra-s9dx.onrender.com/`** (or `http://localhost:8000` locally) in your browser.
 2. Under the block selector dropdown, select **`Pusad (पुसद) - Yavatmal, Vidarbha`**.
 3. Note the Risk Card updates to **ORANGE / RED Alert**:
    - Monsoon Break Probability: **74%**

@@ -1,7 +1,7 @@
 /**
  * NavChakra (NavChakra) — Master Application Script
  * "बादलों के संकेत से, खेतों के फैसले तक"
- * SIH 2026 Problem Statement 26086 / Ministry of Earth Sciences (MoES)
+ * Hyperlocal Monsoon Prediction System / Ministry of Earth Sciences (MoES)
  */
 
 // Global Application State
@@ -10622,7 +10622,7 @@ function exportTelemetryCsv() {
 }
 
 function openProfileModal() {
-  alert('NavChakra v1.0.0\nSIH 2026 Problem Statement 26086\nMinistry of Earth Sciences (MoES) / NCMRWF\nHyperlocal Agromet & Monsoon Intelligence');
+  alert('NavChakra v1.0.0\nMinistry of Earth Sciences (MoES) / NCMRWF\nHyperlocal Agromet & Monsoon Intelligence Platform');
 }
 
 // Utility
