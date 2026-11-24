@@ -13,10 +13,12 @@
 
 ---
 
-**Core Engineering Team**:  
-- **Aditya Singh** ([@imsinghaditya07](https://github.com/imsinghaditya07))  
-- **Anand Kumar Jha**  
-- **Aaryan Lal Das**  
+**Core Engineering Team & Responsibilities**:  
+- **Anand Kumar Jha** — Team Leader and Full Stack Developer  
+- **Aditya Singh** ([@imsinghaditya07](https://github.com/imsinghaditya07)) — AI/ML Integration and Frontend Development  
+- **Aaryan Lal Das** — GIS and Product Developer  
+
+> **Common Responsibility**: Integration, testing, documentation and final presentation.  
 
 ---
 ## 1. System Overview & Architecture
