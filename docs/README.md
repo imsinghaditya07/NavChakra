@@ -39,27 +39,6 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 
 ## 2. Infrastructure Cost Statement & Operational Economics
 
-### Estimated Project Budget Breakdown
-
-| Requirement | Estimated Cost |
-|---|---|
-| **Cloud hosting and deployment** | ₹1,000 |
-| **SMS/notification services** | ₹2,000 |
-| **Data storage and backup** | ₹2,000 |
-| **Testing and miscellaneous expenses** | ₹1,000 |
-| **Contingency** | ₹3,000 |
-| **Total Estimated Cost** | **₹9,000** |
-
-#### Cost-Saving Measures:
-- **Use open-source technologies**: Eliminates proprietary software licensing overhead across ML runtimes, database engines, and backend frameworks.
-- **Use publicly available government and satellite datasets**: Ingests directly from IMD, ISRO MOSDAC, NOAA PSL, and NASA POWER at zero data acquisition cost.
-- **Use existing laptops and internet facilities**: Eliminates dedicated on-premise development hardware procurement costs.
-- **Avoid paid APIs wherever possible**: Relies on free/open-tier endpoints (Open-Meteo, Bhashini IndicTrans2, Blitzortung, Leaflet/OSM) with resilient local fallbacks.
-
----
-
-### Component-wise Architecture & Economics Matrix
-
 | Component | Selected Tool / Provider | Commercial Alternative | Prototype Cost | Production Scaling Path |
 |---|---|---|---|---|
 | **Satellite Imagery** | ISRO MOSDAC INSAT-3D/3DR TIR | Paid Planet/Spire Feeds | **₹0.00** | Direct MoES NKN fiber feed |
@@ -77,6 +56,12 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 | **Total Operational Budget** | — | — | **₹9,000** | Budget-neutral for Government Deployment |
 
 > **Cost Efficiency Summary**: By leveraging public meteorological APIs, open government datasets, and open-source models, the entire end-to-end operational platform is deployable within a lean **₹9,000** budget while remaining scalable for nationwide deployment.
+
+### Key Cost-Saving Measures:
+- **Use open-source technologies**: Eliminates proprietary software licensing overhead across ML runtimes, database engines, and backend frameworks.
+- **Use publicly available government and satellite datasets**: Ingests directly from IMD, ISRO MOSDAC, NOAA PSL, and NASA POWER at zero data acquisition cost.
+- **Use existing laptops and internet facilities**: Eliminates dedicated on-premise development hardware procurement costs.
+- **Avoid paid APIs wherever possible**: Relies on free/open-tier endpoints (Open-Meteo, Bhashini IndicTrans2, Blitzortung, Leaflet/OSM) with resilient local fallbacks.
 
 ---
 
