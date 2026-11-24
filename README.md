@@ -39,6 +39,27 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 
 ## 2. Infrastructure Cost Statement & Operational Economics
 
+### Estimated Project Budget Breakdown
+
+| Requirement | Estimated Cost |
+|---|---|
+| **Cloud hosting and deployment** | ₹1,000 |
+| **SMS/notification services** | ₹2,000 |
+| **Data storage and backup** | ₹2,000 |
+| **Testing and miscellaneous expenses** | ₹1,000 |
+| **Contingency** | ₹3,000 |
+| **Total Estimated Cost** | **₹9,000** |
+
+#### Cost-Saving Measures:
+- **Use open-source technologies**: Eliminates proprietary software licensing overhead across ML runtimes, database engines, and backend frameworks.
+- **Use publicly available government and satellite datasets**: Ingests directly from IMD, ISRO MOSDAC, NOAA PSL, and NASA POWER at zero data acquisition cost.
+- **Use existing laptops and internet facilities**: Eliminates dedicated on-premise development hardware procurement costs.
+- **Avoid paid APIs wherever possible**: Relies on free/open-tier endpoints (Open-Meteo, Bhashini IndicTrans2, Blitzortung, Leaflet/OSM) with resilient local fallbacks.
+
+---
+
+### Component-wise Architecture & Economics Matrix
+
 | Component | Selected Tool / Provider | Commercial Alternative | Prototype Cost | Production Scaling Path |
 |---|---|---|---|---|
 | **Satellite Imagery** | ISRO MOSDAC INSAT-3D/3DR TIR | Paid Planet/Spire Feeds | **₹0.00** | Direct MoES NKN fiber feed |
@@ -46,15 +67,16 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 | **Surface Agromet & CAPE**| Open-Meteo & NASA POWER API | AccuWeather / IBM Weather | **₹0.00** | IMD NCMRWF AWS/C-DAC servers |
 | **Lightning Stroke Feed** | Blitzortung.org Community TOA | Earth Networks / Vaisala | **₹0.00** | IMD Damini / IITM Lightning Net |
 | **ML Training & Acceleration**| High-Performance GPU / Colab | AWS EC2 p3.2xlarge | **Low-cost / Elastic** | C-DAC PARAM Ananta supercomputer |
-| **Container & API Hosting**| Render Free Tier / HF Spaces | AWS ECS Fargate | **₹0.00** | [Live on Render](https://navchakra-s9dx.onrender.com/) |
+| **Container & API Hosting**| Render / HF Spaces | AWS ECS Fargate | **₹1,000** | [Live on Render](https://navchakra-s9dx.onrender.com/) |
 | **Agro-LLM Specialization**| Adaption Labs (Adaptive Data & AutoScientist) | Manual Data Labeling / Annotation | **Self-serve API** | In-house continuous fine-tuning pipeline |
 | **Multi-Lingual Translation**| Bhashini (Govt of India) + Web Speech API | Google Cloud Translation | **₹0.00** | In-house IndicTrans2 models |
 | **Map Base & Radar** | OpenStreetMap + RainViewer API | Mapbox / Google Maps | **₹0.00** | ISRO Bhuvan GeoPlatform |
-| **IVR Voice Gateway** | Asterisk PBX Open-Source AGI | Twilio / Exotel Voice | **₹0.00** | C-DOT Kisan Call Centre PRI lines |
-| **Agentic AI Layer (Optional)** | Agent37 Cloud Hermes Sandbox | AutoGPT / Cloud LLM APIs | Metered pay-per-minute / BYOK | Persistent sandbox with managed tools |
-| **Core Platform Total** | — | — | **₹0.00 / month** | Budget-neutral for Government of India |
+| **IVR & Notification Gateway** | Asterisk PBX / SMS Gateway | Twilio / Exotel Voice | **₹2,000** | C-DOT Kisan Call Centre PRI lines |
+| **Data Storage & Backup** | DVC + Parquet Feature Store / SQLite | AWS S3 Enterprise Tier | **₹2,000** | National Cloud MeghRaj storage |
+| **Testing & Contingency** | Automated Pytest Suite + CI Buffer | Third-party QA Services | **₹4,000** | Automated CD pipeline |
+| **Total Operational Budget** | — | — | **₹9,000** | Budget-neutral for Government Deployment |
 
-> **Cost & Metering Clarification**: The core prediction backbone (physics models, ML models A & B, deterministic agronomic rules, and grounded RAG chatbot) operates at **₹0.00 recurring infrastructure cost** on open tiers. The optional Agent37 agent layer is pay-per-minute after the free tier credit ($1.00 / 1,000,000 credit micros); model usage is metered unless you configure your own model API key (BYOK). When Agent37 credentials are not set, the platform functions with zero degradation via deterministic RAG.
+> **Cost Efficiency Summary**: By leveraging public meteorological APIs, open government datasets, and open-source models, the entire end-to-end operational platform is deployable within a lean **₹9,000** budget while remaining scalable for nationwide deployment.
 
 ---
 
