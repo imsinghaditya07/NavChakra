@@ -131,24 +131,7 @@ flowchart TD
 
 ---
 
-## 3. Known Free-Tier Limitations & Mitigation Strategy
-
-1. **Hugging Face Spaces & Render Cold-Start Delay**:
-   - *Limitation*: Free containers enter a sleep state after 15 minutes of inactivity, causing a 30–50 second cold-start delay on first request.
-   - *Mitigation*: The app features an automated cron keep-alive ping script (`GET /health` every 12 minutes). A pre-warm ping can be dispatched before demonstrations.
-2. **Google Colab & Kaggle Session Timeouts**:
-   - *Limitation*: Free GPU runtimes disconnect after 60–90 minutes of idle time or 12 hours of total duration.
-   - *Mitigation*: All model training scripts (`train_model_a_lightgbm.py`, `train_model_a_lstm.py`) implement automated per-epoch checkpointing and save weights directly into version-controlled paths tracked by DVC.
-3. **WhatsApp Cloud API Free-Tier Cap**:
-   - *Limitation*: Free sandbox/tier is restricted to 1,000 service conversations per calendar month.
-   - *Mitigation*: Supplemented by browser-native Web Push via Firebase Cloud Messaging (FCM) and the Asterisk IVR voice fallback for feature phones.
-4. **MOSDAC & Copernicus CDS External Approval Lead Time**:
-   - *Limitation*: Automated API credentials can take 3 to 14 days for institutional verification.
-   - *Mitigation*: Zero blockage! High-resolution verified sample tensors and physical profiles are pre-ingested in `/data/sample/insat3d/` and `/data/processed/`, allowing 100% of ML training and inference to function immediately.
-
----
-
-## 4. Benchmark Evaluation: Model A vs IMD Subdivision Baseline
+## 3. Benchmark Evaluation: Model A vs IMD Subdivision Baseline
 
 Direct comparison evaluated on the 2021–2025 Holdout Monsoon Seasons across core monsoon break zones:
 
@@ -162,7 +145,7 @@ Direct comparison evaluated on the 2021–2025 Holdout Monsoon Seasons across co
 
 ---
 
-## 5. Quickstart & Local Execution
+## 4. Quickstart & Local Execution
 
 ### Prerequisites
 - Python 3.9+
@@ -212,7 +195,7 @@ Open your browser locally at **`http://localhost:8000`** or access the live depl
 
 ---
 
-## 6. Application Walkthrough (7 Key Journeys)
+## 5. Application Walkthrough (7 Key Journeys)
 
 ### Journey 1: Hyperlocal Monsoon Break Prediction (7–30 Day Horizon)
 1. Open **`https://navchakra-s9dx.onrender.com/`** (or `http://localhost:8000` locally) in your browser.
