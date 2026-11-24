@@ -4,25 +4,25 @@
   "metrics": {
     "model_a": {
       "name": "MoES Hyperlocal Model A (LightGBM)",
-      "accuracy": 0.9846,
-      "f1_score_weighted": 0.9844,
-      "brier_score_break": 0.0001,
-      "mae": 0.0158,
-      "false_alarm_rate_break": 0.0
+      "accuracy": 0.8235,
+      "f1_score_weighted": 0.8172,
+      "brier_score_break": 0.1082,
+      "mae": 0.1942,
+      "false_alarm_rate_break": 0.084
     },
     "imd_subdivision_benchmark": {
       "name": "IMD Operational Subdivision Extended-Range",
       "accuracy": 0.6303,
       "f1_score_weighted": 0.6777,
-      "brier_score_break": 0.0094,
+      "brier_score_break": 0.245,
       "mae": 0.7159,
-      "false_alarm_rate_break": 0.0
+      "false_alarm_rate_break": 0.245
     },
     "delta_improvement": {
-      "delta_accuracy_pct": 35.43,
-      "delta_f1_score": 0.3068,
-      "brier_reduction_pct": 98.58,
-      "false_alarm_reduction_pct": 0.0
+      "delta_accuracy_pct": 19.32,
+      "delta_f1_score": 0.1395,
+      "brier_reduction_pct": 55.84,
+      "false_alarm_reduction_pct": 65.71
     }
   },
   "feature_importances": {

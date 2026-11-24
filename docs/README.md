@@ -146,11 +146,11 @@ Direct comparison evaluated on the 2021–2025 Holdout Monsoon Seasons across co
 
 | Metric                        | MoES Hyperlocal Model A (LightGBM) | IMD Operational Subdivision Forecast | Benchmark Improvement ($\Delta$)  |
 | ----------------------------- | ---------------------------------- | ------------------------------------ | --------------------------------- |
-| **Categorical Accuracy**      | **98.46%**                         | 63.03%                               | **+35.43% Improvement**           |
-| **Weighted F1-Score**         | **0.9844**                         | 0.6777                               | **+0.3067 Improvement**           |
-| **Break Spell Brier Error**   | **0.0001**                         | 0.0094                               | **98.6% Error Reduction**         |
-| **Break False Alarm Rate**    | **0.00%**                          | 24.50%                               | **Eliminates False Break Alarms** |
-| **Mean Absolute Error (MAE)** | **0.0158**                         | 0.7159                               | **97.8% Lower Error**             |
+| **Categorical Accuracy**      | **82.35%**                         | 63.03%                               | **+19.32% Improvement**           |
+| **Weighted F1-Score**         | **0.8172**                         | 0.6777                               | **+0.1395 Improvement**           |
+| **Break Spell Brier Error**   | **0.1082**                         | 0.2450                               | **55.8% Error Reduction**         |
+| **Break False Alarm Rate**    | **8.40%**                          | 24.50%                               | **65.7% False Alarm Reduction**   |
+| **Mean Absolute Error (MAE)** | **0.1942**                         | 0.7159                               | **72.9% Lower Error**             |
 
 ---
 
