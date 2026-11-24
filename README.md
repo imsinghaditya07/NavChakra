@@ -3,14 +3,12 @@
 
 [![Live Deployment](https://img.shields.io/badge/Live%20Demo-navchakra--s9dx.onrender.com-brightgreen?style=for-the-badge&logo=render)](https://navchakra-s9dx.onrender.com/)
 [![API Documentation](https://img.shields.io/badge/Swagger%20Docs-API%20Reference-blue?style=for-the-badge&logo=fastapi)](https://navchakra-s9dx.onrender.com/docs)
-[![Compute](https://img.shields.io/badge/Compute-Nodus%20Compute-7928CA?style=for-the-badge&logo=nvidia)](https://noduscompute.com)
 [![Adaptive AI](https://img.shields.io/badge/Adaptive%20AI-Adaption%20Labs-10B981?style=for-the-badge&logo=openai)](https://adaptionlabs.ai)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-imsinghaditya07%2FNavChakra-black?style=for-the-badge&logo=github)](https://github.com/imsinghaditya07/NavChakra)
 
 > **🚀 Live Deployed App**: [https://navchakra-s9dx.onrender.com/](https://navchakra-s9dx.onrender.com/)  
 > **📚 Demo Video Link**: [https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz](https://youtu.be/LNyUXiiQhS0?si=4ysWy1E2QRvXNXKz)  
 > **📑 Project Presentation**: [Google Drive Presentation](https://drive.google.com/file/d/19UHcfaDqVXFjIMmhgoAdQ_kBhy-icfyn/view?usp=drivesdk)  
-> **⚡ High-Performance ML Compute**: **Nodus Compute**  
 > **🌱 Continuous Agro-LLM Learning**: **Adaption Labs** (Adaptive Data & AutoScientist)
 
 ---
@@ -34,7 +32,7 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 - NOAA ENSO/IOD/MJO       (7-30d Break/Onset)          Score Formula                - SHAP Plain-Language        - Officials Dashboard
 - ISRO INSAT-3D TIR      - Model B (Convective ONNX)  - Emergency Citizen           One-Liner Generator         - Regional Voice (TTS)
 - Open-Meteo & CAPE       (0-30m Severe Storm)         Crowd-Report Fallback       - Grounded RAG Chatbot       - Asterisk IVR Gateway
-- Blitzortung Strikes    - Nodus GPU Compute Engine    Override                     (No Hallucination)          - WhatsApp Cloud Free
+- Blitzortung Strikes    - Hybrid ML Compute Engine    Override                     (No Hallucination)          - WhatsApp Cloud Free
 ```
 
 ---
@@ -47,7 +45,7 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 | **Global Teleconnections** | NOAA PSL (ENSO/MJO) & BOM (IOD) | Paid Weather Analytics | **₹0.00** | Automated Open FTP/HTTP cron |
 | **Surface Agromet & CAPE**| Open-Meteo & NASA POWER API | AccuWeather / IBM Weather | **₹0.00** | IMD NCMRWF AWS/C-DAC servers |
 | **Lightning Stroke Feed** | Blitzortung.org Community TOA | Earth Networks / Vaisala | **₹0.00** | IMD Damini / IITM Lightning Net |
-| **ML Training & Acceleration**| Nodus Compute (Decentralized GPU) + Colab | AWS EC2 p3.2xlarge | **Low-cost / Elastic** | C-DAC PARAM Ananta supercomputer |
+| **ML Training & Acceleration**| High-Performance GPU / Colab | AWS EC2 p3.2xlarge | **Low-cost / Elastic** | C-DAC PARAM Ananta supercomputer |
 | **Container & API Hosting**| Render Free Tier / HF Spaces | AWS ECS Fargate | **₹0.00** | [Live on Render](https://navchakra-s9dx.onrender.com/) |
 | **Agro-LLM Specialization**| Adaption Labs (Adaptive Data & AutoScientist) | Manual Data Labeling / Annotation | **Self-serve API** | In-house continuous fine-tuning pipeline |
 | **Multi-Lingual Translation**| Bhashini (Govt of India) + Web Speech API | Google Cloud Translation | **₹0.00** | In-house IndicTrans2 models |
@@ -60,147 +58,7 @@ This repository delivers an end-to-end, operational prototype for downscaling gl
 
 ---
 
-## 2B. Agent Layer (Agent37) & Kisan Saarthi (किसान सारथी) Architecture
-
-NavChakra features an autonomous, multilingual AI agro-meteorological advisory agent named **Kisan Saarthi (किसान सारथी)**, integrated via **Agent37** (`agent37.app`). Agent37 provides a secure, persistent cloud sandbox (Hermes agent environment) with managed tools, session continuity, and real-time streaming capabilities while enforcing strict meteorological guardrails.
-
-```
-                  ┌────────────────────────────────────────────────────────┐
-                  │   Farmer Query via Web App / Mobile Voice / Drawer     │
-                  │   (Speech-to-Text in Hindi, Marathi, Bengali, etc.)    │
-                  └───────────────────────────┬────────────────────────────┘
-                                              │
-                                              ▼
-                  ┌────────────────────────────────────────────────────────┐
-                  │            NavChakra Server-Side Proxy API             │
-                  │      (/api/agent — FastAPI Backend & Serverless)       │
-                  │  - Server-side injection of private X-Agent37-Key      │
-                  │  - ZERO key exposure to client browser                 │
-                  └───────────────────────────┬────────────────────────────┘
-                                              │
-                        ┌─────────────────────┴─────────────────────┐
-                        │                                           │
-          [If Agent37 configured & healthy]           [If unconfigured / timeout / error]
-                        │                                           │
-                        ▼                                           ▼
-        ┌───────────────────────────────┐           ┌───────────────────────────────┐
-        │  Agent37 Sandboxed Instance   │           │   Deterministic Grounded RAG   │
-        │  (https://<ID>.agent37.app)   │           │   - rag_chatbot.answer_query  │
-        │  - POST /v1/responses (SSE)   │           │   - Zero meteorological drift │
-        │  - Guarded read-only tools    │           │   - 100% Free / Open tier     │
-        │  - Untrusted input sanitizing │           │   - Instant word-by-word SSE  │
-        │  - Max 3 crisp sentences      │           │                               │
-        └───────────────┬───────────────┘           └───────────────┬───────────────┘
-                        │                                           │
-                        │ (On timeout, failed status, empty output) │
-                        ├───────────────────────────────────────────┘
-                        │
-                        ▼
-        ┌───────────────────────────────────────────────────────────┐
-        │        Server-Sent Events (SSE) Streaming Response        │
-        │ - Real-time word-by-word streaming to Kisan Saarthi panel │
-        │ - Multilingual Text-to-Speech (TTS) audio narration       │
-        │ - Source attribution: "agent37" OR "rag_fallback"         │
-        └───────────────────────────────────────────────────────────┘
-```
-
-### Key Capabilities & Architectural Highlights
-
-#### 1. Dual Execution Pipeline & Zero-Crash Resilience
-* **Real-Time Streaming**: Queries dispatched through `/api/agent` (FastAPI backend `backend/app/api/agent_router.py` or serverless `api/agent.js`) proxy directly to the upstream Agent37 instance at `https://<AGENT37_INSTANCE_ID>.agent37.app/v1/responses` via Server-Sent Events (SSE).
-* **Deterministic Grounded RAG Fallback**: If `AGENT37_KEY` or `AGENT37_INSTANCE_ID` are not configured in the environment, or if an upstream timeout (>8s), network partition, or error occurs, the system automatically falls back to the local deterministic ICAR Grounded RAG engine (`rag_chatbot.py`), streaming simulated word-by-word responses without breaking the user experience or throwing 500 errors.
-
-#### 2. Complete Credential Privacy & Zero Client Leakage
-* The secret `AGENT37_KEY` / `X-Agent37-Key` is strictly stored and evaluated **server-side**.
-* Neither the API key nor the upstream sandbox credentials are ever exposed to the client browser, localStorage, cookies, or frontend bundle.
-
-#### 3. Guarded Read-Only Agent Tools (`/api/agent-tools/*`)
-To answer farmer queries with verified real-time conditions, Agent37 is equipped with read-only tools exposed by NavChakra:
-* `GET /api/agent-tools/forecast/{block_id}`: Real-time block-level monsoon onset/break probabilities, rootzone soil moisture, and teleconnection states.
-* `GET /api/agent-tools/alerts`: Active hazard alerts (severe convective storms, lightning strikes, flash floods, heatwaves).
-* `GET /api/agent-tools/crowd-reports`: Real-time ground-truth citizen observation feed.
-* `GET /api/agent-tools/advisory/{block_id}`: Verified ICAR agronomic advisory matrices for Kharif & Rabi crops.
-* **Tool Authentication**: Tool endpoints require the `X-Tools-Key` header, validated against `AGENT_TOOLS_KEY` via constant-time cryptographic hash verification (`secrets.compare_digest`).
-
-#### 4. Safety Guardrails & Physical Model Immutability
-* **Advisory Only**: The agent operates strictly in an advisory capacity. It can **never** modify physical Model A/B prediction tensors, risk thresholds, or the emergency citizen crowd RED override.
-* **Prompt Injection Defense**: Farmer text is passed between explicit data tags and treated as untrusted input.
-* **Concise Advice**: System prompts bound responses to a maximum of 3 clear, actionable sentences tailored for immediate field application.
-
-#### 5. Multilingual Voice & Chat Interface (`frontend/agent_insight_panel.js`)
-* **23 Indian Languages**: Supports all 23 official Indian languages (Hindi, Marathi, Bengali, Telugu, Tamil, Gujarati, Punjabi, Odia, Kannada, Malayalam, Assamese, etc.) dynamically synchronizing with the user's selected language.
-* **Voice-First Accessibility**: Integrated Speech-to-Text (STT) for hands-free voice questioning and regional Text-to-Speech (TTS) audio narration via the browser Web Speech API with zero per-minute audio charges.
-* **Location Context**: Automatically injects the farmer's currently selected District, Block, and Gram Panchayat into the agent context.
-
-#### 6. Agent37 Environment Setup
-```env
-# Agent37 Cloud Sandbox Configuration
-AGENT37_KEY=your_agent37_api_key_here
-AGENT37_INSTANCE_ID=your_instance_subdomain
-# Or full instance URL:
-AGENT37_INSTANCE_URL=https://your_instance_id.agent37.app
-
-# Guarded Read-Only Tools Shared Secret
-AGENT_TOOLS_KEY=your_secure_agent_tools_secret_key
-```
-
----
-
-## 2C. High-Performance ML Acceleration with Nodus Compute
-
-NavChakra leverages **Nodus Compute** as its elastic, high-throughput GPU/CPU infrastructure to accelerate data pre-processing, temporal sequence model training, continuous meteorological fine-tuning, and on-demand model inference.
-
-### End-to-End Execution Flow
-
-![Nodus Compute Execution Flow](docs/nodus_workflow.png)
-
-```mermaid
-flowchart TD
-    A["👤 <b>User opens NavChakra</b><br/>Website frontend"] --> B["☁️ <b>Render</b><br/>Hosts the website and/or backend"]
-    B --> C["⚡ <b>Nodus Compute</b><br/>Runs a connected forecasting job or model"]
-    C --> D["📊 <b>Forecast returned to NavChakra</b><br/>Results are displayed to the user"]
-
-    style A fill:#0d1117,stroke:#30363d,color:#ffffff,rx:10,ry:10
-    style B fill:#161b22,stroke:#1f6feb,color:#ffffff,rx:10,ry:10
-    style C fill:#21183c,stroke:#8957e5,color:#ffffff,rx:10,ry:10
-    style D fill:#0e2a1b,stroke:#238636,color:#ffffff,rx:10,ry:10
-```
-
-```
-┌────────────────────────────────────────────────────────┐
-│                 User opens NavChakra                   │
-│                   Website frontend                     │
-└───────────────────────────┬────────────────────────────┘
-                            │
-                            ▼
-┌────────────────────────────────────────────────────────┐
-│                        Render                          │
-│            Hosts the website and/or backend            │
-└───────────────────────────┬────────────────────────────┘
-                            │
-                            ▼
-┌────────────────────────────────────────────────────────┐
-│                     Nodus Compute                      │
-│       Runs a connected forecasting job or model        │
-└───────────────────────────┬────────────────────────────┘
-                            │
-                            ▼
-┌────────────────────────────────────────────────────────┐
-│             Forecast returned to NavChakra             │
-│              Results are displayed to user             │
-└────────────────────────────────────────────────────────┘
-```
-
-### Why Nodus Compute for NavChakra?
-* **Connected Forecasting Jobs & Model Execution**: When a user selects a block or requests a heavy forecast analysis, Render dispatches the intensive temporal sequence learning and inference workloads to Nodus Compute.
-* **High-Throughput Sequence Learning**: NavChakra downscales complex multi-decadal global climate drivers (NOAA ENSO ONI, BOM IOD DMI, NOAA MJO Phase 1–8) alongside high-density IMD gridded precipitation and NASA POWER surface data across 7–30 day sliding temporal windows. Nodus Compute provides fast, distributed GPU clusters that drastically accelerate PyTorch LSTM sequence training times.
-* **Elastic Checkpointing & Resumability**: Seamlessly couples with NavChakra's resumable training pipeline (`training/train.py`). Epoch checkpoints (`checkpoint_latest.pt` and versioned models in `models/registry/`) are rapidly synced and validated without costly idle instance overhead.
-* **Cost-Efficient Scalability**: Compared to legacy cloud virtual machines (e.g., AWS EC2 p3/p4 instances), Nodus Compute delivers on-demand, high-performance compute with zero idle lock-in—enabling rapid retraining across thousands of administrative blocks at a fraction of the cost.
-* **Parallel Hyperparameter Optimization**: Powers multi-trial grid searches for LightGBM gradient boosting parameters, optimal LSTM sequence lengths, and ONNX runtime export benchmarks.
-
----
-
-## 2D. Continuous Agro-LLM Learning with Adaption Labs
+## 2B. Continuous Agro-LLM Learning with Adaption Labs
 
 NavChakra leverages **Adaption Labs** (`adaptionlabs.ai`) to power **Adaptive AI That Continuously Learns** specifically for **Kisan Saarthi (किसान सारथी)**, the autonomous agro-meteorological advisory assistant. Rather than modifying or replacing the core physical meteorology and numerical weather models, Adaption Labs is utilized to curate, expand, fine-tune, and specialize the agricultural natural language intelligence.
 
@@ -328,7 +186,7 @@ pip install -r requirements.txt
 # Build feature store from teleconnections, IMD grids & NASA POWER
 python data/build_datasets.py
 
-# Train PyTorch LSTM and Tabular models with Nodus Compute GPU acceleration & checkpointing
+# Train PyTorch LSTM and Tabular models with GPU acceleration & checkpointing
 python training/train.py --data data/sample/rainfall_sample.csv --out models/registry/v_sample --epochs 10
 
 # Train Model A (LightGBM + LSTM) and Model B (Nowcast ONNX)
@@ -398,8 +256,8 @@ Open your browser locally at **`http://localhost:8000`** or access the live depl
 3. Click **`☀️ High Contrast`**: the UI shifts into an ultra-high-contrast daylight mode designed for direct sunlight in open fields.
 4. Click **`🔊 Voice`** or **`Listen to Voice Advisory`**: the browser's Web Speech API speaks the advisory aloud in clean native Hindi/Marathi without any paid API keys!
 
-### Journey 7: Kisan Saarthi Streaming Agent (Agent37 Powered)
+### Journey 7: Kisan Saarthi Multilingual Agro-Advisory Agent
 1. Click the floating green **`🌾 Kisan Saarthi (किसान सारथी)`** button or open the assistant drawer.
 2. Type or speak using the microphone button: *"What is the monsoon break risk for my block?"*
-3. Watch the answer stream in real time via Server-Sent Events (SSE) from the **Agent37** sandbox (or automatic guarded RAG fallback if running offline/unconfigured).
+3. Watch the answer stream in real time via Server-Sent Events (SSE) from the advisory engine (or automatic guarded RAG fallback if running offline/unconfigured).
 4. Select any of the **23 regional languages** (e.g., Telugu, Punjabi, Bengali, Gujarati); notice both the response text and the native TTS audio narration instantly adapt.
