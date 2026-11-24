@@ -18,7 +18,7 @@
 **Core Engineering Team**:  
 - **Aditya Singh** ([@imsinghaditya07](https://github.com/imsinghaditya07))  
 - **Anand Kumar Jha**  
-- **Rishab Kumar**  
+- **Aaryan Lal Das**  
 
 ---
 ## 1. System Overview & Architecture
