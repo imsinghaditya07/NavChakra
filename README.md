@@ -76,58 +76,25 @@ NavChakra leverages **Adaption Labs** (`adaptionlabs.ai`) to power **Adaptive AI
 ### 4-Stage Adaptation & Integration Lifecycle
 
 ```mermaid
-flowchart TD
-    subgraph S1 ["1. Prepare Farmer Q&A Data"]
-        A["🌾 <b>Domain Knowledge Ingestion</b><br/>• Real farmer questions across districts<br/>• ICAR verified crop advisory rules<br/>• Sowing, irrigation, & extreme weather alerts"]
-    end
+flowchart LR
+    S1["🌾 <b>1. Ingest Farmer Q&A</b><br/>Localized crop rules & queries"]
+    S2["📈 <b>2. Adaptive Data Engine</b><br/>Dataset expansion & 23 languages"]
+    S3["🧪 <b>3. AutoScientist Suite</b><br/>Autonomous model fine-tuning"]
+    S4["⚙️ <b>4. Operational Backend</b><br/>FastAPI streaming & Kisan Saarthi"]
 
-    subgraph S2 ["2. Adaptive Data Engine"]
-        B["📈 <b>Dataset Expansion & Translation</b><br/>• Augments question diversity & edge cases<br/>• Synthesizes realistic farmer phrasing<br/>• Multi-dialect translation across 23 Indian languages"]
-    end
+    S1 --> S2 --> S3 --> S4
 
-    subgraph S3 ["3. AutoScientist Training Suite"]
-        C["🧪 <b>Automated Experimentation</b><br/>• Fine-tunes supported language model backbones<br/>• Optimizes training hyperparameters & loss<br/>• Validates agromet response accuracy<br/>• Exports optimized model checkpoints"]
-    end
-
-    subgraph S4 ["4. NavChakra Operational Integration"]
-        D["⚙️ <b>FastAPI Backend (/api/agent)</b><br/>Server-side streaming proxy & guardrails"]
-        E["📱 <b>Kisan Saarthi Interface</b><br/>Real-time SSE chat + 23-language voice STT/TTS"]
-    end
-
-    A --> B
-    B --> C
-    C -->|Trained Model Checkpoint| D
-    D --> E
-
-    style S1 fill:#0f172a,stroke:#3b82f6,color:#ffffff,rx:10,ry:10
-    style S2 fill:#064e3b,stroke:#10b981,color:#ffffff,rx:10,ry:10
-    style S3 fill:#3b0764,stroke:#a855f7,color:#ffffff,rx:10,ry:10
-    style S4 fill:#14532d,stroke:#22c55e,color:#ffffff,rx:10,ry:10
+    style S1 fill:#0f172a,stroke:#3b82f6,color:#ffffff,rx:6,ry:6
+    style S2 fill:#064e3b,stroke:#10b981,color:#ffffff,rx:6,ry:6
+    style S3 fill:#3b0764,stroke:#a855f7,color:#ffffff,rx:6,ry:6
+    style S4 fill:#14532d,stroke:#22c55e,color:#ffffff,rx:6,ry:6
 ```
 
 ```
-┌────────────────────────────────────────────────────────────────────────┐
-│                      1. Prepare Farmer Q&A Data                        │
-│   Curate questions on crops, irrigation, rainfall, & extreme weather   │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                        2. Adaptive Data Engine                         │
-│   Improve, expand, and translate examples across supported languages   │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                        3. AutoScientist Suite                          │
-│   Automate experiments around model training & fine-tuning configs     │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                      4. Integrate with NavChakra                       │
-│    Connect trained checkpoint to FastAPI backend & farmer chat panel   │
-└────────────────────────────────────────────────────────────────────────┘
+┌────────────────────────┐      ┌────────────────────────┐      ┌────────────────────────┐      ┌────────────────────────┐
+│ 1. Ingest Farmer Q&A   │ ───► │ 2. Adaptive Data Engine│ ───► │ 3. AutoScientist Suite │ ───► │ 4. Operational Backend │
+│ Crop rules & queries   │      │ Expansion & 23 Indic Lg│      │ Autonomous fine-tuning │      │ FastAPI & Kisan Saarthi│
+└────────────────────────┘      └────────────────────────┘      └────────────────────────┘      └────────────────────────┘
 ```
 
 ### Detailed Workflow Steps:
