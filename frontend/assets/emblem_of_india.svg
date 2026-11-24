@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 135" width="100" height="135" aria-label="State Emblem of India">
+  <g fill="#212529">
+    <!-- Center Lion Face & Mane -->
+    <path d="M50 12 C44 12 40 16 38 21 C36 26 36 32 37 38 C38 41 40 43 43 44 C41 46 39 49 40 53 C41 57 44 60 48 61 L48 64 C43 65 39 67 36 71 C34 74 34 78 36 82 L42 84 C41 87 42 90 44 92 L50 94 L56 92 C58 90 59 87 58 84 L64 82 C66 78 66 74 64 71 C61 67 57 65 52 64 L52 61 C56 60 59 57 60 53 C61 49 59 46 57 44 C60 43 62 41 63 38 C64 32 64 26 62 21 C60 16 56 12 50 12 Z M47 28 C48 27 52 27 53 28 C53 30 52 32 50 32 C48 32 47 30 47 28 Z M45 36 C47 35 53 35 55 36 C55 38 53 40 50 40 C47 40 45 38 45 36 Z M48 44 C49 43 51 43 52 44 L52 48 C51 49 49 49 48 48 Z M44 52 C46 51 54 51 56 52 C55 55 53 56 50 56 C47 56 45 55 44 52 Z"/>
+    
+    <!-- Left Lion Profile -->
+    <path d="M37 23 C33 21 28 23 25 27 C22 31 21 37 23 42 C24 45 27 47 30 47 C29 50 28 53 30 57 C32 61 35 63 39 64 C38 67 36 70 33 72 C29 74 25 78 26 83 L32 84 C31 87 33 90 35 92 L40 93 L38 86 C36 84 35 81 36 77 C38 74 41 72 44 71 L44 67 C41 66 38 63 37 59 C36 56 36 53 37 50 L34 49 C31 48 29 45 29 41 C28 37 29 33 31 30 C33 27 36 26 39 27 Z"/>
+    
+    <!-- Right Lion Profile -->
+    <path d="M63 23 C67 21 72 23 75 27 C78 31 79 37 77 42 C76 45 73 47 70 47 C71 50 72 53 70 57 C68 61 65 63 61 64 C62 67 64 70 67 72 C71 74 75 78 74 83 L68 84 C69 87 67 90 65 92 L60 93 L62 86 C64 84 65 81 64 77 C62 74 59 72 56 71 L56 67 C59 66 62 63 63 59 C64 56 64 53 63 50 L66 49 C69 48 71 45 71 41 C72 37 71 33 69 30 C67 27 64 26 61 27 Z"/>
+
+    <!-- Abacus Base Platform -->
+    <rect x="18" y="94" width="64" height="4" rx="1.5"/>
+    
+    <!-- Center Dharma Chakra (Wheel of Law) on Abacus -->
+    <circle cx="50" cy="104" r="7" stroke="#212529" stroke-width="1.8" fill="none"/>
+    <circle cx="50" cy="104" r="1.8" fill="#212529"/>
+    <!-- Chakra Spokes -->
+    <line x1="50" y1="97" x2="50" y2="111" stroke="#212529" stroke-width="1"/>
+    <line x1="43" y1="104" x2="57" y2="104" stroke="#212529" stroke-width="1"/>
+    <line x1="45" y1="99" x2="55" y2="109" stroke="#212529" stroke-width="1"/>
+    <line x1="45" y1="109" x2="55" y2="99" stroke="#212529" stroke-width="1"/>
+
+    <!-- Left Bull (Galloping Bull of the West) silhouette indication -->
+    <path d="M28 100 C27 98 25 99 23 100 C21 101 20 104 22 106 C24 107 26 107 28 106 C30 105 30 102 28 100 Z"/>
+    
+    <!-- Right Horse (Galloping Horse of the South) silhouette indication -->
+    <path d="M72 100 C73 98 75 99 77 100 C79 101 80 104 78 106 C76 107 74 107 72 106 C70 105 70 102 72 100 Z"/>
+
+    <!-- Bottom Stepped Base -->
+    <rect x="22" y="110" width="56" height="3" rx="1"/>
+    <rect x="15" y="113" width="70" height="3.5" rx="1.5"/>
+
+    <!-- Motto: Satyameva Jayate (सत्यमेव जयते) in Devanagari script -->
+    <text x="50" y="128" font-family="'Noto Sans Devanagari', 'Mangal', 'Poppins', sans-serif" font-size="8" font-weight="700" text-anchor="middle" letter-spacing="0.8">सत्यमेव जयते</text>
+  </g>
+</svg>

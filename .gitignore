@@ -1,0 +1,43 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+dist/
+build/
+.next/
+
+# IDE / System
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data & Model weights cache (DVC handles large files)
+data/large/
+*.tar.gz
+*.zip
+*.nc
+!data/sample/**
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Root reference PDFs and large scans
+/*.pdf
+

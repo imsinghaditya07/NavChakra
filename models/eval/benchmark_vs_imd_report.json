@@ -1,0 +1,48 @@
+{
+  "evaluation_period": "2021-2025 Monsoon Seasons (Holdout)",
+  "test_samples": 5520,
+  "metrics": {
+    "model_a": {
+      "name": "MoES Hyperlocal Model A (LightGBM)",
+      "accuracy": 0.9846,
+      "f1_score_weighted": 0.9844,
+      "brier_score_break": 0.0001,
+      "mae": 0.0158,
+      "false_alarm_rate_break": 0.0
+    },
+    "imd_subdivision_benchmark": {
+      "name": "IMD Operational Subdivision Extended-Range",
+      "accuracy": 0.6303,
+      "f1_score_weighted": 0.6777,
+      "brier_score_break": 0.0094,
+      "mae": 0.7159,
+      "false_alarm_rate_break": 0.0
+    },
+    "delta_improvement": {
+      "delta_accuracy_pct": 35.43,
+      "delta_f1_score": 0.3068,
+      "brier_reduction_pct": 98.58,
+      "false_alarm_reduction_pct": 0.0
+    }
+  },
+  "feature_importances": {
+    "elevation_m": 2204.29,
+    "day_of_year": 60666.62,
+    "rain_7d_sum": 52144.34,
+    "rain_14d_sum": 6209.59,
+    "rain_28d_sum": 12613.79,
+    "rain_anomaly_zscore": 132923.03,
+    "soil_wetness_rootzone": 1279.89,
+    "solar_radiation_mj": 26570.18,
+    "temp_max_c": 3773.33,
+    "enso_oni": 482.62,
+    "iod_dmi": 307.9,
+    "mjo_rmm1": 331.23,
+    "mjo_rmm2": 400.25,
+    "mjo_phase": 80.36,
+    "mjo_amplitude": 3157.83,
+    "enso_oni_lag14": 364.13,
+    "iod_dmi_lag14": 347.43,
+    "mjo_phase_lag14": 74.16
+  }
+}

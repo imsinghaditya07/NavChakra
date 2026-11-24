@@ -1,0 +1,149 @@
+{
+  "crops": {
+    "paddy": {
+      "name": "Paddy / Rice (धान)",
+      "season": "Kharif",
+      "duration_days": 120,
+      "stages": [
+        {
+          "stage": "nursery_and_sowing",
+          "days": "1-25",
+          "water_need": "high",
+          "drought_sensitivity": 0.85,
+          "excess_rain_sensitivity": 0.40,
+          "ideal_conditions": "Consistent soaking rain (15-25 mm/day), warm soil temp",
+          "break_risk_mitigation": "Delay transplanting; apply light protective nursery irrigation; maintain thin water layer in seedling beds.",
+          "storm_risk_mitigation": "Protect raised nursery beds from surface runoff erosion."
+        },
+        {
+          "stage": "tillering_and_vegetative",
+          "days": "26-60",
+          "water_need": "very_high",
+          "drought_sensitivity": 0.70,
+          "excess_rain_sensitivity": 0.30,
+          "ideal_conditions": "Standing water 2-5 cm, continuous monsoon rainfall",
+          "break_risk_mitigation": "Weed management to reduce moisture competition; apply potassium spray to enhance drought tolerance.",
+          "storm_risk_mitigation": "Clear field drainage channels to prevent complete submergence exceeding 48 hours."
+        },
+        {
+          "stage": "panicle_initiation_and_flowering",
+          "days": "61-90",
+          "water_need": "critical",
+          "drought_sensitivity": 0.95,
+          "excess_rain_sensitivity": 0.60,
+          "ideal_conditions": "Saturated soil without intense rain during anthesis",
+          "break_risk_mitigation": "Life-saving irrigation through farm ponds/borewells; avoid nitrogen fertilizer during active break.",
+          "storm_risk_mitigation": "Drain excess water immediately after cloudburst; check for blast/bacterial blight post-storm."
+        },
+        {
+          "stage": "grain_filling_and_maturity",
+          "days": "91-120",
+          "water_need": "moderate",
+          "drought_sensitivity": 0.50,
+          "excess_rain_sensitivity": 0.80,
+          "ideal_conditions": "Dry sunny weather, diminishing rainfall",
+          "break_risk_mitigation": "Monitor grain maturity; break conditions actually accelerate harvesting.",
+          "storm_risk_mitigation": "Harvest mature crop immediately; shelter harvested sheaves from unseasonal squalls/hail."
+        }
+      ]
+    },
+    "cotton": {
+      "name": "Cotton (कपास)",
+      "season": "Kharif",
+      "duration_days": 150,
+      "stages": [
+        {
+          "stage": "sowing_and_emergence",
+          "days": "1-20",
+          "water_need": "moderate",
+          "drought_sensitivity": 0.90,
+          "excess_rain_sensitivity": 0.85,
+          "ideal_conditions": "Initial onset rain > 50 mm, well-drained black soil",
+          "break_risk_mitigation": "Delay sowing if onset break expected; if already sown, apply dust mulch with shallow inter-cultivation.",
+          "storm_risk_mitigation": "Prevent water stagnation around young seedlings; waterlogging > 24h causes wilt."
+        },
+        {
+          "stage": "square_and_boll_formation",
+          "days": "50-100",
+          "water_need": "high",
+          "drought_sensitivity": 0.80,
+          "excess_rain_sensitivity": 0.75,
+          "ideal_conditions": "Alternating sunny days and moderate showers",
+          "break_risk_mitigation": "Spray 2% DAP or 1% Potassium Nitrate during dry spells to arrest square/boll shedding.",
+          "storm_risk_mitigation": "Heavy winds and hail cause severe boll drop; ensure deep drainage furrows."
+        }
+      ]
+    },
+    "soybean": {
+      "name": "Soybean (सोयाबीन)",
+      "season": "Kharif",
+      "duration_days": 95,
+      "stages": [
+        {
+          "stage": "sowing_and_germination",
+          "days": "1-15",
+          "water_need": "moderate",
+          "drought_sensitivity": 0.80,
+          "excess_rain_sensitivity": 0.90,
+          "ideal_conditions": "75-100 mm accumulated onset rainfall before sowing",
+          "break_risk_mitigation": "Do not sow on dry seedbed; delay until revival cycle is confirmed.",
+          "storm_risk_mitigation": "Avoid crusted surface; break soil crust if heavy shower follows sowing."
+        },
+        {
+          "stage": "pod_filling",
+          "days": "55-80",
+          "water_need": "high",
+          "drought_sensitivity": 0.92,
+          "excess_rain_sensitivity": 0.50,
+          "ideal_conditions": "Consistent soil moisture at root zone (0-30 cm)",
+          "break_risk_mitigation": "Provide sprinkler irrigation from community water harvesting structure; straw mulching.",
+          "storm_risk_mitigation": "Drain excess water to avoid root rot."
+        }
+      ]
+    },
+    "maize": {
+      "name": "Maize (मक्का)",
+      "season": "Kharif",
+      "duration_days": 100,
+      "stages": [
+        {
+          "stage": "sowing",
+          "days": "1-15",
+          "water_need": "moderate",
+          "drought_sensitivity": 0.75,
+          "excess_rain_sensitivity": 0.70,
+          "ideal_conditions": "Adequate seedbed moisture, soil temp > 22C",
+          "break_risk_mitigation": "Sow in ridges and furrows method for moisture conservation.",
+          "storm_risk_mitigation": "Provide broadbed furrow to drain flash monsoon runoff."
+        },
+        {
+          "stage": "silking_and_tasseling",
+          "days": "45-65",
+          "water_need": "critical",
+          "drought_sensitivity": 0.95,
+          "excess_rain_sensitivity": 0.60,
+          "ideal_conditions": "Steady moisture, calm winds for pollen dispersion",
+          "break_risk_mitigation": "Prioritize life-saving irrigation; dry break causes barren cobs.",
+          "storm_risk_mitigation": "Severe squalls cause lodging; earthing up along plant rows gives mechanical support."
+        }
+      ]
+    },
+    "pulses_arhar": {
+      "name": "Pigeon Pea / Arhar / Tur (अरहर)",
+      "season": "Kharif",
+      "duration_days": 180,
+      "stages": [
+        {
+          "stage": "vegetative",
+          "days": "1-70",
+          "water_need": "low_to_moderate",
+          "drought_sensitivity": 0.40,
+          "excess_rain_sensitivity": 0.85,
+          "ideal_conditions": "Deep taproot development in well-drained soils",
+          "break_risk_mitigation": "Intercrop with soybean or green gram; deep roots tap subsoil moisture during break spells.",
+          "storm_risk_mitigation": "Extremely susceptible to phytophthora blight if fields waterlog."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "model_name": "Model B Convective Nowcast (0-30 min)",
+  "test_metrics": {
+    "roc_auc": 0.9379,
+    "brier_score": 0.0715,
+    "accuracy": 0.9007,
+    "precision": 0.7651,
+    "recall": 0.6526,
+    "f1_score": 0.7044
+  },
+  "feature_importance_gain": {
+    "cape_j_kg": 15834.31,
+    "lifted_index": 11554.15,
+    "delta_tb_15m": 9605.61,
+    "cin_j_kg": 4787.63,
+    "delta_tb_30m": 2251.8,
+    "dewpoint_depression_c": 1772.42,
+    "wind_shear_6km_ms": 763.67,
+    "cloud_top_temp_c": 540.77,
+    "lightning_strikes_15m": 477.4
+  }
+}

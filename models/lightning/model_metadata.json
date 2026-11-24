@@ -1,0 +1,9 @@
+{
+  "model_name": "AryaSaarthi Lightning Activity Diagnostic",
+  "model_version": "aryasaarthi-lightning-rules-v1.0.0",
+  "training_status": "NOT TRAINABLE (ML Supervised)",
+  "reason_for_block": "Genuine ground lightning network (e.g. Earth Networks / IITM lightning network) observation logs are absent in the provided raw files.",
+  "scientific_alternative": "Satellite cloud cooling rate proxy: AIRS/INSAT OLR < 190 W/m\u00b2 with negative 3-day trend + precipitable water vapor > 4.0 cm.",
+  "formulation": "lightning_prob = sigmoid(-0.03 * (OLR - 210) + 0.5 * (PWV - 3.5))",
+  "updated_at": "2026-10-02T15:22:25.255654+00:00"
+}

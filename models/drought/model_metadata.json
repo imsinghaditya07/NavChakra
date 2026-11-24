@@ -1,0 +1,72 @@
+{
+  "model_name": "AryaSaarthi Soil Moisture & Drought Deficit Forecaster",
+  "model_version": "aryasaarthi-drought-v1.0.0",
+  "trained_at": "2026-10-02T15:22:25.218473+00:00",
+  "temporal_limitation_note": "Soil moisture temporal coverage is limited to 2020 as specified.",
+  "features": [
+    "sm_pct_15cm",
+    "sm_level_15cm",
+    "sm_volume_15cm",
+    "sm_vol_pct_15cm",
+    "sm_pct_lag1",
+    "sm_pct_lag3",
+    "sm_pct_lag7",
+    "sm_pct_roll7",
+    "NINA34",
+    "RMM1",
+    "RMM2",
+    "amplitude",
+    "mjo_phase_sin",
+    "mjo_phase_cos",
+    "elevation_m",
+    "relief_m",
+    "slope_deg"
+  ],
+  "train_period": [
+    "2020-01-01",
+    "2020-06-30"
+  ],
+  "val_period": [
+    "2020-07-01",
+    "2020-08-10"
+  ],
+  "test_period": [
+    "2020-08-11",
+    "2020-09-22"
+  ],
+  "metrics": {
+    "cv_5fold_mae_mean_pct": 2.543,
+    "cv_5fold_mae_std_pct": 1.911,
+    "cv_5fold_r2_mean": 0.713,
+    "test_mae_pct": 3.215,
+    "test_rmse_pct": 5.185,
+    "test_r2": 0.794
+  },
+  "cv_folds_detail": [
+    {
+      "fold": 1,
+      "mae_pct": 0.22,
+      "r2": 0.933
+    },
+    {
+      "fold": 2,
+      "mae_pct": 0.379,
+      "r2": 0.417
+    },
+    {
+      "fold": 3,
+      "mae_pct": 3.663,
+      "r2": 0.616
+    },
+    {
+      "fold": 4,
+      "mae_pct": 5.019,
+      "r2": 0.727
+    },
+    {
+      "fold": 5,
+      "mae_pct": 3.433,
+      "r2": 0.87
+    }
+  ]
+}

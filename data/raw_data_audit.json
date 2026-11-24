@@ -1,0 +1,484 @@
+[
+  {
+    "filename": "DISTRICT_RAINFALL_DISTRIBUTION_COUNTRY_INDIA_cd.pdf",
+    "size_bytes": 2997798,
+    "format": ".pdf",
+    "status": "OK",
+    "metadata": {},
+    "summary": {},
+    "num_pages": 33,
+    "extracted_text_preview": "India Meteorological Department Hydromet Division, New Delhi DISTRICT RAINFALL DISTRIBUTION DAY: 24-09-2026 PERIOD: 01-06-2026 to 24-09-2026 S.No MET.SUBDIVISION/UT/STATE/DISTRICT ACTUAL(mm) NORMAL(mm) %DEP. CAT. ACTUAL(mm) NORMAL(mm) %DEP. CAT.  ANDAMAN & NICOBAR ISLANDS 42.3 10 323% LE 1735.7 1541.9 13% N 1 NICOBAR 0 11 -100% NR 702 1041.3 -33% D 2 NORTH & MIDDLE ANDAMAN 97.9 11.6 744% LE 2654.6 1819.8 46% E 3 SOUTH ANDAMAN 7.8 7.7 2% N 1371.6 1548 -11% N  ARUNACHAL PRADESH 5.7 14.6 -61% LD 930.7 1616 -42% D 1 ANJAW 2.1 5.1 -59% D 175.1 1528.2 -89% LD 2 CHANGLANG 9.7 13.8 -30% D 1032.7 1306.5 -21% D 3 DIBANG VALLEY  11.4  ND  1135  ND 4 EAST KAMENG 6.7 9.4 -29% D 1437 1194.5 20% E 5 EAST SIANG 0.6 22.2 -97% LD 2043.9 3074.8 -34% D 6 KURUNG KUMEY 1.3 9.2 -86% LD 627.4 1182.2 -47% D 7 LOHI",
+    "role": "IMD Observed District Rainfall Distribution Report"
+  },
+  {
+    "filename": "ENSO.csv",
+    "size_bytes": 39645,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": []
+    },
+    "summary": {},
+    "num_records": 1884,
+    "columns": [
+      "Date",
+      "NINA34"
+    ],
+    "time_min": "1870-01-01 00:00:00",
+    "time_max": "2026-12-01 00:00:00",
+    "missing_count": 5,
+    "duplicates": 0,
+    "frequency": "Monthly",
+    "spatial_coverage": "Ni\u00f1o 3.4 Region (5N-5S, 170W-120W)",
+    "variables": "Ni\u00f1o 3.4 SST anomaly index",
+    "units": "\u00b0C anomaly",
+    "role": "Teleconnection Feature"
+  },
+  {
+    "filename": "ERA5 CSV.csv",
+    "size_bytes": 28881,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": [],
+      "sections_count": 3,
+      "location_metadata": [
+        "latitude,longitude,elevation,utc_offset_seconds,timezone,timezone_abbreviation",
+        "28.576448,77.18678,214.0,19800,Asia/Kolkata,GMT+5:30"
+      ]
+    },
+    "summary": {},
+    "hourly_records": 360,
+    "hourly_columns": [
+      "time",
+      "temperature_2m (\u00b0C)",
+      "relative_humidity_2m (%)",
+      "dew_point_2m (\u00b0C)",
+      "pressure_msl (hPa)",
+      "surface_pressure (hPa)",
+      "wind_speed_10m (km/h)",
+      "wind_direction_10m (\u00b0)",
+      "precipitation (mm)",
+      "rain (mm)",
+      "soil_temperature_0_to_7cm (\u00b0C)",
+      "soil_temperature_7_to_28cm (\u00b0C)",
+      "soil_moisture_0_to_7cm (m\u00b3/m\u00b3)"
+    ],
+    "time_min": "2026-09-08T00:00",
+    "time_max": "2026-09-22T23:00",
+    "daily_records": 15,
+    "daily_columns": [
+      "time",
+      "temperature_2m_mean (\u00b0C)",
+      "precipitation_sum (mm)",
+      "precipitation_hours (h)",
+      "wind_speed_10m_max (km/h)",
+      "wind_direction_10m_dominant (\u00b0)",
+      "shortwave_radiation_sum (MJ/m\u00b2)",
+      "et0_fao_evapotranspiration (mm)"
+    ],
+    "frequency": "Hourly and Daily",
+    "spatial_coverage": "Single Lat/Lon: 28.576N, 77.187E (Delhi Safdarjung area), Elev 214m",
+    "variables": "T2m, RH2m, DewPoint, Pressure MSL, Surface Pressure, Wind Speed/Dir, Precipitation, Soil Temp, Soil Moisture",
+    "units": "\u00b0C, %, hPa, km/h, mm, m\u00b3/m\u00b3",
+    "role": "NWP/Reanalysis In-Situ Verification / Boundary Feature"
+  },
+  {
+    "filename": "MJO.txt",
+    "size_bytes": 2597997,
+    "format": ".txt",
+    "status": "OK",
+    "metadata": {},
+    "summary": {},
+    "first_10_lines": [
+      "RMM values up to \"real time\". 19740601-20131231: Both SST1 variability (ENSO) and 120-day mean have been removed in these RMM values; 20140101-: Only the 120-day has been removed.",
+      "year, month, day, RMM1, RMM2, phase, amplitude.  Missing Value= 1.E36 or 999",
+      "1974           6           1   1.6344700       1.2030400               5   2.0294800      WH04_method:_OLR_&_NCEP_wind",
+      "1974           6           2   1.6028900       1.0151200               5   1.8972900      WH04_method:_OLR_&_NCEP_wind",
+      "1974           6           3   1.5162500       1.0855100               5   1.8647600      WH04_method:_OLR_&_NCEP_wind",
+      "1974           6           4   1.5098100       1.0357300               5   1.8309200      WH04_method:_OLR_&_NCEP_wind",
+      "1974           6           5   1.5590600       1.3051800               5   2.0332601      WH04_method:_OLR_&_NCEP_wind",
+      "1974           6           6   1.2062600       1.6288900               6   2.0269001      WH04_method:_OLR_&_NCEP_wind",
+      "1974           6           7  0.61110097       1.7224801               6   1.8276700      WH04_method:_OLR_&_NCEP_wind",
+      "1974           6           8  0.32639500       1.7781800               6   1.8078901      WH04_method:_OLR_&_NCEP_wind"
+    ],
+    "num_records": 18166,
+    "num_columns": 8,
+    "columns": [
+      "year",
+      "month",
+      "day",
+      "RMM1",
+      "RMM2",
+      "phase",
+      "amplitude",
+      "date"
+    ],
+    "time_min": "1974-06-01 00:00:00",
+    "time_max": "2024-02-24 00:00:00",
+    "missing_count": 870,
+    "duplicates": 0,
+    "frequency": "Daily",
+    "spatial_coverage": "Global Tropics (MJO RMM1/RMM2)",
+    "variables": "RMM1, RMM2, phase (1-8), amplitude",
+    "units": "Standardized EOF index",
+    "role": "Teleconnection Feature"
+  },
+  {
+    "filename": "OLR data for wetbengal(1).csv",
+    "size_bytes": 6804,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": [
+        "Title:,\"Time Series, Area-Averaged of Outgoing Longwave Radiation (Daytime/Ascending, AIRS-only) (daily)\"",
+        "User Start Date:,2025-12-01T00:00:00Z",
+        "User End Date:,2026-09-23T23:59:59Z",
+        "User Bounding Box:,\"85.5,21,90,27.5\"",
+        "Data Bounding Box:,\"85.5,21.5,89.5,27.5\"",
+        "URL to Reproduce Results:,\"https://giovanni.gsfc.nasa.gov/giovanni/#service=ArAvTs&starttime=2025-12-01T00:00:00Z&endtime=2026-09-23T23:59:59Z&bbox=85.5,21,90,27.5&data=AIRS3STD_7_0_OLR_A&dataKeyword=Outgoing%20longwave%20radiation&portal=GIOVANNI&format=json\"",
+        "Fill Value (mean_AIRS3STD_7_0_OLR_A):, -9999"
+      ]
+    },
+    "summary": {},
+    "num_records": 287,
+    "columns": [
+      "time",
+      "mean_AIRS3STD_7_0_OLR_A"
+    ],
+    "time_min": "2025-12-01 00:00:00",
+    "time_max": "2026-09-21 00:00:00",
+    "missing_count": 11,
+    "duplicates": 0,
+    "frequency": "Daily",
+    "spatial_coverage": "West Bengal Bounding Box (85.5-89.5E, 21.5-27.5N)",
+    "variables": "Outgoing Longwave Radiation (Daytime Ascending, AIRS)",
+    "units": "W/m\u00b2",
+    "role": "Convective / Cloud Activity Feature"
+  },
+  {
+    "filename": "SST CSV.csv",
+    "size_bytes": 2898,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": [
+        "Title:,\"Time Series, Area-Averaged of Sea Surface Temperature at 11 microns (Day) (water only) 8-daily 4 km [MODIS-Aqua (8-daily)\"",
+        "User Start Date:,2025-01-01T00:00:00Z",
+        "User End Date:,2026-09-30T23:59:59Z",
+        "User Bounding Box:,\"85.5,21,90,27.5\"",
+        "Data Bounding Box:,\"85.5208,21.0208,89.9792,27.4792\"",
+        "URL to Reproduce Results:,\"https://giovanni.gsfc.nasa.gov/giovanni/?utm_source=gemini#service=ArAvTs&starttime=2025-01-01T00:00:00Z&endtime=2026-09-30T23:59:59Z&bbox=85.5,21,90,27.5&data=MODISA_L3m_SST_8d_4km_R2019_0_sst&dataKeyword=MODIS-Aqua&portal=GIOVANNI&format=json\"",
+        "Fill Value (mean_MODISA_L3m_SST_8d_4km_R2019_0_sst):, -32767"
+      ]
+    },
+    "summary": {},
+    "num_records": 72,
+    "columns": [
+      "time",
+      "mean_MODISA_L3m_SST_8d_4km_R2019_0_sst"
+    ],
+    "time_min": "2025-01-01 00:00:00",
+    "time_max": "2026-07-20 00:00:00",
+    "missing_count": 0,
+    "duplicates": 0,
+    "frequency": "8-Daily",
+    "spatial_coverage": "Bay of Bengal offshore West Bengal (85.5-89.9E, 21.0-27.5N)",
+    "variables": "Sea Surface Temperature at 11 microns (MODIS-Aqua L3m)",
+    "units": "\u00b0C",
+    "role": "Oceanic / Thermal Feature"
+  },
+  {
+    "filename": "SST pic.png",
+    "size_bytes": 26654,
+    "format": ".png",
+    "status": "OK",
+    "metadata": {},
+    "summary": {},
+    "image_dimensions": [
+      1048,
+      475
+    ],
+    "image_mode": "L",
+    "role": "Reference / Visual Validation Artifact"
+  },
+  {
+    "filename": "circulation.csv",
+    "size_bytes": 11415,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": []
+    },
+    "summary": {},
+    "num_records": 632,
+    "columns": [
+      "latitude",
+      "longitude",
+      "elevation",
+      "utc_offset_seconds",
+      "timezone",
+      "timezone_abbreviation"
+    ],
+    "missing_count": 2524,
+    "duplicates": 0,
+    "frequency": "Sub-daily / daily",
+    "variables": "latitude, longitude, elevation, utc_offset_seconds, timezone, timezone_abbreviation",
+    "role": "Atmospheric Circulation / Pressure Feature"
+  },
+  {
+    "filename": "district_rainfall.csv",
+    "size_bytes": 51574,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": []
+    },
+    "summary": {}
+  },
+  {
+    "filename": "humidity csv.csv",
+    "size_bytes": 14545,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": [
+        "Title:,\"Time Series, Area-Averaged of Precipitable Water Vapor (IR Retrieval) Surface to 680mb (previously Surface to 920mb in C51): (daily)\"",
+        "User Start Date:,2025-01-01T00:00:00Z",
+        "User End Date:,2026-09-30T23:59:59Z",
+        "User Bounding Box:,\"85.5,21,90,27.5\"",
+        "Data Bounding Box:,\"85.5,21.5,89.5,27.5\"",
+        "URL to Reproduce Results:,\"https://giovanni.gsfc.nasa.gov/giovanni/?utm_source=gemini#service=ArAvTs&starttime=2025-01-01T00:00:00Z&endtime=2026-09-30T23:59:59Z&bbox=85.5,21,90,27.5&data=MOD08_D3_6_1_Atmospheric_Water_Vapor_Low_QA_Mean&dataKeyword=Specific%20humidity&portal=GIOVANNI&format=json\"",
+        "Fill Value (mean_MOD08_D3_6_1_Atmospheric_Water_Vapor_Low_QA_Mean):, -9999"
+      ]
+    },
+    "summary": {},
+    "num_records": 630,
+    "columns": [
+      "time",
+      "mean_MOD08_D3_6_1_Atmospheric_Water_Vapor_Low_QA_Mean"
+    ],
+    "time_min": "2025-01-01 00:00:00",
+    "time_max": "2026-09-22 00:00:00",
+    "missing_count": 2,
+    "duplicates": 0,
+    "frequency": "Daily",
+    "spatial_coverage": "West Bengal Bounding Box (85.5-89.5E, 21.5-27.5N)",
+    "variables": "Precipitable Water Vapor (IR Retrieval Surface to 680mb, MODIS MOD08_D3)",
+    "units": "cm (liquid water equivalent)",
+    "role": "Atmospheric Moisture Feature"
+  },
+  {
+    "filename": "humidity pic.png",
+    "size_bytes": 46729,
+    "format": ".png",
+    "status": "OK",
+    "metadata": {},
+    "summary": {},
+    "image_dimensions": [
+      1048,
+      475
+    ],
+    "image_mode": "L",
+    "role": "Reference / Visual Validation Artifact"
+  },
+  {
+    "filename": "olr data for westbengal in image format.png",
+    "size_bytes": 38672,
+    "format": ".png",
+    "status": "OK",
+    "metadata": {},
+    "summary": {},
+    "image_dimensions": [
+      1048,
+      475
+    ],
+    "image_mode": "L",
+    "role": "Reference / Visual Validation Artifact"
+  },
+  {
+    "filename": "sm_Assam_2020.csv",
+    "size_bytes": 362879,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": []
+    },
+    "summary": {},
+    "num_records": 6708,
+    "columns": [
+      "Date",
+      "State Name",
+      "DistrictName",
+      "Average Soilmoisture Level (at 15cm)",
+      "Average SoilMoisture Volume (at 15cm)",
+      "Aggregate Soilmoisture Percentage (at 15cm)",
+      "Volume Soilmoisture percentage (at 15cm)"
+    ],
+    "missing_count": 0,
+    "duplicates": 0,
+    "spatial_coverage": "State: Assam (District-level)",
+    "time_min": "2020-01-01 (Estimated)",
+    "time_max": "2020-12-31",
+    "frequency": "Daily / Weekly",
+    "variables": "Date, State Name, DistrictName, Average Soilmoisture Level (at 15cm), Average SoilMoisture Volume (at 15cm), Aggregate Soilmoisture Percentage (at 15cm), Volume Soilmoisture percentage (at 15cm)",
+    "units": "Soil Moisture Index / m\u00b3/m\u00b3",
+    "role": "Land Surface / Soil Moisture Feature (2020 only)"
+  },
+  {
+    "filename": "sm_Bihar_2020.csv",
+    "size_bytes": 511279,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": []
+    },
+    "summary": {},
+    "num_records": 9484,
+    "columns": [
+      "Date",
+      "State Name",
+      "DistrictName",
+      "Average Soilmoisture Level (at 15cm)",
+      "Average SoilMoisture Volume (at 15cm)",
+      "Aggregate Soilmoisture Percentage (at 15cm)",
+      "Volume Soilmoisture percentage (at 15cm)"
+    ],
+    "missing_count": 0,
+    "duplicates": 0,
+    "spatial_coverage": "State: Bihar (District-level)",
+    "time_min": "2020-01-01 (Estimated)",
+    "time_max": "2020-12-31",
+    "frequency": "Daily / Weekly",
+    "variables": "Date, State Name, DistrictName, Average Soilmoisture Level (at 15cm), Average SoilMoisture Volume (at 15cm), Aggregate Soilmoisture Percentage (at 15cm), Volume Soilmoisture percentage (at 15cm)",
+    "units": "Soil Moisture Index / m\u00b3/m\u00b3",
+    "role": "Land Surface / Soil Moisture Feature (2020 only)"
+  },
+  {
+    "filename": "sm_Jharkhand_2020.csv",
+    "size_bytes": 352013,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": []
+    },
+    "summary": {},
+    "num_records": 5980,
+    "columns": [
+      "Date",
+      "State Name",
+      "DistrictName",
+      "Average Soilmoisture Level (at 15cm)",
+      "Average SoilMoisture Volume (at 15cm)",
+      "Aggregate Soilmoisture Percentage (at 15cm)",
+      "Volume Soilmoisture percentage (at 15cm)"
+    ],
+    "missing_count": 0,
+    "duplicates": 0,
+    "spatial_coverage": "State: Jharkhand (District-level)",
+    "time_min": "2020-01-01 (Estimated)",
+    "time_max": "2020-12-31",
+    "frequency": "Daily / Weekly",
+    "variables": "Date, State Name, DistrictName, Average Soilmoisture Level (at 15cm), Average SoilMoisture Volume (at 15cm), Aggregate Soilmoisture Percentage (at 15cm), Volume Soilmoisture percentage (at 15cm)",
+    "units": "Soil Moisture Index / m\u00b3/m\u00b3",
+    "role": "Land Surface / Soil Moisture Feature (2020 only)"
+  },
+  {
+    "filename": "sm_Odisha_2020.csv",
+    "size_bytes": 415510,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": []
+    },
+    "summary": {},
+    "num_records": 7448,
+    "columns": [
+      "Date",
+      "State Name",
+      "DistrictName",
+      "Average Soilmoisture Level (at 15cm)",
+      "Average SoilMoisture Volume (at 15cm)",
+      "Aggregate Soilmoisture Percentage (at 15cm)",
+      "Volume Soilmoisture percentage (at 15cm)"
+    ],
+    "missing_count": 0,
+    "duplicates": 0,
+    "spatial_coverage": "State: Odisha (District-level)",
+    "time_min": "2020-01-01 (Estimated)",
+    "time_max": "2020-12-31",
+    "frequency": "Daily / Weekly",
+    "variables": "Date, State Name, DistrictName, Average Soilmoisture Level (at 15cm), Average SoilMoisture Volume (at 15cm), Aggregate Soilmoisture Percentage (at 15cm), Volume Soilmoisture percentage (at 15cm)",
+    "units": "Soil Moisture Index / m\u00b3/m\u00b3",
+    "role": "Land Surface / Soil Moisture Feature (2020 only)"
+  },
+  {
+    "filename": "sm_UttarPradesh_2020.csv",
+    "size_bytes": 1110043,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": []
+    },
+    "summary": {},
+    "num_records": 17608,
+    "columns": [
+      "Date",
+      "State Name",
+      "DistrictName",
+      "Average Soilmoisture Level (at 15cm)",
+      "Average SoilMoisture Volume (at 15cm)",
+      "Aggregate Soilmoisture Percentage (at 15cm)",
+      "Volume Soilmoisture percentage (at 15cm)"
+    ],
+    "missing_count": 0,
+    "duplicates": 0,
+    "spatial_coverage": "State: UttarPradesh (District-level)",
+    "time_min": "2020-01-01 (Estimated)",
+    "time_max": "2020-12-31",
+    "frequency": "Daily / Weekly",
+    "variables": "Date, State Name, DistrictName, Average Soilmoisture Level (at 15cm), Average SoilMoisture Volume (at 15cm), Aggregate Soilmoisture Percentage (at 15cm), Volume Soilmoisture percentage (at 15cm)",
+    "units": "Soil Moisture Index / m\u00b3/m\u00b3",
+    "role": "Land Surface / Soil Moisture Feature (2020 only)"
+  },
+  {
+    "filename": "sm_Westbengal_2020.csv",
+    "size_bytes": 301366,
+    "format": ".csv",
+    "status": "OK",
+    "metadata": {
+      "detected_meta": []
+    },
+    "summary": {},
+    "num_records": 4750,
+    "columns": [
+      "Date",
+      "State Name",
+      "DistrictName",
+      "Average Soilmoisture Level (at 15cm)",
+      "Average SoilMoisture Volume (at 15cm)",
+      "Aggregate Soilmoisture Percentage (at 15cm)",
+      "Volume Soilmoisture percentage (at 15cm)"
+    ],
+    "missing_count": 0,
+    "duplicates": 0,
+    "spatial_coverage": "State: Westbengal (District-level)",
+    "time_min": "2020-01-01 (Estimated)",
+    "time_max": "2020-12-31",
+    "frequency": "Daily / Weekly",
+    "variables": "Date, State Name, DistrictName, Average Soilmoisture Level (at 15cm), Average SoilMoisture Volume (at 15cm), Aggregate Soilmoisture Percentage (at 15cm), Volume Soilmoisture percentage (at 15cm)",
+    "units": "Soil Moisture Index / m\u00b3/m\u00b3",
+    "role": "Land Surface / Soil Moisture Feature (2020 only)"
+  },
+  {
+    "filename": "wind_data.pdf",
+    "size_bytes": 214286,
+    "format": ".pdf",
+    "status": "OK",
+    "metadata": {},
+    "summary": {},
+    "num_pages": 1,
+    "extracted_text_preview": "0 50 100 150 200 250 300 350 Longitude [degrees_east] 75 50 25 0 25 50 75 Latitude [degrees_north] U-Component of Wind 20 10 0 10 20 mean Daily U-wind [m/s]",
+    "role": "Wind Field Visualization / Reference"
+  }
+]

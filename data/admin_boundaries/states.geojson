@@ -1,0 +1,1337 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Andhra Pradesh",
+        "stname": "Andhra Pradesh",
+        "code": "AP",
+        "type": "state",
+        "district_count": 26
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.54,
+              14.9129
+            ],
+            [
+              80.94,
+              14.9129
+            ],
+            [
+              80.94,
+              16.9129
+            ],
+            [
+              78.54,
+              16.9129
+            ],
+            [
+              78.54,
+              14.9129
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Arunachal Pradesh",
+        "stname": "Arunachal Pradesh",
+        "code": "AR",
+        "type": "state",
+        "district_count": 26
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              93.5278,
+              27.218
+            ],
+            [
+              95.9278,
+              27.218
+            ],
+            [
+              95.9278,
+              29.218
+            ],
+            [
+              93.5278,
+              29.218
+            ],
+            [
+              93.5278,
+              27.218
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Assam",
+        "stname": "Assam",
+        "code": "AS",
+        "type": "state",
+        "district_count": 35
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              91.7376,
+              25.2006
+            ],
+            [
+              94.1376,
+              25.2006
+            ],
+            [
+              94.1376,
+              27.2006
+            ],
+            [
+              91.7376,
+              27.2006
+            ],
+            [
+              91.7376,
+              25.2006
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Bihar",
+        "stname": "Bihar",
+        "code": "BR",
+        "type": "state",
+        "district_count": 38
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              84.1131,
+              24.0961
+            ],
+            [
+              86.5131,
+              24.0961
+            ],
+            [
+              86.5131,
+              26.0961
+            ],
+            [
+              84.1131,
+              26.0961
+            ],
+            [
+              84.1131,
+              24.0961
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Chhattisgarh",
+        "stname": "Chhattisgarh",
+        "code": "CT",
+        "type": "state",
+        "district_count": 33
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.6661,
+              20.2787
+            ],
+            [
+              83.0661,
+              20.2787
+            ],
+            [
+              83.0661,
+              22.2787
+            ],
+            [
+              80.6661,
+              22.2787
+            ],
+            [
+              80.6661,
+              20.2787
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Goa",
+        "stname": "Goa",
+        "code": "GA",
+        "type": "state",
+        "district_count": 2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.924,
+              14.2993
+            ],
+            [
+              75.324,
+              14.2993
+            ],
+            [
+              75.324,
+              16.2993
+            ],
+            [
+              72.924,
+              16.2993
+            ],
+            [
+              72.924,
+              14.2993
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Gujarat",
+        "stname": "Gujarat",
+        "code": "GJ",
+        "type": "state",
+        "district_count": 33
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              69.9924,
+              21.2587
+            ],
+            [
+              72.3924,
+              21.2587
+            ],
+            [
+              72.3924,
+              23.2587
+            ],
+            [
+              69.9924,
+              23.2587
+            ],
+            [
+              69.9924,
+              21.2587
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Haryana",
+        "stname": "Haryana",
+        "code": "HR",
+        "type": "state",
+        "district_count": 22
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.8856,
+              28.0588
+            ],
+            [
+              77.2856,
+              28.0588
+            ],
+            [
+              77.2856,
+              30.0588
+            ],
+            [
+              74.8856,
+              30.0588
+            ],
+            [
+              74.8856,
+              28.0588
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Himachal Pradesh",
+        "stname": "Himachal Pradesh",
+        "code": "HP",
+        "type": "state",
+        "district_count": 12
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.9734,
+              30.1048
+            ],
+            [
+              78.3734,
+              30.1048
+            ],
+            [
+              78.3734,
+              32.1048
+            ],
+            [
+              75.9734,
+              32.1048
+            ],
+            [
+              75.9734,
+              30.1048
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Jharkhand",
+        "stname": "Jharkhand",
+        "code": "JH",
+        "type": "state",
+        "district_count": 24
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              84.0799,
+              22.6102
+            ],
+            [
+              86.4799,
+              22.6102
+            ],
+            [
+              86.4799,
+              24.6102
+            ],
+            [
+              84.0799,
+              24.6102
+            ],
+            [
+              84.0799,
+              22.6102
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Karnataka",
+        "stname": "Karnataka",
+        "code": "KA",
+        "type": "state",
+        "district_count": 31
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.5139,
+              14.3173
+            ],
+            [
+              76.9139,
+              14.3173
+            ],
+            [
+              76.9139,
+              16.3173
+            ],
+            [
+              74.5139,
+              16.3173
+            ],
+            [
+              74.5139,
+              14.3173
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Kerala",
+        "stname": "Kerala",
+        "code": "KL",
+        "type": "state",
+        "district_count": 14
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.0711,
+              9.8505
+            ],
+            [
+              77.4711,
+              9.8505
+            ],
+            [
+              77.4711,
+              11.8505
+            ],
+            [
+              75.0711,
+              11.8505
+            ],
+            [
+              75.0711,
+              9.8505
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Madhya Pradesh",
+        "stname": "Madhya Pradesh",
+        "code": "MP",
+        "type": "state",
+        "district_count": 55
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.4569,
+              21.9734
+            ],
+            [
+              79.8569,
+              21.9734
+            ],
+            [
+              79.8569,
+              23.9734
+            ],
+            [
+              77.4569,
+              23.9734
+            ],
+            [
+              77.4569,
+              21.9734
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Maharashtra",
+        "stname": "Maharashtra",
+        "code": "MH",
+        "type": "state",
+        "district_count": 36
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.5139,
+              18.7515
+            ],
+            [
+              76.9139,
+              18.7515
+            ],
+            [
+              76.9139,
+              20.7515
+            ],
+            [
+              74.5139,
+              20.7515
+            ],
+            [
+              74.5139,
+              18.7515
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Manipur",
+        "stname": "Manipur",
+        "code": "MN",
+        "type": "state",
+        "district_count": 16
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              92.7063,
+              23.6637
+            ],
+            [
+              95.1063,
+              23.6637
+            ],
+            [
+              95.1063,
+              25.6637
+            ],
+            [
+              92.7063,
+              25.6637
+            ],
+            [
+              92.7063,
+              23.6637
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Meghalaya",
+        "stname": "Meghalaya",
+        "code": "ML",
+        "type": "state",
+        "district_count": 12
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              90.1662,
+              24.467
+            ],
+            [
+              92.5662,
+              24.467
+            ],
+            [
+              92.5662,
+              26.467
+            ],
+            [
+              90.1662,
+              26.467
+            ],
+            [
+              90.1662,
+              24.467
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Mizoram",
+        "stname": "Mizoram",
+        "code": "MZ",
+        "type": "state",
+        "district_count": 11
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              91.7376,
+              22.1645
+            ],
+            [
+              94.1376,
+              22.1645
+            ],
+            [
+              94.1376,
+              24.1645
+            ],
+            [
+              91.7376,
+              24.1645
+            ],
+            [
+              91.7376,
+              22.1645
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Nagaland",
+        "stname": "Nagaland",
+        "code": "NL",
+        "type": "state",
+        "district_count": 16
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              93.3624,
+              25.1584
+            ],
+            [
+              95.7624,
+              25.1584
+            ],
+            [
+              95.7624,
+              27.1584
+            ],
+            [
+              93.3624,
+              27.1584
+            ],
+            [
+              93.3624,
+              25.1584
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Odisha",
+        "stname": "Odisha",
+        "code": "OR",
+        "type": "state",
+        "district_count": 30
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              83.8985,
+              19.9517
+            ],
+            [
+              86.2985,
+              19.9517
+            ],
+            [
+              86.2985,
+              21.9517
+            ],
+            [
+              83.8985,
+              21.9517
+            ],
+            [
+              83.8985,
+              19.9517
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Punjab",
+        "stname": "Punjab",
+        "code": "PB",
+        "type": "state",
+        "district_count": 23
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.1412,
+              30.1471
+            ],
+            [
+              76.5412,
+              30.1471
+            ],
+            [
+              76.5412,
+              32.1471
+            ],
+            [
+              74.1412,
+              32.1471
+            ],
+            [
+              74.1412,
+              30.1471
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Rajasthan",
+        "stname": "Rajasthan",
+        "code": "RJ",
+        "type": "state",
+        "district_count": 50
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.0179,
+              26.0238
+            ],
+            [
+              75.4179,
+              26.0238
+            ],
+            [
+              75.4179,
+              28.0238
+            ],
+            [
+              73.0179,
+              28.0238
+            ],
+            [
+              73.0179,
+              26.0238
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Sikkim",
+        "stname": "Sikkim",
+        "code": "SK",
+        "type": "state",
+        "district_count": 6
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              87.3122,
+              26.533
+            ],
+            [
+              89.7122,
+              26.533
+            ],
+            [
+              89.7122,
+              28.533
+            ],
+            [
+              87.3122,
+              28.533
+            ],
+            [
+              87.3122,
+              26.533
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Tamil Nadu",
+        "stname": "Tamil Nadu",
+        "code": "TN",
+        "type": "state",
+        "district_count": 38
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.4569,
+              10.1271
+            ],
+            [
+              79.8569,
+              10.1271
+            ],
+            [
+              79.8569,
+              12.1271
+            ],
+            [
+              77.4569,
+              12.1271
+            ],
+            [
+              77.4569,
+              10.1271
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Telangana",
+        "stname": "Telangana",
+        "code": "TG",
+        "type": "state",
+        "district_count": 33
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.8193,
+              17.1124
+            ],
+            [
+              80.2193,
+              17.1124
+            ],
+            [
+              80.2193,
+              19.1124
+            ],
+            [
+              77.8193,
+              19.1124
+            ],
+            [
+              77.8193,
+              17.1124
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Tripura",
+        "stname": "Tripura",
+        "code": "TR",
+        "type": "state",
+        "district_count": 8
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              90.7882,
+              22.9408
+            ],
+            [
+              93.1882,
+              22.9408
+            ],
+            [
+              93.1882,
+              24.9408
+            ],
+            [
+              90.7882,
+              24.9408
+            ],
+            [
+              90.7882,
+              22.9408
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Uttar Pradesh",
+        "stname": "Uttar Pradesh",
+        "code": "UP",
+        "type": "state",
+        "district_count": 75
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.7462,
+              25.8467
+            ],
+            [
+              82.1462,
+              25.8467
+            ],
+            [
+              82.1462,
+              27.8467
+            ],
+            [
+              79.7462,
+              27.8467
+            ],
+            [
+              79.7462,
+              25.8467
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Uttarakhand",
+        "stname": "Uttarakhand",
+        "code": "UT",
+        "type": "state",
+        "district_count": 13
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.8193,
+              29.0668
+            ],
+            [
+              80.2193,
+              29.0668
+            ],
+            [
+              80.2193,
+              31.0668
+            ],
+            [
+              77.8193,
+              31.0668
+            ],
+            [
+              77.8193,
+              29.0668
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "West Bengal",
+        "stname": "West Bengal",
+        "code": "WB",
+        "type": "state",
+        "district_count": 23
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              86.655,
+              21.9868
+            ],
+            [
+              89.055,
+              21.9868
+            ],
+            [
+              89.055,
+              23.9868
+            ],
+            [
+              86.655,
+              23.9868
+            ],
+            [
+              86.655,
+              21.9868
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Andaman and Nicobar Island",
+        "stname": "Andaman and Nicobar Island",
+        "code": "AN",
+        "type": "ut",
+        "district_count": 3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              91.4586,
+              10.7401
+            ],
+            [
+              93.8586,
+              10.7401
+            ],
+            [
+              93.8586,
+              12.7401
+            ],
+            [
+              91.4586,
+              12.7401
+            ],
+            [
+              91.4586,
+              10.7401
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Chandigarh",
+        "stname": "Chandigarh",
+        "code": "CH",
+        "type": "ut",
+        "district_count": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.5794,
+              29.7333
+            ],
+            [
+              77.9794,
+              29.7333
+            ],
+            [
+              77.9794,
+              31.7333
+            ],
+            [
+              75.5794,
+              31.7333
+            ],
+            [
+              75.5794,
+              29.7333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Dadra & Nagar Haveli and Daman & Diu",
+        "stname": "Dadra & Nagar Haveli and Daman & Diu",
+        "code": "DH",
+        "type": "ut",
+        "district_count": 3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.6397,
+              19.4283
+            ],
+            [
+              74.0397,
+              19.4283
+            ],
+            [
+              74.0397,
+              21.4283
+            ],
+            [
+              71.6397,
+              21.4283
+            ],
+            [
+              71.6397,
+              19.4283
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Delhi",
+        "stname": "Delhi",
+        "code": "DL",
+        "type": "ut",
+        "district_count": 11
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.9025,
+              27.7041
+            ],
+            [
+              78.3025,
+              27.7041
+            ],
+            [
+              78.3025,
+              29.7041
+            ],
+            [
+              75.9025,
+              29.7041
+            ],
+            [
+              75.9025,
+              27.7041
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Jammu and Kashmir",
+        "stname": "Jammu and Kashmir",
+        "code": "JK",
+        "type": "ut",
+        "district_count": 20
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.3762,
+              32.7782
+            ],
+            [
+              77.7762,
+              32.7782
+            ],
+            [
+              77.7762,
+              34.7782
+            ],
+            [
+              75.3762,
+              34.7782
+            ],
+            [
+              75.3762,
+              32.7782
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Ladakh",
+        "stname": "Ladakh",
+        "code": "LA",
+        "type": "ut",
+        "district_count": 2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3771,
+              33.1526
+            ],
+            [
+              78.7771,
+              33.1526
+            ],
+            [
+              78.7771,
+              35.1526
+            ],
+            [
+              76.3771,
+              35.1526
+            ],
+            [
+              76.3771,
+              33.1526
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Lakshadweep",
+        "stname": "Lakshadweep",
+        "code": "LD",
+        "type": "ut",
+        "district_count": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.4417,
+              9.5667
+            ],
+            [
+              73.8417,
+              9.5667
+            ],
+            [
+              73.8417,
+              11.5667
+            ],
+            [
+              71.4417,
+              11.5667
+            ],
+            [
+              71.4417,
+              9.5667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "state": "Puducherry",
+        "stname": "Puducherry",
+        "code": "PY",
+        "type": "ut",
+        "district_count": 4
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.6083,
+              10.9416
+            ],
+            [
+              81.0083,
+              10.9416
+            ],
+            [
+              81.0083,
+              12.9416
+            ],
+            [
+              78.6083,
+              12.9416
+            ],
+            [
+              78.6083,
+              10.9416
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

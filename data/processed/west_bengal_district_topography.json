@@ -1,0 +1,170 @@
+{
+  "BIRBHUM": {
+    "lat": 23.84,
+    "lon": 87.61,
+    "elevation_m": 46.2,
+    "relief_m": 26.6,
+    "slope_deg": 0.79
+  },
+  "BANKURA": {
+    "lat": 23.23,
+    "lon": 87.08,
+    "elevation_m": 83.5,
+    "relief_m": 43.1,
+    "slope_deg": 1.18
+  },
+  "BARDDHAMAN": {
+    "lat": 23.24,
+    "lon": 87.86,
+    "elevation_m": 32.7,
+    "relief_m": 23.8,
+    "slope_deg": 0.73
+  },
+  "PURBA BARDHAMAN": {
+    "lat": 23.24,
+    "lon": 87.86,
+    "elevation_m": 32.7,
+    "relief_m": 23.8,
+    "slope_deg": 0.73
+  },
+  "PASCHIM BARDHAMAN": {
+    "lat": 23.68,
+    "lon": 86.98,
+    "elevation_m": 113.1,
+    "relief_m": 44.1,
+    "slope_deg": 1.39
+  },
+  "DARJILING": {
+    "lat": 27.041,
+    "lon": 88.2663,
+    "elevation_m": 1749.6,
+    "relief_m": 1369.7,
+    "slope_deg": 24.74
+  },
+  "KALIMPONG": {
+    "lat": 27.06,
+    "lon": 88.47,
+    "elevation_m": 976.6,
+    "relief_m": 1224.4,
+    "slope_deg": 19.42
+  },
+  "JALPAIGURI": {
+    "lat": 26.5414,
+    "lon": 88.7195,
+    "elevation_m": 85.5,
+    "relief_m": 16.0,
+    "slope_deg": 0.74
+  },
+  "ALIPURDUAR": {
+    "lat": 26.49,
+    "lon": 89.52,
+    "elevation_m": 48.1,
+    "relief_m": 20.3,
+    "slope_deg": 0.98
+  },
+  "KOCH BIHAR": {
+    "lat": 26.32,
+    "lon": 89.45,
+    "elevation_m": 44.2,
+    "relief_m": 27.9,
+    "slope_deg": 0.82
+  },
+  "MALDAH": {
+    "lat": 25.01,
+    "lon": 88.14,
+    "elevation_m": 26.2,
+    "relief_m": 18.0,
+    "slope_deg": 0.97
+  },
+  "UTTAR DINAJPUR": {
+    "lat": 25.62,
+    "lon": 88.12,
+    "elevation_m": 33.3,
+    "relief_m": 16.2,
+    "slope_deg": 0.78
+  },
+  "DAKSHIN DINAJPUR": {
+    "lat": 25.22,
+    "lon": 88.76,
+    "elevation_m": 24.9,
+    "relief_m": 17.0,
+    "slope_deg": 0.88
+  },
+  "MURSHIDABAD": {
+    "lat": 24.18,
+    "lon": 88.27,
+    "elevation_m": 20.4,
+    "relief_m": 21.1,
+    "slope_deg": 0.91
+  },
+  "NADIA": {
+    "lat": 23.47,
+    "lon": 88.55,
+    "elevation_m": 12.4,
+    "relief_m": 25.6,
+    "slope_deg": 0.81
+  },
+  "PURULIYA": {
+    "lat": 23.3321,
+    "lon": 86.3652,
+    "elevation_m": 239.2,
+    "relief_m": 60.0,
+    "slope_deg": 1.43
+  },
+  "HUGLI": {
+    "lat": 22.9,
+    "lon": 88.39,
+    "elevation_m": 10.2,
+    "relief_m": 19.2,
+    "slope_deg": 0.78
+  },
+  "HAORA": {
+    "lat": 22.58,
+    "lon": 88.32,
+    "elevation_m": 8.2,
+    "relief_m": 19.5,
+    "slope_deg": 0.78
+  },
+  "KOLKATA": {
+    "lat": 22.5726,
+    "lon": 88.3639,
+    "elevation_m": 9.4,
+    "relief_m": 23.9,
+    "slope_deg": 0.95
+  },
+  "NORTH 24 PARGANAS": {
+    "lat": 22.72,
+    "lon": 88.48,
+    "elevation_m": 9.1,
+    "relief_m": 21.4,
+    "slope_deg": 0.84
+  },
+  "SOUTH 24 PARGANAS": {
+    "lat": 22.18,
+    "lon": 88.55,
+    "elevation_m": 2.4,
+    "relief_m": 6.7,
+    "slope_deg": 0.23
+  },
+  "PASCHIM MEDINIPUR": {
+    "lat": 22.42,
+    "lon": 87.32,
+    "elevation_m": 39.4,
+    "relief_m": 44.1,
+    "slope_deg": 1.0
+  },
+  "PURBA MEDINIPUR": {
+    "lat": 21.94,
+    "lon": 87.77,
+    "elevation_m": 3.3,
+    "relief_m": 10.7,
+    "slope_deg": 0.54
+  },
+  "JHARGRAM": {
+    "lat": 22.45,
+    "lon": 86.98,
+    "elevation_m": 84.5,
+    "relief_m": 50.9,
+    "slope_deg": 1.26
+  }
+}

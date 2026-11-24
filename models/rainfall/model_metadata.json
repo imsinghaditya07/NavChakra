@@ -1,0 +1,153 @@
+{
+  "model_name": "AryaSaarthi Probabilistic Rainfall Forecasting Engine",
+  "model_version": "aryasaarthi-rainfall-v1.0.0",
+  "trained_at": "2026-10-02T15:22:22.184474+00:00",
+  "features": [
+    "rain_lag1d",
+    "rain_lag3d",
+    "rain_roll3d",
+    "rain_roll7d",
+    "NINA34",
+    "enso_lag1m",
+    "enso_lag3m",
+    "enso_roll3m",
+    "RMM1",
+    "RMM2",
+    "amplitude",
+    "mjo_phase_sin",
+    "mjo_phase_cos",
+    "mjo_active",
+    "mjo_rmm1_lag1",
+    "mjo_rmm2_lag1",
+    "mjo_amp_roll7",
+    "doy_sin",
+    "doy_cos",
+    "is_monsoon_season",
+    "elevation_m",
+    "relief_m",
+    "slope_deg",
+    "clim_normal_rain_daily",
+    "clim_normal_temp",
+    "clim_normal_humidity",
+    "clim_rainy_days",
+    "rain_anomaly_vs_clim"
+  ],
+  "train_period": [
+    "2000-01-01",
+    "2017-12-31"
+  ],
+  "val_period": [
+    "2018-01-01",
+    "2021-12-31"
+  ],
+  "test_period": [
+    "2022-01-01",
+    "2025-12-31"
+  ],
+  "metrics": {
+    "cv_5fold_mae_mean_mm": 2.556,
+    "cv_5fold_mae_std_mm": 0.214,
+    "cv_5fold_rmse_mean_mm": 6.023,
+    "cv_5fold_r2_mean": 0.227,
+    "test_mae_mm": 2.529,
+    "test_rmse_mm": 5.863,
+    "test_r2": 0.273,
+    "test_bias_mm": -0.072,
+    "skill_vs_climatology_pct": 2.79,
+    "skill_vs_persistence_pct": 27.64,
+    "roc_auc": 0.859,
+    "brier_score": 0.0922
+  },
+  "cv_folds_detail": [
+    {
+      "fold": 1,
+      "mae_mm": 2.314,
+      "rmse_mm": 5.491,
+      "r2": 0.183
+    },
+    {
+      "fold": 2,
+      "mae_mm": 2.749,
+      "rmse_mm": 6.119,
+      "r2": 0.253
+    },
+    {
+      "fold": 3,
+      "mae_mm": 2.606,
+      "rmse_mm": 6.255,
+      "r2": 0.23
+    },
+    {
+      "fold": 4,
+      "mae_mm": 2.302,
+      "rmse_mm": 5.607,
+      "r2": 0.231
+    },
+    {
+      "fold": 5,
+      "mae_mm": 2.811,
+      "rmse_mm": 6.645,
+      "r2": 0.235
+    }
+  ],
+  "top_features": [
+    [
+      "rain_roll7d",
+      0.4389003329300947
+    ],
+    [
+      "rain_roll3d",
+      0.16402381092826057
+    ],
+    [
+      "doy_cos",
+      0.05236984492213918
+    ],
+    [
+      "rain_lag3d",
+      0.04717252147530498
+    ],
+    [
+      "is_monsoon_season",
+      0.04515764138516196
+    ],
+    [
+      "doy_sin",
+      0.04044356955844731
+    ],
+    [
+      "amplitude",
+      0.026376666808622953
+    ],
+    [
+      "rain_anomaly_vs_clim",
+      0.026122366020391797
+    ]
+  ],
+  "regional_metrics": {
+    "AMRAVATI": {
+      "records": 1460,
+      "mae_mm": 2.417
+    },
+    "DHARWAD": {
+      "records": 1460,
+      "mae_mm": 2.321
+    },
+    "JALNA": {
+      "records": 1460,
+      "mae_mm": 2.215
+    },
+    "MUZAFFARPUR": {
+      "records": 1460,
+      "mae_mm": 3.02
+    },
+    "NARMADAPURAM": {
+      "records": 1460,
+      "mae_mm": 2.746
+    },
+    "YAVATMAL": {
+      "records": 1460,
+      "mae_mm": 2.457
+    }
+  }
+}
