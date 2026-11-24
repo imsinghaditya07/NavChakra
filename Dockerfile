@@ -34,4 +34,4 @@ RUN python -c "from backend.app.db.database import init_db; init_db()"
 EXPOSE 7860
 
 # Run FastAPI server via Uvicorn
-CMD ["uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["sh", "-c", "uvicorn backend.app.main:app --host 0.0.0.0 --port ${PORT:-7860}"]

@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: navchakra
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 7860
+      - key: HOSTING_TIER
+        value: Render Free Tier
+      - key: SECRET_KEY
+        generateValue: true
